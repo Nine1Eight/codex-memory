@@ -1,0 +1,454 @@
+{
+  "acceptance_invariant": "environment_files_pre == environment_files_post == ghostbridge_pre == post_move_adl == causal_memory == temporal_transition == boundary_pre == boundary_post == committed_actions and adl_debt == 0",
+  "artifact": {
+    "bytes": 275769,
+    "cells": 39,
+    "code_cells": 20,
+    "markdown_cells": 19,
+    "name": "ARC3-QWEN38-ADL-GHOSTBRIDGE-RHAE-FINAL-TUNED-v4.ipynb",
+    "nbformat": 4,
+    "path": "/workspace/scratch/14a426462374/ARC3-QWEN38-ADL-GHOSTBRIDGE-RHAE-FINAL-TUNED-v4.ipynb",
+    "sha256": "3961f8266e13c4c7f34073745094962e1bd2ab722d710df010a71f3895020c9a"
+  },
+  "build": {
+    "base_cell_count": 34,
+    "inserted_component_cells": 5,
+    "output_cell_count": 39
+  },
+  "end_to_end_scope": {
+    "real_kaggle_execution": "not run locally: competition gateway, private environments, GPU model mount, and Kaggle runtime are unavailable in this workspace",
+    "required_next_external_test": "run this notebook as a Kaggle competition notebook and require the final equality marker plus a valid submission.parquet",
+    "submission_artifact": "local schema/value validation passed; physical parquet round-trip requires Kaggle parquet engine",
+    "synthetic_pipeline": "pass: public context PRE -> GhostBridge PRE -> boundary PRE -> action -> animation/no-op -> ADL POST -> causal memory -> twin/reversepath -> boundary POST -> zero debt"
+  },
+  "overall": "PASS_LOCAL_STATIC_AND_SYNTHETIC_POST_TUNING_PARQUET_EXTERNAL_REQUIRED",
+  "post_tune_tests": {
+    "failed": 0,
+    "parameters": {
+      "hard_stall": 12,
+      "no_impact_streak": 3,
+      "no_impact_threshold": 0.75,
+      "soft_stall": 6,
+      "success_protect": 18,
+      "zero_score_triage": 24
+    },
+    "passed": 7,
+    "tests": {
+      "animation_and_hard_noop": true,
+      "end_to_end_pre_action_post_memory_audit": true,
+      "environment_files_public_only": true,
+      "environment_twin": true,
+      "fail_closed_action_debt": true,
+      "reversepath": true,
+      "rhae_exact_formula": true
+    }
+  },
+  "pre_tune_tests": {
+    "failed": 0,
+    "parameters": {
+      "hard_stall": 16,
+      "no_impact_streak": 3,
+      "no_impact_threshold": 0.83,
+      "soft_stall": 8,
+      "success_protect": 12,
+      "zero_score_triage": 24
+    },
+    "passed": 7,
+    "tests": {
+      "animation_and_hard_noop": true,
+      "end_to_end_pre_action_post_memory_audit": true,
+      "environment_files_public_only": true,
+      "environment_twin": true,
+      "fail_closed_action_debt": true,
+      "reversepath": true,
+      "rhae_exact_formula": true
+    }
+  },
+  "schema": "arc3.adl.ghostbridge.rhae.validation.v4",
+  "scoring": {
+    "canonical_hidden_game_value": "competition gateway run.final_score",
+    "competition_aggregate": "arithmetic mean of per-game percentages",
+    "diagnostic_control_weights_are_competition_scores": false,
+    "formula_version": "arc-agi-3-rhae-2026",
+    "ft09_reproduction_percent": 46.55246646963703,
+    "game_formula": "100 * min(weighted_level_score/total_level_weight, completed_level_weight/total_level_weight)",
+    "hidden_human_baselines_read": false,
+    "historical_run_reproduction": {
+      "games_checked": 25,
+      "games_matching_displayed_2dp": 25,
+      "maximum_absolute_rounding_error": 0.004732142857143629,
+      "pass": true,
+      "records": [
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "cn04",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "bp35",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.004285714285714448,
+          "displayed_percent_2dp": 14.29,
+          "game": "sc25",
+          "reproduced_percent": 14.285714285714285,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "sp80",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "tn36",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0022222222222221255,
+          "displayed_percent_2dp": 2.78,
+          "game": "lp85",
+          "reproduced_percent": 2.7777777777777777,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "wa30",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "ka59",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "sk48",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0022222222222221255,
+          "displayed_percent_2dp": 2.22,
+          "game": "su15",
+          "reproduced_percent": 2.2222222222222223,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.004732142857143629,
+          "displayed_percent_2dp": 4.19,
+          "game": "m0r0",
+          "reproduced_percent": 4.185267857142857,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0019047619047620756,
+          "displayed_percent_2dp": 4.76,
+          "game": "r11l",
+          "reproduced_percent": 4.761904761904762,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "dc22",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0022222222222225696,
+          "displayed_percent_2dp": 27.78,
+          "game": "ar25",
+          "reproduced_percent": 27.77777777777778,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.002466469637035118,
+          "displayed_percent_2dp": 46.55,
+          "game": "ft09",
+          "reproduced_percent": 46.55246646963703,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0022222222222221255,
+          "displayed_percent_2dp": 2.78,
+          "game": "s5i5",
+          "reproduced_percent": 2.7777777777777777,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.004285714285712672,
+          "displayed_percent_2dp": 10.71,
+          "game": "vc33",
+          "reproduced_percent": 10.714285714285714,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.003420138888888813,
+          "displayed_percent_2dp": 0.78,
+          "game": "tu93",
+          "reproduced_percent": 0.7834201388888888,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "g50t",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.001818181818181941,
+          "displayed_percent_2dp": 1.82,
+          "game": "lf52",
+          "reproduced_percent": 1.8181818181818181,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0008163265306122547,
+          "displayed_percent_2dp": 2.04,
+          "game": "sb26",
+          "reproduced_percent": 2.0408163265306123,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "cd82",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0014285714285713347,
+          "displayed_percent_2dp": 3.57,
+          "game": "ls20",
+          "reproduced_percent": 3.571428571428571,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.003333333333337407,
+          "displayed_percent_2dp": 16.67,
+          "game": "re86",
+          "reproduced_percent": 16.666666666666664,
+          "within_2dp_rounding": true
+        },
+        {
+          "absolute_rounding_error": 0.0,
+          "displayed_percent_2dp": 0.0,
+          "game": "tr87",
+          "reproduced_percent": 0.0,
+          "within_2dp_rounding": true
+        }
+      ],
+      "source": "/workspace/scratch/14a426462374/upload/Pasted markdown(9).md"
+    },
+    "level_formula": "min((human_actions / agent_actions)^2, 1.15)"
+  },
+  "selected_config": {
+    "hard_stall": 12,
+    "no_impact_streak": 3,
+    "no_impact_threshold": 0.75,
+    "soft_stall": 6,
+    "success_protect": 18,
+    "zero_score_triage": 24
+  },
+  "source_artifacts": {
+    "animation_donor": "taaf-anim-arc-agi-3-solver-2.ipynb",
+    "base_notebook": {
+      "path": "/workspace/scratch/14a426462374/library_downloads/ARC3-KAGGLE-COMPETITION-TRUE-SCORED-RUN-357-QWEN38-ADL-GHOSTBRIDGE-TESTED.ipynb",
+      "sha256": "a796f8a8b7964b9f0b06acb1f5cb44d38083f519a68eb01b88d27dcbec4f2e89"
+    },
+    "johnny_proven_execution_path": "Qwen3.8, seed 20260819, full frame, concurrency 28, one pass",
+    "official_previous_kaggle_score": 0.88
+  },
+  "static_validation": {
+    "forbidden_prompt_pattern_hits": {
+      "baseline prompt injection": 0,
+      "environment source injection": 0
+    },
+    "parquet_smoke": {
+      "error": "ImportError(\"Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\\nA suitable version of pyarrow or fastparquet is required for parquet support.\\nTrying to import the above resulted in these errors:\\n - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.\\n - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.\")",
+      "pass": null,
+      "required_external_check": "Kaggle pyarrow/fastparquet write and read-back",
+      "schema_and_value_validation": "pass",
+      "status": "SKIPPED_LOCAL_ENGINE_UNAVAILABLE"
+    },
+    "python_ast": {
+      "cells_checked": 20,
+      "failures": [],
+      "pass": true
+    },
+    "required_marker_counts": {
+      "ActionDebtLedger": 3,
+      "AnimationImpactAnalyzer": 6,
+      "CompetitionRHAEScorer": 14,
+      "ENVIRONMENT_FILES BRIDGE READY": 1,
+      "EnvironmentTwin": 3,
+      "GhostBridgePlanner": 2,
+      "POST-TUNE COMPONENT TESTS PASS": 1,
+      "PRE-TUNE COMPONENT TESTS PASS": 1,
+      "RHAE KAGGLE-ALIGNED SCORE AUDIT": 1,
+      "ReversePath": 12,
+      "TRUE SCORED RUN COMPLETE": 2,
+      "environment_files_post=": 1,
+      "environment_files_pre=": 1
+    },
+    "strict_json_duplicate_key_check": "pass",
+    "structural_checks": {
+      "adl_debt_fail_closed_present": true,
+      "all_code_outputs_cleared": true,
+      "final_equality_audit_present": true,
+      "gateway_score_canonical": true,
+      "qwen38_model_source_present": true,
+      "rhae_completion_cap_present": true,
+      "rhae_exact_level_formula_present": true,
+      "single_environment_pass_present": true,
+      "strict_public_environment_fields_present": true,
+      "submission_schema_present": true,
+      "valid_nbformat": true
+    }
+  },
+  "tuning": {
+    "candidate_count": 81,
+    "method": "deterministic grid search scored by exact RHAE on five behavioral scenarios",
+    "objective_gain": 38.97459222932361,
+    "pre_tune_game_scores": {
+      "animation_gate": 9.861932938856016,
+      "delayed_evidence": 81.06392248257328,
+      "fast_mechanic": 100.0,
+      "no_op_escape": 47.53451676528599,
+      "success_frontier": 16.666666666666664
+    },
+    "pre_tune_objective": 51.02540777067639,
+    "scenarios": [
+      "fast_mechanic",
+      "delayed_evidence",
+      "no_op_escape",
+      "animation_gate",
+      "success_frontier"
+    ],
+    "selected": {
+      "hard_stall": 12,
+      "no_impact_streak": 3,
+      "no_impact_threshold": 0.75,
+      "soft_stall": 6,
+      "success_protect": 18,
+      "zero_score_triage": 24
+    },
+    "selected_game_scores": {
+      "animation_gate": 100.0,
+      "delayed_evidence": 100.0,
+      "fast_mechanic": 100.0,
+      "no_op_escape": 50.0,
+      "success_frontier": 100.0
+    },
+    "selected_objective": 90.0,
+    "top_five": [
+      {
+        "game_scores": {
+          "animation_gate": 100.0,
+          "delayed_evidence": 100.0,
+          "fast_mechanic": 100.0,
+          "no_op_escape": 50.0,
+          "success_frontier": 100.0
+        },
+        "objective": 90.0,
+        "parameters": {
+          "hard_stall": 12,
+          "no_impact_streak": 3,
+          "no_impact_threshold": 0.75,
+          "soft_stall": 6,
+          "success_protect": 18,
+          "zero_score_triage": 24
+        }
+      },
+      {
+        "game_scores": {
+          "animation_gate": 100.0,
+          "delayed_evidence": 100.0,
+          "fast_mechanic": 100.0,
+          "no_op_escape": 47.53451676528599,
+          "success_frontier": 100.0
+        },
+        "objective": 89.5069033530572,
+        "parameters": {
+          "hard_stall": 12,
+          "no_impact_streak": 3,
+          "no_impact_threshold": 0.75,
+          "soft_stall": 8,
+          "success_protect": 18,
+          "zero_score_triage": 24
+        }
+      },
+      {
+        "game_scores": {
+          "animation_gate": 100.0,
+          "delayed_evidence": 100.0,
+          "fast_mechanic": 96.05555555555556,
+          "no_op_escape": 47.53451676528599,
+          "success_frontier": 100.0
+        },
+        "objective": 88.7180144641683,
+        "parameters": {
+          "hard_stall": 12,
+          "no_impact_streak": 3,
+          "no_impact_threshold": 0.75,
+          "soft_stall": 4,
+          "success_protect": 18,
+          "zero_score_triage": 24
+        }
+      },
+      {
+        "game_scores": {
+          "animation_gate": 100.0,
+          "delayed_evidence": 81.06392248257328,
+          "fast_mechanic": 100.0,
+          "no_op_escape": 50.0,
+          "success_frontier": 100.0
+        },
+        "objective": 86.21278449651466,
+        "parameters": {
+          "hard_stall": 16,
+          "no_impact_streak": 3,
+          "no_impact_threshold": 0.75,
+          "soft_stall": 6,
+          "success_protect": 18,
+          "zero_score_triage": 24
+        }
+      },
+      {
+        "game_scores": {
+          "animation_gate": 100.0,
+          "delayed_evidence": 81.06392248257328,
+          "fast_mechanic": 100.0,
+          "no_op_escape": 47.53451676528599,
+          "success_frontier": 100.0
+        },
+        "objective": 85.71968784957186,
+        "parameters": {
+          "hard_stall": 16,
+          "no_impact_streak": 3,
+          "no_impact_threshold": 0.75,
+          "soft_stall": 8,
+          "success_protect": 18,
+          "zero_score_triage": 24
+        }
+      }
+    ]
+  }
+}

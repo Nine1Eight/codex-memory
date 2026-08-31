@@ -1,0 +1,118 @@
+{
+  "artifact": "arc3-ghostbridge-v2-qwen38-true-scored-run-FINAL.ipynb",
+  "sha256": "da6141ea5870786c18c81405246f39b1e171afa9355d39ddc81d4ed56ba41f54",
+  "size_bytes": 122757,
+  "notebook_schema_valid": true,
+  "compiled_code_cells": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27
+  ],
+  "verification": {
+    "single_environment_pass": true,
+    "post_move_adl_fail_closed": true,
+    "post_move_adl_degraded_recovery": true,
+    "model_endpoint_smoke_test": true,
+    "served_model_identity_guard": true,
+    "strict_log_coverage_on_submission": true,
+    "recursive_pyproject_bootstrap_removed": true,
+    "vcs_clone_bootstrap_removed": true,
+    "stale_two_pass_metadata_removed": true,
+    "execution_state_clean": true
+  },
+  "kaggle": {
+    "accelerator": "nvidiaRtxPro6000",
+    "gpu_enabled": true,
+    "internet_enabled": false,
+    "dataSources": [
+      {
+        "sourceType": "competition",
+        "sourceId": 133468
+      },
+      {
+        "sourceType": "datasetVersion",
+        "sourceId": 16761237
+      },
+      {
+        "sourceType": "datasetVersion",
+        "sourceId": 16033726
+      },
+      {
+        "sourceType": "modelInstanceVersion",
+        "sourceId": 966079
+      }
+    ]
+  },
+  "contracts": {
+    "served_model": "Qwen/Qwen3.8-27B-FP8",
+    "model_ref": "foysalemonshanto/qwen3-8-27b-fp8-repacked-v1",
+    "model_source_id": 966079,
+    "competition_source_id": 133468,
+    "taaf_source_id": 16761237,
+    "vllm_wheelhouse_source_id": 16033726,
+    "ls20_action_cap": 309,
+    "all_other_games_action_cap": null,
+    "global_nonbinding_action_sentinel": 1000000000,
+    "stall_escape_actions": 6,
+    "stall_hard_actions": 12
+  },
+  "legacy_qwen36_references": [
+    {
+      "cell": 4,
+      "line": "LEGACY_TAAF_MODEL_REF = \"driessmit1/vrfai-qwen3-6-27b-fp8-hf-snapshot\""
+    },
+    {
+      "cell": 4,
+      "line": "if \"qwen3.6\" in identity or \"qwen3-6\" in identity:"
+    },
+    {
+      "cell": 4,
+      "line": "raise RuntimeError(f\"WRONG MODEL RESOLVED: Qwen3.6 at {model_dir}\")"
+    },
+    {
+      "cell": 4,
+      "line": "# One canonical input map. Immutable TAAF Qwen3.6 lookup keys are aliases only."
+    },
+    {
+      "cell": 9,
+      "line": "\"/kaggle/input/vrfai-qwen3-6-27b-fp8-hf-snapshot\","
+    },
+    {
+      "cell": 9,
+      "line": "\"/kaggle/input/datasets/driessmit1/vrfai-qwen3-6-27b-fp8-hf-snapshot\","
+    },
+    {
+      "cell": 9,
+      "line": "patched = patched.replace(\"vrfai/Qwen3.6-27B-FP8\", ANALYZER_MODEL_ID)"
+    }
+  ],
+  "legacy_qwen36_reference_policy": "compatibility alias, wrong-model guard, and setup rewrite only; never active model selection",
+  "runtime_unit_tests": {
+    "cap_contract": "PASS",
+    "six_action_policy_escape": "PASS",
+    "twelve_action_hard_stall": "PASS",
+    "progress_resets_no_progress": "PASS",
+    "normal_post_move_adl": "PASS",
+    "forced_rich_post_failure_degraded_recovery": "PASS",
+    "unrepaired_adl_debt_blocks_next_action": "PASS",
+    "action_boundary_logs_exactly_one_move": "PASS",
+    "ls20_stop_overlay_at_309": "PASS",
+    "original_terminal_stop_preserved": "PASS"
+  },
+  "environment_limitations": {
+    "full_kaggle_execution_performed": false,
+    "reason": "No Kaggle credential file/auth environment variables and no mounted Kaggle competition/model inputs in this execution environment."
+  }
+}

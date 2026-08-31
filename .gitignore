@@ -51,3 +51,8 @@ temp/
 *.pdf
 *.sqlite
 *.db
+
+# Explicit Android ARC/Kaggle exports requested for this private memory repo
+!android-local/arc-kaggle/**/*.zip
+!android-local/arc-kaggle/**/*.tar
+!android-local/arc-kaggle/**/*.tar.gz

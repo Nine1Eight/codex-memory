@@ -24,3 +24,10 @@ build products, model weights, archives, APK/DMG binaries, PDF corpora, database
 larger than 90 MB. Third-party upstream clones and deleted Trash contents are not mirrored.
 
 The original local projects were not modified by this snapshot operation.
+
+## Android ARC/Kaggle export
+
+`android-local/arc-kaggle/` contains ARC- and Kaggle-named notebooks, scripts,
+reports, bundles, and project directories discovered in Android shared storage.
+Paths are preserved relative to shared storage. Embedded credentials are redacted
+from the backup copy, and files at or above GitHub's per-file limit are omitted.

@@ -1,0 +1,22 @@
+{
+  "format": "B8NN/1.0",
+  "name": "ARC-AGI-3 Swarm Neural Node",
+  "source_sha256": "a1499d70d426bbc7e3bbfa9ba4cc56b4e25714f3cc222975a0da870b76e7c7ce",
+  "source_bytes": 155971,
+  "agent_count_extracted": 100,
+  "tier_counts": {
+    "1": 5,
+    "2": 15,
+    "3": 20,
+    "4": 30,
+    "5": 30
+  },
+  "compact_json_bytes": 31969,
+  "compact_compressed_bytes": 7073,
+  "compact_glyphs": 7073,
+  "full_json_bytes": 190584,
+  "full_compressed_bytes": 49374,
+  "full_glyphs": 49374,
+  "compression_ratio_full_vs_source": 0.3166,
+  "glyph_encoding": "byte b -> chr(0x2800+b)"
+}

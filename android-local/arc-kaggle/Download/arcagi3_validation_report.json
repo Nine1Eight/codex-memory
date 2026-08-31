@@ -1,0 +1,1700 @@
+{
+  "checks": {
+    "click_payloads_bounded": true,
+    "click_win": true,
+    "click_zero_epistemic_leakage": true,
+    "corridor_win": true,
+    "corridor_zero_epistemic_leakage": true
+  },
+  "click": {
+    "actions": 3,
+    "game_id": "validation-click",
+    "levels_completed": 1,
+    "plans": [
+      {
+        "action_name": "ACTION6",
+        "candidate_id": "ACTION6:4:4",
+        "data": {
+          "x": 4,
+          "y": 4
+        },
+        "expected_value": 12.527228125,
+        "oracle_score": 9.277566341426589,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION6",
+        "candidate_id": "ACTION6:6:6",
+        "data": {
+          "x": 6,
+          "y": 6
+        },
+        "expected_value": 9.629559620257549,
+        "oracle_score": 6.250960409592764,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION6",
+        "candidate_id": "ACTION6:6:2",
+        "data": {
+          "x": 6,
+          "y": 2
+        },
+        "expected_value": 6.657096329437471,
+        "oracle_score": 3.4121996652229902,
+        "phantom_risk": 0.0
+      }
+    ],
+    "policy": {
+      "causal_edges": [
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 1.6666666666666667,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.5,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 8.333333333333337,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:2",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.9999999999999999,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.5,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 2.1666666666666665,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:6",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 1.1666666666666665,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:6",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 7.3333333333333375,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:6",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.9999999999999999,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:6",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.3333333333333333,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:2:6",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7905694150420949,
+          "simulated_support": 1.6666666666666667,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:4:4",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.8333333333333333,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:4:4",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 8.833333333333336,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:4:4",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6324555320336759,
+          "simulated_support": 0.6666666666666666,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:4:4",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.0,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:4:4",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 2.1666666666666665,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.9999999999999999,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 7.500000000000004,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:2",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.9999999999999999,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.3333333333333333,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8366600265340756,
+          "simulated_support": 2.333333333333333,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:6",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7337993857053428,
+          "simulated_support": 1.1666666666666665,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:6",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 7.500000000000004,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:6",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6324555320336759,
+          "simulated_support": 0.6666666666666666,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:6",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5,
+          "simulated_support": 0.3333333333333333,
+          "source": "validation-click|L0|cc93ef14b20eed3a:8x8|ACTION6:6:6",
+          "support": 0.0,
+          "target": "WIN"
+        }
+      ],
+      "global_action_stats": {
+        "ACTION6": {
+          "changed": 0,
+          "failures": 0,
+          "no_change": 2,
+          "progress": 0,
+          "total_utility": -2.3,
+          "trials": 2,
+          "wins": 0
+        }
+      },
+      "last_difference": {
+        "changed_bbox": null,
+        "changed_cells": 0,
+        "color_count_delta": 0,
+        "game_over": false,
+        "levels_delta": 0,
+        "outcome_class": "NO_CHANGE",
+        "palette_invariant_change": false,
+        "pixel_change_fraction": 0.0,
+        "source": {
+          "canonical_hash": "b42863f5fb3386fb4923a1c42c56c737a3e9e4fc061e7a3f7e7250c6caa75cce",
+          "color_count": 2,
+          "raw_hash": "5b4a5b77f1ca44705e7a630739988c20e1ec1085801a4d7e65887db4effdca93",
+          "shape": [
+            8,
+            8
+          ],
+          "structural_hash": "cc93ef14b20eed3a9dc4aab1ff3296a84b2b7c0759fb8d5aed03417dadf63e14"
+        },
+        "structural_change": false,
+        "target": {
+          "canonical_hash": "b42863f5fb3386fb4923a1c42c56c737a3e9e4fc061e7a3f7e7250c6caa75cce",
+          "color_count": 2,
+          "raw_hash": "5b4a5b77f1ca44705e7a630739988c20e1ec1085801a4d7e65887db4effdca93",
+          "shape": [
+            8,
+            8
+          ],
+          "structural_hash": "cc93ef14b20eed3a9dc4aab1ff3296a84b2b7c0759fb8d5aed03417dadf63e14"
+        },
+        "total_cells": 64,
+        "utility": -1.15,
+        "win": false
+      },
+      "max_epistemic_leakage": 0.0,
+      "stall_count": 2,
+      "steps": 3
+    },
+    "state": "WIN",
+    "win_levels": 1,
+    "won": true
+  },
+  "corridor": {
+    "actions": 20,
+    "game_id": "validation-corridor",
+    "levels_completed": 1,
+    "plans": [
+      {
+        "action_name": "ACTION2",
+        "candidate_id": "ACTION2",
+        "data": {},
+        "expected_value": 13.275820625000001,
+        "oracle_score": 9.91729543385988,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION5",
+        "candidate_id": "ACTION5",
+        "data": {},
+        "expected_value": 12.480806406250002,
+        "oracle_score": 8.640714245800826,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": 11.008469714152202,
+        "oracle_score": 7.745655259786876,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": 14.072247636814398,
+        "oracle_score": 10.149527987307042,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION3",
+        "candidate_id": "ACTION3",
+        "data": {},
+        "expected_value": 12.223958091307756,
+        "oracle_score": 8.151717642547382,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION5",
+        "candidate_id": "ACTION5",
+        "data": {},
+        "expected_value": 10.21672378669426,
+        "oracle_score": 6.22167297678156,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION3",
+        "candidate_id": "ACTION3",
+        "data": {},
+        "expected_value": 8.295141638972083,
+        "oracle_score": 4.596109546335869,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION3",
+        "candidate_id": "ACTION3",
+        "data": {},
+        "expected_value": 9.608203428909766,
+        "oracle_score": 5.890956278375084,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION1",
+        "candidate_id": "ACTION1",
+        "data": {},
+        "expected_value": 8.826036386263917,
+        "oracle_score": 4.90607443568806,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": -7.062358046304735,
+        "oracle_score": -9.269890875969017,
+        "phantom_risk": 0.7977240352174656
+      },
+      {
+        "action_name": "ACTION2",
+        "candidate_id": "ACTION2",
+        "data": {},
+        "expected_value": 4.265006990258161,
+        "oracle_score": 1.1089595083194674,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION1",
+        "candidate_id": "ACTION1",
+        "data": {},
+        "expected_value": 3.518034063023169,
+        "oracle_score": 0.4985515295649505,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": -4.691385789031054,
+        "oracle_score": -7.705572476327645,
+        "phantom_risk": 0.7867957924694432
+      },
+      {
+        "action_name": "ACTION2",
+        "candidate_id": "ACTION2",
+        "data": {},
+        "expected_value": 8.437546940407735,
+        "oracle_score": 4.938692365900147,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION5",
+        "candidate_id": "ACTION5",
+        "data": {},
+        "expected_value": 8.769163356711198,
+        "oracle_score": 5.301778705903484,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": 10.571242450846785,
+        "oracle_score": 6.863468433034077,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION3",
+        "candidate_id": "ACTION3",
+        "data": {},
+        "expected_value": 10.878050308800471,
+        "oracle_score": 6.731249310380369,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": 2.913652791860822,
+        "oracle_score": -0.20300392518460675,
+        "phantom_risk": 0.816496580927726
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": 7.70166947675319,
+        "oracle_score": 3.992536413494409,
+        "phantom_risk": 0.0
+      },
+      {
+        "action_name": "ACTION4",
+        "candidate_id": "ACTION4",
+        "data": {},
+        "expected_value": 8.130318904364694,
+        "oracle_score": 4.699808859891652,
+        "phantom_risk": 0.0
+      }
+    ],
+    "policy": {
+      "causal_edges": [
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.9109265799407509,
+          "simulated_support": 4.875,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION1",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7745966692414834,
+          "simulated_support": 1.5,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION1",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 10.875,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION1",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.816496580927726,
+          "simulated_support": 2.0,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION1",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6546536707079771,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION1",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8509629433967631,
+          "simulated_support": 2.625,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 12.0,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION2",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6546536707079771,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.9067647005823629,
+          "simulated_support": 4.625,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION3",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5773502691896257,
+          "simulated_support": 0.5,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION3",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 9.125,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION3",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7071067811865476,
+          "simulated_support": 1.0,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION3",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6546536707079771,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION3",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 9.875,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION4",
+          "support": 2.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6382847385042254,
+          "simulated_support": 1.375,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION4",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.9173789611800793,
+          "simulated_support": 10.625,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION4",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6831300510639732,
+          "simulated_support": 1.75,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION4",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.39735970711951313,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION4",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8563488385776752,
+          "simulated_support": 2.75,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION5",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7071067811865476,
+          "simulated_support": 1.0,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION5",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 10.375,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION5",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7867957924694432,
+          "simulated_support": 1.625,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION5",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|25c2f00c8ea490ad:8x8|ACTION5",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 3.75,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION1",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 1.25,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION1",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 13.75,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION1",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 1.0,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION1",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION1",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.816496580927726,
+          "simulated_support": 2.0,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6546536707079771,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 15.625,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION2",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7453559924999299,
+          "simulated_support": 1.25,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5222329678670935,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 10.5,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION3",
+          "support": 1.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7071067811865476,
+          "simulated_support": 1.0,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION3",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.936441710371274,
+          "simulated_support": 7.125,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION3",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7276068751089989,
+          "simulated_support": 1.125,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION3",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION3",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 10.875,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION4",
+          "support": 2.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6201736729460423,
+          "simulated_support": 1.25,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION4",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8481145238787242,
+          "simulated_support": 5.125,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION4",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7071067811865476,
+          "simulated_support": 2.0,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION4",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5222329678670935,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION4",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8660254037844386,
+          "simulated_support": 3.0,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION5",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7071067811865476,
+          "simulated_support": 1.0,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION5",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 14.125,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION5",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7867957924694432,
+          "simulated_support": 1.625,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION5",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|8deaa7820d19077c:8x8|ACTION5",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 1.5,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION1",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION1",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 5.5,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION1",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.625,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION1",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION1",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 6.375,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION2",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 3.75,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION3",
+          "support": 1.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5222329678670935,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION3",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.861356769214109,
+          "simulated_support": 2.875,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION3",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6546536707079771,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION3",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION3",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 5.25,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION4",
+          "support": 1.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION4",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7977240352174656,
+          "simulated_support": 1.75,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION4",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5773502691896257,
+          "simulated_support": 0.5,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION4",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION4",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.75,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION5",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.5,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION5",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 6.125,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION5",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.625,
+          "source": "validation-corridor|L0|badd684bff001e98:8x8|ACTION5",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.5,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION1",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION1",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 3.0,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION1",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION1",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 3.0,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION2",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 2.0,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION3",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION3",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 1.5,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION3",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION3",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION3",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 3.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION4",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION4",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.5,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION4",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.0,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION4",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION4",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION5",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION5",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 3.25,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION5",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION5",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|ecd02c9cb4223f83:8x8|ACTION5",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8853156407653622,
+          "simulated_support": 3.625,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION1",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7608859102526822,
+          "simulated_support": 1.375,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION1",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 12.875,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION1",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7867957924694432,
+          "simulated_support": 1.625,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION1",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5773502691896257,
+          "simulated_support": 0.5,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION1",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8703882797784892,
+          "simulated_support": 3.125,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION2",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7276068751089989,
+          "simulated_support": 1.125,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION2",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 10.125,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION2",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7453559924999299,
+          "simulated_support": 1.25,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION2",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.5222329678670935,
+          "simulated_support": 0.375,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION2",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 10.0,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION3",
+          "support": 1.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7745966692414834,
+          "simulated_support": 1.5,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION3",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.9529144646879353,
+          "simulated_support": 9.875,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION3",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8388704928078611,
+          "simulated_support": 2.375,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION3",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION3",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 14.0,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION4",
+          "support": 2.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7745966692414834,
+          "simulated_support": 1.5,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION4",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.87642223957918,
+          "simulated_support": 6.625,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION4",
+          "support": 0.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 2.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6695340634119862,
+          "simulated_support": 1.625,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION4",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.4472135954999579,
+          "simulated_support": 0.25,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION4",
+          "support": 0.0,
+          "target": "WIN"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.8563488385776752,
+          "simulated_support": 2.75,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION5",
+          "support": 0.0,
+          "target": "CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.6831300510639732,
+          "simulated_support": 0.875,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION5",
+          "support": 0.0,
+          "target": "GAME_OVER"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 1.0,
+          "phantom_score": 0.0,
+          "simulated_support": 7.0,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION5",
+          "support": 1.0,
+          "target": "NO_CHANGE"
+        },
+        {
+          "contradictions": 1.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.7453559924999299,
+          "simulated_support": 1.25,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION5",
+          "support": 0.0,
+          "target": "PROGRESS"
+        },
+        {
+          "contradictions": 0.0,
+          "empirical_confidence": 0.0,
+          "phantom_score": 0.0,
+          "simulated_support": 0.125,
+          "source": "validation-corridor|L0|f90d7eb4a1af3885:8x8|ACTION5",
+          "support": 0.0,
+          "target": "WIN"
+        }
+      ],
+      "global_action_stats": {
+        "ACTION1": {
+          "changed": 0,
+          "failures": 0,
+          "no_change": 2,
+          "progress": 0,
+          "total_utility": -2.3,
+          "trials": 2,
+          "wins": 0
+        },
+        "ACTION2": {
+          "changed": 0,
+          "failures": 0,
+          "no_change": 3,
+          "progress": 0,
+          "total_utility": -3.4499999999999997,
+          "trials": 3,
+          "wins": 0
+        },
+        "ACTION3": {
+          "changed": 3,
+          "failures": 0,
+          "no_change": 1,
+          "progress": 0,
+          "total_utility": -2.134375,
+          "trials": 4,
+          "wins": 0
+        },
+        "ACTION4": {
+          "changed": 7,
+          "failures": 0,
+          "no_change": 0,
+          "progress": 0,
+          "total_utility": -2.296875,
+          "trials": 7,
+          "wins": 0
+        },
+        "ACTION5": {
+          "changed": 0,
+          "failures": 0,
+          "no_change": 3,
+          "progress": 0,
+          "total_utility": -3.4499999999999997,
+          "trials": 3,
+          "wins": 0
+        }
+      },
+      "last_difference": {
+        "changed_bbox": [
+          3,
+          4,
+          4,
+          4
+        ],
+        "changed_cells": 2,
+        "color_count_delta": 0,
+        "game_over": false,
+        "levels_delta": 0,
+        "outcome_class": "CHANGE",
+        "palette_invariant_change": true,
+        "pixel_change_fraction": 0.03125,
+        "source": {
+          "canonical_hash": "badd684bff001e98ce78bd58398ea4b724c9ea4d51c947d018992ea667121194",
+          "color_count": 3,
+          "raw_hash": "1568b53353d109238bd926493c5ed59cb066f7aadc4405b533260514621abd03",
+          "shape": [
+            8,
+            8
+          ],
+          "structural_hash": "badd684bff001e98ce78bd58398ea4b724c9ea4d51c947d018992ea667121194"
+        },
+        "structural_change": true,
+        "target": {
+          "canonical_hash": "ced2eb169340430519c16b4ede7fa55df3ff6dea4b21e8df6b09043256162303",
+          "color_count": 3,
+          "raw_hash": "daaeb2eea62ab486d17a2860154654dcf7a01c92665c4d9e0b0dff309792b995",
+          "shape": [
+            8,
+            8
+          ],
+          "structural_hash": "ecd02c9cb4223f83a74a0a0e336f4d294be34670d1813683e6ec6f0cc611709f"
+        },
+        "total_cells": 64,
+        "utility": -0.328125,
+        "win": false
+      },
+      "max_epistemic_leakage": 0.0,
+      "stall_count": 0,
+      "steps": 20
+    },
+    "state": "WIN",
+    "win_levels": 1,
+    "won": true
+  },
+  "passed": true
+}

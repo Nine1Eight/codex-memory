@@ -1,0 +1,21 @@
+{
+  "id": "wethepeople918/duckwadl-adl-v3-causal-frontier-scored-run",
+  "title": "DuckWADL ADL v3 Causal Frontier Scored Run",
+  "code_file": "duckwadl-adl-v3-causal-frontier-scored-run.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "machine_shape": "NvidiaRtxPro6000",
+  "dataset_sources": [
+    "jeroencottaar/taaf-kaggle-source-share",
+    "driessmit1/arc3-vllm-h100-wheelhouse-v3",
+    "driessmit1/vrfai-qwen3-6-27b-fp8-hf-snapshot"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}

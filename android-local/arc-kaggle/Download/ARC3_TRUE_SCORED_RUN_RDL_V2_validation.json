@@ -1,0 +1,94 @@
+{
+  "checks": {
+    "agent_output": true,
+    "competition_mode": true,
+    "final_output_manifest": true,
+    "gateway_submission_preserved": true,
+    "gateway_wait": true,
+    "ls20_309": true,
+    "one_pass": true,
+    "qwen38": true,
+    "rdl_mutation_disabled": true,
+    "rdl_observational": true,
+    "rdl_source_scan_disabled": true,
+    "submission_path": true,
+    "true_submission_detection": true
+  },
+  "embedded_multiverse_oracle": {
+    "clean_install": "PASS",
+    "glyph_canon_definitions": 333,
+    "hidden_eval_mode": "observational",
+    "rdl_semantic_families": 16,
+    "version": "2.0.0",
+    "wheel_sha256": "8adf90401004ac59b57066b2c71ab064715d4b0373e154eda70d9c02a44d2678",
+    "wheel_size_bytes": 95797
+  },
+  "johnny5_repairs": {
+    "kaggle_gpu_metadata": true,
+    "submission_contract": "gateway parquet preserved on true rerun; validated manual fallback otherwise",
+    "undefined_no_impact_constants_fixed": {
+      "MAX_NO_IMPACT_ACTIONS": {
+        "definitions": 1,
+        "references": 5
+      },
+      "NO_IMPACT_BAND_THRESHOLD": {
+        "definitions": 1,
+        "references": 3
+      },
+      "NO_IMPACT_BAND_WARMUP": {
+        "definitions": 1,
+        "references": 2
+      },
+      "NO_IMPACT_BAND_WINDOW": {
+        "definitions": 1,
+        "references": 2
+      }
+    }
+  },
+  "notebook": "ARC3_TRUE_SCORED_RUN_RDL_V2_JOHNNY5.ipynb",
+  "notebook_sha256": "14eef945726d46522eb46e7f33cf962cffe13172487221d31c63c3658b231f9a",
+  "notebook_validation": {
+    "all_saved_outputs_stripped": true,
+    "cells": 36,
+    "code_cells": 19,
+    "compile_errors": [],
+    "compile_with_top_level_await": "PASS",
+    "nbformat": "PASS"
+  },
+  "output_contract": {
+    "diagnostic": [
+      "true_scored_run_output_manifest.json",
+      "rdl_runtime_manifest.json",
+      "auto_input_manifest.json",
+      "auto_runtime_audit.json",
+      "rdl_observational_events.jsonl",
+      "dwe_move_events.jsonl",
+      "ghostbridge_premove_pre_move_events.jsonl",
+      "dwe_game_summaries.jsonl"
+    ],
+    "my_agent_sha256": "d29e59fade42378b2144feac3d0d16eb2b00d67dbd053ff6ee78804c27ad9d09",
+    "required": [
+      "my_agent.py",
+      "submission.parquet"
+    ]
+  },
+  "required_runtime_inputs": {
+    "competition": "arc-prize-2026-arc-agi-3",
+    "datasets": [
+      "jeroencottaar/taaf-kaggle-source-share",
+      "driessmit1/arc3-vllm-h100-wheelhouse-v3"
+    ],
+    "internet": false,
+    "model": "foysalemonshanto/qwen3-8-27b-fp8-repacked-v1/pytorch/hf-fp8/1",
+    "model_id": "Qwen/Qwen3.8-27B-FP8"
+  },
+  "runtime_scope": {
+    "actual_kaggle_gateway_executed_in_this_session": false,
+    "leaderboard_score_claimed": false,
+    "note": "Static/packaging/clean-wheel validation only; official score is produced only by a Kaggle competition rerun against the gateway."
+  },
+  "schema": "arc3.true-scored-run.rdl-v2.static-validation.v1",
+  "source_notebook": "johnny5.ipynb",
+  "source_notebook_sha256": "b55c5ce23a4978c730e98122d39f729bd2d5f15f37df1b2e815966ca0a685a7a",
+  "status": "PASS"
+}

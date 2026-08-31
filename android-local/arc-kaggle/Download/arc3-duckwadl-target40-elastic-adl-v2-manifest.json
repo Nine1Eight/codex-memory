@@ -1,0 +1,23 @@
+{
+  "notebook": "arc3-duckwadl-target40-elastic-adl-v2.ipynb",
+  "sha256": "87a3750c991ccf10fb38bad8b24ec554a2c1773ad93471046b33b47c38afbc8e",
+  "cells": 32,
+  "code_cells": 15,
+  "syntax_valid": true,
+  "base": "DuckWADL_ADL_v3_Kaggle_True_Scored_Run.ipynb",
+  "target_candidate_pool": 10,
+  "target_game_score_regime": ">=40% via depth/efficiency proxy",
+  "features": [
+    "exponential level-completion triage evidence",
+    "early Level-1 speed bonus",
+    "dynamic flatline budget decay",
+    "elastic top-10 candidate displacement",
+    "12->10->8 global probe scaling",
+    "asynchronous triage side-channel",
+    "strict synchronous environment action ordering",
+    "short raw chat history / compact causal memory",
+    "vLLM prefix caching flag for direct vLLM startup",
+    "fail-open allocator",
+    "canonical Duck/TAAF submission ownership"
+  ]
+}

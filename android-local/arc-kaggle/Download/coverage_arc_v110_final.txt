@@ -1,0 +1,39 @@
+Name                                       Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------------
+integrations/kaggle_starter/my_agent.py       21      2      0      0    90%   36, 39
+multiverse_oracle/__init__.py                 13      0      0      0   100%
+multiverse_oracle/adl_adapter.py              18      0      0      0   100%
+multiverse_oracle/arcagi3.py                 668     82    226     56    83%   134, 136, 138, 140, 142, 144, 146, 163, 169, 171, 175, 182, 185, 189, 192, 194->200, 197, 199, 205, 213, 234, 275, 277, 280, 285, 287, 298-300, 317, 325-334, 338-339, 381, 400-401, 409, 411, 444, 460-461, 474, 482-483, 496, 498, 518, 590, 597, 615, 747, 765-775, 829-831, 850, 865, 873->863, 877, 925, 1029->1031, 1035, 1038->1040, 1042->1056, 1049, 1054, 1080-1082
+multiverse_oracle/arcagi3_agent.py            29      5      4      0    79%   39-43
+multiverse_oracle/arcagi3_validation.py      103     12     16      3    86%   105, 109, 141-149, 153
+multiverse_oracle/causal.py                   57      0     18      0   100%
+multiverse_oracle/collapse.py                 46      1     20      1    97%   60
+multiverse_oracle/detector.py                 45      0     10      0   100%
+multiverse_oracle/drift.py                    20      0     10      0   100%
+multiverse_oracle/ghostbridge_adapter.py      14      0      0      0   100%
+multiverse_oracle/gridworld.py               173      3     66      6    96%   104, 150->183, 165->153, 169->171, 184, 209
+multiverse_oracle/mathutils.py                38      0      8      0   100%
+multiverse_oracle/oracle.py                   60      4      6      0    94%   16, 22, 31, 39
+multiverse_oracle/persistence.py              30      1      2      1    94%   45
+multiverse_oracle/planner.py                  53      0     20      0   100%
+multiverse_oracle/provenance.py               24      0      8      1    97%   29->33
+multiverse_oracle/session.py                  47      1     10      0    98%   19
+multiverse_oracle/types.py                    90      0     16      0   100%
+multiverse_oracle/validation.py               62      4      6      2    91%   90->107, 131-133, 137
+tests/test_adl_adapter.py                      7      0      0      0   100%
+tests/test_arcagi3.py                        267      2     10      1    99%   90, 346
+tests/test_arcagi3_validation.py               5      0      0      0   100%
+tests/test_causal.py                          22      0      4      0   100%
+tests/test_cli.py                             23      0      0      0   100%
+tests/test_collapse.py                        22      0      0      0   100%
+tests/test_detector.py                        16      0      0      0   100%
+tests/test_edge_cases.py                     161      3      2      0    98%   168, 170, 172
+tests/test_gridworld_e2e.py                   22      0      0      0   100%
+tests/test_persistence.py                     13      0      0      0   100%
+tests/test_planner.py                         12      0      0      0   100%
+tests/test_provenance.py                      13      0      0      0   100%
+tests/test_self_validation.py                  5      0      0      0   100%
+tests/test_session.py                         21      1      0      0    95%   34
+tests/test_validation.py                       9      0      0      0   100%
+--------------------------------------------------------------------------------------
+TOTAL                                       2229    121    462     71    92%
