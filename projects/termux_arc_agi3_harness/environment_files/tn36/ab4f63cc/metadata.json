@@ -1,0 +1,20 @@
+{
+  "game_id": "tn36-ab4f63cc",
+  "title": "TN36",
+  "default_fps": 3,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/true_naming",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    23,
+    22,
+    26,
+    37,
+    25,
+    56,
+    61
+  ],
+  "local_dir": "environment_files/tn36/ab4f63cc",
+  "date_downloaded": "2026-03-23T01:12:51.708975+00:00"
+}

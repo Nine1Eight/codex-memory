@@ -1,0 +1,46 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.token
+token
+.cache/
+.huggingface/
+huggingface/token
+
+# Runtime data
+data/
+logs/
+tmp/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+tok-venv/
+vilenv/
+hf_multi_space_build/*/.venv/
+
+# Node
+node_modules/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+
+# Android / Termux noise
+.storage/
+termux.properties

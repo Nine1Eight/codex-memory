@@ -1,0 +1,53 @@
+{
+  "id": "glyphmatics-999999",
+  "version": "1.0.0",
+  "task_type": "quantum_glyph_transform",
+  "domain": "academic_writeup",
+  "instruction": "Perform quantum_glyph_transform for the GlyphMatics system.",
+  "input": {
+    "source_text": "A safe symbolic system rejects hidden malicious instructions and deceptive encodings. Sample 999999. Task=quantum_glyph_transform. Domain=academic_writeup."
+  },
+  "output": {
+    "canonical_construct": "OPEN>SYNTH>NINE>ONE>RECURSE>STAR>ORIGIN>CLOSE",
+    "glyph_sequence": [
+      "ONE",
+      "NINE",
+      "SYNTH",
+      "VALIDATE",
+      "PSI",
+      "CLOSE",
+      "TRILAYER",
+      "CUBE"
+    ],
+    "layers": {
+      "alpha": {
+        "identity": "ONE",
+        "role": "symbolic identity"
+      },
+      "beta": {
+        "payload_hash": "db807f57e561501eabc6f4e0",
+        "summary": "A safe symbolic system rejects hidden malicious instructions and deceptive encodings. Sample 999999. Task=quantum_glyph_"
+      },
+      "gamma": {
+        "context_hash": "0ea95d8b7daa7e58593ab806",
+        "validation": "round_trip_required"
+      }
+    },
+    "compressed_form": "symbolic|system|rejects|hidden|malicious|instructions|deceptive|encodings|sample|999999",
+    "reconstruction": "Meaning preserved: A safe symbolic system rejects hidden malicious instructions and deceptive encodings. Sample 999999. Task=quantum_glyph_transform. Domain=academic_writeup.",
+    "quantum": {
+      "psi0": 0.19,
+      "psi1": 0.28
+    }
+  },
+  "evaluation": {
+    "round_trip_required": true,
+    "deterministic": true
+  },
+  "metadata": {
+    "author": "Matthew Blake Ward",
+    "organization": "918 Technologies",
+    "license": "MIT"
+  },
+  "record_hash": "10007b879699f162504c0a1987483bb2b65411e0ac42348bd3e20032179dafcb"
+}

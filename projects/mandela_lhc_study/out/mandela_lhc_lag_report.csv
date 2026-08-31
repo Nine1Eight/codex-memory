@@ -1,0 +1,6 @@
+event_id,name,first_public_notice,nearest_lhc_window,lag_days,lag_class,proximity_score,confidence_0_1,source
+mandela_death,Nelson Mandela death,2010-09-09,First 7 TeV collisions,163,medium_31_180_days,0.404317,0.95,Fiona Broome public post
+fotl_cornucopia,Fruit of the Loom cornucopia,,,,undated_event_needs_research,,0.3,
+berenstain,Berenstain Bears spelling,,,,undated_event_needs_research,,0.3,
+monopoly_monocle,Monopoly Man monocle,,,,undated_event_needs_research,,0.3,
+pikachu_tail,Pikachu black tail tip,,,,undated_event_needs_research,,0.3,

@@ -1,0 +1,14 @@
+{
+  "id": "wethepeople918/arc-agi-3-adaptive-blindsight-policy-v5",
+  "title": "ARC AGI 3 Adaptive BlindSight Policy V5",
+  "code_file": "submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ]
+}

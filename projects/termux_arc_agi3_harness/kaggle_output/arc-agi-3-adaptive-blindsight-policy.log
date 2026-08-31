@@ -1,0 +1,76 @@
+[{"stream_name":"stderr","time":12.439827516,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":12.439949494,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":14.248529958,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":14.248568533,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":14.248578399,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":14.248582573,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":15.258536916,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":15.258574893,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":15.258580761,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":15.258585469,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":20.99001938,"data":"Looking in links: /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels\r\n"}
+,{"stream_name":"stdout","time":21.092132413,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arc_agi-0.9.8-py3-none-any.whl\r\n"}
+,{"stream_name":"stdout","time":21.092171331,"data":"Requirement already satisfied: python-dotenv in /usr/local/lib/python3.12/dist-packages (1.2.2)\r\n"}
+,{"stream_name":"stdout","time":21.092180757,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arcengine-0.9.3-py3-none-any.whl (from arc-agi)\r\n"}
+,{"stream_name":"stdout","time":21.092190529,"data":"Requirement already satisfied: flask\u003e=3.1.0 in /usr/local/lib/python3.12/dist-packages (from arc-agi) (3.1.3)\r\n"}
+,{"stream_name":"stdout","time":21.092194903,"data":"Requirement already satisfied: matplotlib\u003e=3.7.0 in /usr/local/lib/python3.12/dist-packages (from arc-agi) (3.10.0)\r\n"}
+,{"stream_name":"stdout","time":21.144465828,"data":"Requirement already satisfied: pydantic\u003e=2.0.0 in /usr/local/lib/python3.12/dist-packages (from arc-agi) (2.12.3)\r\n"}
+,{"stream_name":"stdout","time":21.144506191,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/pillow-12.2.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from arc-agi)\r\n"}
+,{"stream_name":"stdout","time":21.297181555,"data":"Requirement already satisfied: requests\u003e=2.31.0 in /usr/local/lib/python3.12/dist-packages (from arc-agi) (2.32.4)\r\n"}
+,{"stream_name":"stdout","time":21.297213484,"data":"Requirement already satisfied: numpy\u003e=1.24.0 in /usr/local/lib/python3.12/dist-packages (from arcengine\u003e=0.9.3-\u003earc-agi) (2.4.6)\r\n"}
+,{"stream_name":"stdout","time":21.297221049,"data":"Requirement already satisfied: blinker\u003e=1.9.0 in /usr/local/lib/python3.12/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (1.9.0)\r\n"}
+,{"stream_name":"stdout","time":21.297228784,"data":"Requirement already satisfied: click\u003e=8.1.3 in /usr/local/lib/python3.12/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (8.3.2)\r\n"}
+,{"stream_name":"stdout","time":21.297236055,"data":"Requirement already satisfied: itsdangerous\u003e=2.2.0 in /usr/local/lib/python3.12/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (2.2.0)\r\n"}
+,{"stream_name":"stdout","time":21.297261008,"data":"Requirement already satisfied: jinja2\u003e=3.1.2 in /usr/local/lib/python3.12/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.6)\r\n"}
+,{"stream_name":"stdout","time":21.297266473,"data":"Requirement already satisfied: markupsafe\u003e=2.1.1 in /usr/local/lib/python3.12/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.0.3)\r\n"}
+,{"stream_name":"stdout","time":21.297271306,"data":"Requirement already satisfied: werkzeug\u003e=3.1.0 in /usr/local/lib/python3.12/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.8)\r\n"}
+,{"stream_name":"stdout","time":21.297275597,"data":"Requirement already satisfied: contourpy\u003e=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.3.3)\r\n"}
+,{"stream_name":"stdout","time":21.29728016,"data":"Requirement already satisfied: cycler\u003e=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (0.12.1)\r\n"}
+,{"stream_name":"stdout","time":21.297284859,"data":"Requirement already satisfied: fonttools\u003e=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (4.62.1)\r\n"}
+,{"stream_name":"stdout","time":21.348186361,"data":"Requirement already satisfied: kiwisolver\u003e=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.5.0)\r\n"}
+,{"stream_name":"stdout","time":21.348224021,"data":"Requirement already satisfied: packaging\u003e=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (26.0)\r\n"}
+,{"stream_name":"stdout","time":21.34823068,"data":"Requirement already satisfied: pyparsing\u003e=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (3.3.2)\r\n"}
+,{"stream_name":"stdout","time":21.348235936000002,"data":"Requirement already satisfied: python-dateutil\u003e=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (2.9.0.post0)\r\n"}
+,{"stream_name":"stdout","time":21.348241245,"data":"Requirement already satisfied: annotated-types\u003e=0.6.0 in /usr/local/lib/python3.12/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.7.0)\r\n"}
+,{"stream_name":"stdout","time":21.348246252,"data":"Requirement already satisfied: pydantic-core==2.41.4 in /usr/local/lib/python3.12/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (2.41.4)\r\n"}
+,{"stream_name":"stdout","time":21.348250794,"data":"Requirement already satisfied: typing-extensions\u003e=4.14.1 in /usr/local/lib/python3.12/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (4.15.0)\r\n"}
+,{"stream_name":"stdout","time":21.348255916,"data":"Requirement already satisfied: typing-inspection\u003e=0.4.2 in /usr/local/lib/python3.12/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.4.2)\r\n"}
+,{"stream_name":"stdout","time":21.348260662,"data":"Requirement already satisfied: charset_normalizer\u003c4,\u003e=2 in /usr/local/lib/python3.12/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.4.7)\r\n"}
+,{"stream_name":"stdout","time":21.348265884,"data":"Requirement already satisfied: idna\u003c4,\u003e=2.5 in /usr/local/lib/python3.12/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.11)\r\n"}
+,{"stream_name":"stdout","time":21.348270722,"data":"Requirement already satisfied: urllib3\u003c3,\u003e=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2.5.0)\r\n"}
+,{"stream_name":"stdout","time":21.348275518,"data":"Requirement already satisfied: certifi\u003e=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2026.2.25)\r\n"}
+,{"stream_name":"stdout","time":21.399064743,"data":"Requirement already satisfied: six\u003e=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil\u003e=2.7-\u003ematplotlib\u003e=3.7.0-\u003earc-agi) (1.17.0)\r\n"}
+,{"stream_name":"stdout","time":23.957355042,"data":"Installing collected packages: pillow, arcengine, arc-agi\r\n"}
+,{"stream_name":"stdout","time":23.957407255,"data":"  Attempting uninstall: pillow\r\n"}
+,{"stream_name":"stdout","time":24.315818161,"data":"    Found existing installation: pillow 11.3.0\r\n"}
+,{"stream_name":"stdout","time":24.315850795,"data":"    Uninstalling pillow-11.3.0:\r\n"}
+,{"stream_name":"stdout","time":24.723280136,"data":"      Successfully uninstalled pillow-11.3.0\r\n"}
+,{"stream_name":"stdout","time":25.386427455,"data":"\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n"}
+,{"stream_name":"stdout","time":25.386518468,"data":"ydata-profiling 4.18.4 requires numba\u003c0.63,\u003e=0.60, but you have numba 0.65.1 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":25.386525568,"data":"ydata-profiling 4.18.4 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.6 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":25.386531295,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":25.386558078,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.2.0 which is incompatible.\u001b[0m\u001b[31m\r\n"}
+,{"stream_name":"stdout","time":25.386565313,"data":"\u001b[0mSuccessfully installed arc-agi-0.9.8 arcengine-0.9.3 pillow-12.2.0\r\n"}
+,{"stream_name":"stdout","time":26.220484667,"data":"repo copied: /kaggle/working/ARC-AGI-3-Agents\n"}
+,{"stream_name":"stdout","time":26.238462583,"data":"wrote /kaggle/working/ARC-AGI-3-Agents/agents/my_agent.py\n"}
+,{"stream_name":"stdout","time":26.254596784,"data":"adaptive_priors.py not found in /kaggle/working; using empty priors\n"}
+,{"stream_name":"stdout","time":26.332921842,"data":"/kaggle/working/ARC-AGI-3-Agents\n"}
+,{"stream_name":"stdout","time":32.564137206,"data":"Traceback (most recent call last):\r\n"}
+,{"stream_name":"stdout","time":32.564219408,"data":"  File \"/kaggle/working/ARC-AGI-3-Agents/main.py\", line 20, in \u003cmodule\u003e\r\n"}
+,{"stream_name":"stdout","time":32.564229599,"data":"    from agents import AVAILABLE_AGENTS, Swarm\r\n"}
+,{"stream_name":"stdout","time":32.564236148,"data":"  File \"/kaggle/working/ARC-AGI-3-Agents/agents/__init__.py\", line 10, in \u003cmodule\u003e\r\n"}
+,{"stream_name":"stdout","time":32.564243023,"data":"    from .templates.langgraph_thinking import LangGraphThinking\r\n"}
+,{"stream_name":"stdout","time":32.564249508,"data":"  File \"/kaggle/working/ARC-AGI-3-Agents/agents/templates/langgraph_thinking/__init__.py\", line 1, in \u003cmodule\u003e\r\n"}
+,{"stream_name":"stdout","time":32.564255457,"data":"    from .agent import LangGraphThinking\r\n"}
+,{"stream_name":"stdout","time":32.564260757,"data":"  File \"/kaggle/working/ARC-AGI-3-Agents/agents/templates/langgraph_thinking/agent.py\", line 7, in \u003cmodule\u003e\r\n"}
+,{"stream_name":"stdout","time":32.564266468,"data":"    from langgraph.store.sqlite import SqliteStore\r\n"}
+,{"stream_name":"stdout","time":32.564272008,"data":"ModuleNotFoundError: No module named 'langgraph.store.sqlite'\r\n"}
+,{"stream_name":"stderr","time":36.59357111,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":36.593672909,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":36.858279635,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":36.858318863,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":37.835003971,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":38.22821719,"data":"[NbConvertApp] Writing 18261 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":41.58302878,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":42.724434906,"data":"[NbConvertApp] Writing 293399 bytes to __results__.html\n"}
+]

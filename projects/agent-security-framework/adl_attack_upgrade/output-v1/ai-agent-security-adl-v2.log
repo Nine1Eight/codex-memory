@@ -1,0 +1,24 @@
+[{"stream_name":"stderr","time":7.268853354,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.268928975,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.268934481,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.268937504,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.921057911,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.921111843,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.921118622,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.921123375,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.039434959,"data":"WROTE_ATTACK_PY /kaggle/working/attack.py\n"}
+,{"stream_name":"stdout","time":9.039481156,"data":"ATTACK_BYTES 13570\n"}
+,{"stream_name":"stdout","time":9.039487176,"data":"ATTACK_SHA256 494c227c0379ffc5e3674ab8c3a6545fec53477efcf69b0f6e32058f77e3e5f7\n"}
+,{"stream_name":"stdout","time":9.039491876,"data":"PY_COMPILE PASS\n"}
+,{"stream_name":"stdout","time":12.080090381,"data":"JED_SERVER AVAILABLE\n"}
+,{"stream_name":"stdout","time":12.080120305,"data":"STARTING JEDAttackInferenceServer().serve()\n"}
+,{"stream_name":"stdout","time":12.092902396,"data":"NO_SUBMISSION_CSV_IN_PUBLIC_RUN\n"}
+,{"stream_name":"stderr","time":14.859692761,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":14.859728305,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":15.018442531,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":15.018470485,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":15.723479479,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":16.032529696,"data":"[NbConvertApp] Writing 21124 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":18.570939192,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":19.418406972,"data":"[NbConvertApp] Writing 314653 bytes to __results__.html\n"}
+]

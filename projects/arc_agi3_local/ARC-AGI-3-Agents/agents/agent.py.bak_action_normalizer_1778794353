@@ -1,0 +1,179 @@
+import json
+import logging
+import os
+import time
+from abc import ABC, abstractmethod
+from typing import Optional, Any
+
+from arcengine import FrameData, GameAction, GameState
+
+try:
+    from pydantic import ValidationError
+except Exception:
+    class ValidationError(Exception):
+        pass
+
+from .recorder import Recorder
+from .tracing import trace_agent_session
+
+logger = logging.getLogger(__name__)
+
+class Agent(ABC):
+    MAX_ACTIONS = 80
+
+    def __init__(self, card_id, game_id, agent_name, ROOT_URL, record, arc_env, tags=None):
+        self.ROOT_URL = ROOT_URL
+        self.card_id = card_id
+        self.game_id = game_id
+        self.guid = ""
+        self.agent_name = agent_name
+        self.tags = tags or []
+        self.frames = [FrameData(levels_completed=0)]
+        self.action_counter = 0
+        self.timer = 0
+        self.arc_env = arc_env
+        self._cleanup = True
+        self.headers = {
+            "X-API-Key": os.getenv("ARC_API_KEY", ""),
+            "Accept": "application/json",
+        }
+        if record:
+            self.start_recording()
+
+    @property
+    def is_playback(self):
+        return type(self) is Playback
+
+    @property
+    def name(self):
+        return f"{self.game_id}.{self.__class__.__name__.lower()}"
+
+    @property
+    def state(self):
+        return self.frames[-1].state
+
+    @property
+    def levels_completed(self):
+        return self.frames[-1].levels_completed
+
+    @property
+    def seconds(self):
+        return round(time.time() - self.timer, 2)
+
+    @property
+    def fps(self):
+        if self.action_counter <= 0:
+            return 0.0
+        return round(self.action_counter / max(self.seconds, 0.1), 2)
+
+    def start_recording(self):
+        self.recorder = Recorder(prefix=self.name)
+
+    def append_frame(self, frame):
+        self.frames.append(frame)
+        if len(self.frames) > getattr(self, "_MAX_FRAMES", 10):
+            self.frames = self.frames[-getattr(self, "_MAX_FRAMES", 10):]
+        if getattr(frame, "guid", None):
+            self.guid = frame.guid
+        if hasattr(self, "recorder") and not self.is_playback:
+            try:
+                self.recorder.record(json.loads(frame.model_dump_json()))
+            except Exception:
+                pass
+
+    def _convert_raw_frame_data(self, raw):
+        if raw is None:
+            raise ValueError("Received None frame data from environment")
+
+        if isinstance(raw, FrameData):
+            return raw
+
+        frame = getattr(raw, "frame", [])
+        try:
+            frame = [arr.tolist() if hasattr(arr, "tolist") else arr for arr in frame]
+        except Exception:
+            pass
+
+        return FrameData(
+            game_id=getattr(raw, "game_id", self.game_id),
+            frame=frame,
+            state=getattr(raw, "state", GameState.NOT_PLAYED),
+            levels_completed=getattr(raw, "levels_completed", 0),
+            win_levels=getattr(raw, "win_levels", 0),
+            guid=getattr(raw, "guid", ""),
+            full_reset=getattr(raw, "full_reset", False),
+            available_actions=getattr(raw, "available_actions", []),
+        )
+
+    def do_action_request(self, action):
+        data = {}
+        try:
+            data = action.action_data.model_dump()
+        except Exception:
+            data = {}
+
+        reasoning = {}
+        if isinstance(data, dict):
+            reasoning = data.get("reasoning", {}) or {}
+
+        raw = self.arc_env.step(action, data=data, reasoning=reasoning)
+        return self._convert_raw_frame_data(raw)
+
+    def take_action(self, action):
+        frame_data = self.do_action_request(action)
+        try:
+            return FrameData.model_validate(frame_data)
+        except Exception:
+            return frame_data
+
+    @trace_agent_session
+    def main(self):
+        self.timer = time.time()
+
+        while (
+            not self.is_done(self.frames, self.frames[-1])
+            and self.action_counter <= self.MAX_ACTIONS
+        ):
+            latest = self._convert_raw_frame_data(
+                self.arc_env.observation_space if self.arc_env else None
+            )
+            action = self.choose_action(self.frames, latest)
+            frame = self.take_action(action)
+            if frame:
+                self.append_frame(frame)
+                logger.info(
+                    f"{self.game_id} - {getattr(action, 'name', action)}: "
+                    f"count {self.action_counter}, levels_completed {getattr(frame, 'levels_completed', -1)}, fps {self.fps}"
+                )
+            self.action_counter += 1
+
+        self.cleanup()
+
+    def cleanup(self, scorecard=None):
+        if not self._cleanup:
+            return
+        self._cleanup = False
+        logger.info(
+            f"Finishing: actions={self.action_counter}, seconds={self.seconds}, fps={self.fps}"
+        )
+
+    @abstractmethod
+    def is_done(self, frames, latest_frame):
+        raise NotImplementedError
+
+    @abstractmethod
+    def choose_action(self, frames, latest_frame):
+        raise NotImplementedError
+
+class Playback(Agent):
+    MAX_ACTIONS = 1000000
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.recorded_actions = []
+
+    def is_done(self, frames, latest_frame):
+        return self.action_counter >= len(self.recorded_actions)
+
+    def choose_action(self, frames, latest_frame):
+        return GameAction.RESET

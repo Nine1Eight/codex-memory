@@ -1,0 +1,25 @@
+# Runtime state
+*.npz
+*.json
+
+# Exceptions (keep configs if needed)
+!README.md
+
+# Python
+__pycache__/
+*.pyc
+
+# Chat outputs
+chat_exports/
+exports/
+
+# Termux storage
+storage/
+
+termux/chat_memory.jsonl
+termux/agent_state.json
+termux/backend_rewards.json
+termux/trainable_embedding.json
+termux/vil_adapter_state.json
+termux/neural_model.npz
+space_sessions/

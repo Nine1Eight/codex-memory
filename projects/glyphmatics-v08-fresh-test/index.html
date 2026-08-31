@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GlyphMatics Extreme Compression Image OS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #07090d;
+      --panel: #101722;
+      --panel2: #151f2f;
+      --text: #edf4ff;
+      --muted: #a9b7cf;
+      --accent: #7dd3fc;
+      --good: #86efac;
+      --warn: #fde68a;
+      --bad: #fca5a5;
+      --border: #29364d;
+      --code: #05070b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,.12), transparent 32rem),
+        radial-gradient(circle at top right, rgba(134,239,172,.08), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    header, main, footer {
+      max-width: 1180px;
+      margin: auto;
+      padding: 22px;
+    }
+
+    header { padding-top: 38px; }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 6vw, 58px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    h2, h3 {
+      margin: 0 0 10px;
+      letter-spacing: -0.025em;
+    }
+
+    p, li { color: var(--muted); }
+    a { color: var(--accent); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(16,23,34,.98), rgba(10,14,22,.98));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+    }
+
+    .wide { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      margin: 14px 0 7px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--panel2);
+      color: var(--text);
+      padding: 12px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 178px;
+      resize: vertical;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: var(--code);
+      white-space: pre;
+    }
+
+    button {
+      cursor: pointer;
+      margin-top: 12px;
+      font-weight: 900;
+      background: linear-gradient(180deg, #1d4770, #10263f);
+      border-color: #315d87;
+    }
+
+    button:hover { filter: brightness(1.12); }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: minmax(210px, 280px) 1fr;
+      gap: 12px;
+      align-items: start;
+      margin-top: 12px;
+    }
+
+    .button-help {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(255,255,255,.025);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .button-help strong {
+      color: var(--text);
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .row > * {
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 4px 5px 4px 0;
+      padding: 5px 9px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .metric {
+      display: grid;
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid #36567c;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(30,58,95,.45), rgba(8,12,20,.7));
+    }
+
+    .metric .big {
+      font-size: clamp(34px, 7vw, 72px);
+      line-height: .95;
+      font-weight: 950;
+      letter-spacing: -0.06em;
+      color: var(--good);
+    }
+
+    .metric .sub {
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+    }
+
+    .mono, pre, code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    pre {
+      overflow: auto;
+      white-space: pre-wrap;
+      background: var(--code);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 13px;
+      color: #dbeafe;
+    }
+
+    .status { min-height: 125px; }
+
+    .download {
+      display: block;
+      margin: 8px 0 0;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #0f2a3d;
+      border: 1px solid #27506d;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    canvas {
+      max-width: 100%;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .good { color: var(--good); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 760px) {
+      .button-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>GlyphMatics Extreme Compression Image OS</h1>
+  <p>
+    A single image becomes the transport and execution artifact. The image contains only visible glyphline letters.
+    No base64. No hidden payload. No byte-to-Braille wrapping. No byte-to-Hanzi wrapping.
+    The runtime reads the image, canonicalizes OCR, and executes only registered glyphlines.
+  </p>
+
+  <div>
+    <span class="pill">pIMGvhz</span>
+    <span class="pill">single image artifact</span>
+    <span class="pill">literal glyphline letters only</span>
+    <span class="pill">semantic execution compression</span>
+    <span class="pill">G14 verified</span>
+  </div>
+</header>
+
+<main>
+  <section class="grid">
+    <div class="card wide">
+      <h2>Only Extreme Compression System</h2>
+      <p>
+        GlyphMatics compression is not byte encoding. It compresses execution meaning into short glyphlines.
+        The glyphlines reconstruct, verify, activate, lineage-lock, and produce the expanded artifact chain.
+      </p>
+
+      <div class="metric">
+        <div class="big">177,581.30 : 1</div>
+        <div class="sub">Semantic execution compression ratio</div>
+        <div class="sub">10,832,459 expanded verified artifact bytes / 61 canonical glyphline bytes</div>
+        <div class="sub">Expanded execution yield: 17,758,130%</div>
+        <div class="sub">Glyphline transport size: 0.0005631% of expanded artifact</div>
+        <div class="sub">Semantic reduction: 99.999437%</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>1. Glyphline Program</h2>
+      <p>
+        These lines are the complete visible execution program. Edit only if the runtime already knows the glyphline.
+      </p>
+
+      <label>Canonical glyphline program</label>
+      <textarea id="glyphlines" spellcheck="false">pgvayh
+p hcbme tn:20 b:64 TMGE cv ruz
+pPvhz
+pAvhz
+pLvhz
+pVvhz</textarea>
+
+      <div class="row">
+        <div>
+          <label>Font size</label>
+          <input id="fontSize" type="number" value="40" min="16" max="160">
+        </div>
+        <div>
+          <label>Margin</label>
+          <input id="margin" type="number" value="40" min="4" max="240">
+        </div>
+        <div>
+          <label>Line gap</label>
+          <input id="lineGap" type="number" value="14" min="0" max="100">
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button onclick="renderArtifact()">Render Single Image Artifact</button>
+        <div class="button-help">
+          <strong>Use:</strong> Converts the visible glyphlines into one PNG image.
+          The PNG contains only rendered text. This is the transport/execution artifact.
+          Download it and run it through the Termux executor.
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button onclick="loadCanonical()">Reset Canonical Glyphlines</button>
+        <div class="button-help">
+          <strong>Use:</strong> Restores the verified six-line command chain:
+          install, TN selftest, pack, activate, lineage, and visual encode.
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button onclick="copyGlyphlines()">Copy Glyphlines</button>
+        <div class="button-help">
+          <strong>Use:</strong> Copies the literal glyphline program to clipboard.
+          Use this when you want to save or inspect the exact execution text before rendering.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Output Image</h2>
+      <p>
+        The canvas below is the artifact. Download the PNG and place it in Termux as
+        <code>~/glyphmatics_transport.png</code>.
+      </p>
+
+      <div id="links"></div>
+
+      <label>Artifact preview</label>
+      <canvas id="artifactCanvas" width="900" height="420"></canvas>
+
+      <div class="button-row">
+        <button onclick="downloadCurrent()">Rebuild Download Links</button>
+        <div class="button-help">
+          <strong>Use:</strong> Recreates download links for the image and the source glyphline text
+          after browser refresh, edits, or parameter changes.
+        </div>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>3. Status</h2>
+      <pre id="status" class="status">Ready.</pre>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Termux Execution Instructions</h2>
+      <p>Install dependencies first:</p>
+      <pre>pkg install -y tesseract
+pip install pillow</pre>
+
+      <p>Extract visible glyphlines from the image:</p>
+      <pre>python ~/glyphmatics_literal_image.py extract ~/glyphmatics_transport.png</pre>
+
+      <p>Run the image as the execution artifact:</p>
+      <pre>python ~/glyphmatics_literal_image.py run ~/glyphmatics_transport.png</pre>
+
+      <p>The executor canonicalizes known OCR errors:</p>
+      <pre>pPAvhz → pAvhz</pre>
+    </div>
+
+    <div class="card">
+      <h2>Button Meanings</h2>
+      <pre>Render Single Image Artifact
+→ creates glyphmatics_transport.png from the visible glyphline program
+
+Reset Canonical Glyphlines
+→ restores the verified execution chain
+
+Copy Glyphlines
+→ copies the literal command program
+
+Rebuild Download Links
+→ regenerates PNG and glyphlines.txt downloads</pre>
+    </div>
+
+    <div class="card">
+      <h2>Verified Chain</h2>
+      <pre>pgvayh
+→ install GlyphMatics core
+
+p hcbme tn:20 b:64 TMGE cv ruz
+→ run TN/MPS selftest
+
+pPvhz
+→ pack runtime
+
+pAvhz
+→ activate latest pack
+
+pLvhz
+→ append verified lineage block
+
+pVvhz
+→ encode latest pack to visual image</pre>
+    </div>
+
+    <div class="card">
+      <h2>Security Rule</h2>
+      <pre>G6 Signal is not G15 Key.
+Observation is not authorization.
+No G14 Lock without verification.</pre>
+      <p>
+        The image is a signal. Execution happens only when the local runtime maps a recovered glyphline
+        to a registered operation.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  GitHub: <a href="https://github.com/sigilagi918/glyphmatics-vil-raw">sigilagi918/glyphmatics-vil-raw</a>
+  · Hugging Face Space: <a href="https://huggingface.co/spaces/Nine1Eight/glyphmatics-vil-raw">Nine1Eight/glyphmatics-vil-raw</a>
+</footer>
+
+<script>
+const CANONICAL = `pgvayh
+p hcbme tn:20 b:64 TMGE cv ruz
+pPvhz
+pAvhz
+pLvhz
+pVvhz`;
+
+let lastCanvasReady = false;
+
+function $(id) {
+  return document.getElementById(id);
+}
+
+function normalizeGlyphlines(text) {
+  return text
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .split("\n")
+    .map(x => x.trim())
+    .filter(Boolean)
+    .join("\n");
+}
+
+async function sha256Hex(text) {
+  const bytes = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest("SHA-256", bytes);
+  return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function byteLen(text) {
+  return new TextEncoder().encode(text).length;
+}
+
+function downloadCanvas(canvas, filename) {
+  canvas.toBlob(blob => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.className = "download";
+    a.textContent = "Download " + filename;
+    $("links").appendChild(a);
+  }, "image/png");
+}
+
+function downloadText(text, filename) {
+  const blob = new Blob([text + "\n"], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.className = "download";
+  a.textContent = "Download " + filename;
+  $("links").appendChild(a);
+}
+
+function drawRoundedRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+async function renderArtifact() {
+  const text = normalizeGlyphlines($("glyphlines").value);
+  const lines = text.split("\n").filter(Boolean);
+
+  const fontSize = Math.max(16, Number($("fontSize").value || 40));
+  const margin = Math.max(4, Number($("margin").value || 40));
+  const lineGap = Math.max(0, Number($("lineGap").value || 14));
+
+  const measure = document.createElement("canvas");
+  const mctx = measure.getContext("2d");
+  mctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
+
+  let maxWidth = 0;
+  for (const line of lines) {
+    maxWidth = Math.max(maxWidth, mctx.measureText(line).width);
+  }
+
+  const lineHeight = Math.ceil(fontSize * 1.22);
+  const width = Math.ceil(maxWidth + margin * 2);
+  const height = Math.ceil(lines.length * lineHeight + Math.max(0, lines.length - 1) * lineGap + margin * 2);
+
+  const canvas = $("artifactCanvas");
+  canvas.width = Math.max(360, width);
+  canvas.height = Math.max(160, height);
+
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#f7f9fc";
+  drawRoundedRect(ctx, 12, 12, canvas.width - 24, canvas.height - 24, 18);
+  ctx.fill();
+
+  ctx.strokeStyle = "#111827";
+  ctx.lineWidth = 2;
+  drawRoundedRect(ctx, 12, 12, canvas.width - 24, canvas.height - 24, 18);
+  ctx.stroke();
+
+  ctx.fillStyle = "#000000";
+  ctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
+  ctx.textBaseline = "top";
+
+  let y = margin;
+  for (const line of lines) {
+    ctx.fillText(line, margin, y);
+    y += lineHeight + lineGap;
+  }
+
+  const digest = await sha256Hex(text);
+  const bytes = byteLen(text);
+
+  $("links").innerHTML = "";
+  downloadCanvas(canvas, "glyphmatics_transport.png");
+  downloadText(text, "glyphlines.txt");
+
+  const expanded = 10832459;
+  const ratio = expanded / bytes;
+  const percentYield = ratio * 100;
+  const transportPercent = (bytes / expanded) * 100;
+  const reductionPercent = 100 - transportPercent;
+
+  lastCanvasReady = true;
+
+  $("status").textContent = JSON.stringify({
+    status: "literal_image_artifact_rendered",
+    system: "GlyphMatics Only Extreme Compression System",
+    image_payload_rule: "visible glyphline letters only",
+    hidden_payload: false,
+    base64: false,
+    braille: false,
+    hanzi_byte_wrapper: false,
+    glyphline_count: lines.length,
+    canonical_glyphline_bytes: bytes,
+    glyphline_sha256: digest,
+    verified_expanded_artifact_bytes: expanded,
+    semantic_execution_ratio: ratio.toFixed(2) + " : 1",
+    expanded_execution_yield_percent: percentYield.toFixed(2) + "%",
+    glyphline_transport_percent_of_expanded_artifact: transportPercent.toFixed(7) + "%",
+    semantic_reduction_percent: reductionPercent.toFixed(6) + "%",
+    output: [
+      "glyphmatics_transport.png",
+      "glyphlines.txt"
+    ],
+    termux_execute: [
+      "python ~/glyphmatics_literal_image.py extract ~/glyphmatics_transport.png",
+      "python ~/glyphmatics_literal_image.py run ~/glyphmatics_transport.png"
+    ]
+  }, null, 2);
+}
+
+function loadCanonical() {
+  $("glyphlines").value = CANONICAL;
+  renderArtifact();
+}
+
+async function copyGlyphlines() {
+  const text = normalizeGlyphlines($("glyphlines").value);
+  await navigator.clipboard.writeText(text);
+  $("status").textContent = "Copied canonical glyphlines to clipboard.\n\n" + text;
+}
+
+function downloadCurrent() {
+  renderArtifact();
+}
+
+renderArtifact();
+</script>
+</body>
+</html>

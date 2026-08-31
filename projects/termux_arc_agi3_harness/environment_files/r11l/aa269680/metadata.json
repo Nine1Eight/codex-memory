@@ -1,0 +1,19 @@
+{
+  "game_id": "r11l-aa269680",
+  "title": "R11L",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/robot_legs",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    7,
+    28,
+    30,
+    20,
+    37,
+    45
+  ],
+  "local_dir": "environment_files/r11l/aa269680",
+  "date_downloaded": "2026-03-23T01:12:51.620046+00:00"
+}

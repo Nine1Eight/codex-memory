@@ -1,0 +1,9 @@
+{
+  "name":"AI Launcher",
+  "short_name":"AILaunch",
+  "display":"standalone",
+  "background_color":"#000000",
+  "theme_color":"#000000",
+  "start_url":"./index.html",
+  "scope":"./"
+}

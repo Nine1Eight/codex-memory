@@ -1,0 +1,19 @@
+{
+  "game_id": "tr87-cd924810",
+  "title": "TR87",
+  "default_fps": 10,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/translate",
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    37,
+    30,
+    39,
+    29,
+    63,
+    119
+  ],
+  "local_dir": "environment_files/tr87/cd924810",
+  "date_downloaded": "2026-03-23T01:12:51.191712+00:00"
+}

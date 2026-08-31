@@ -1,0 +1,21 @@
+{
+  "id": "wethepeople918/arc3-true-scored-run-rdl-v3-johnny5",
+  "title": "ARC3 TRUE SCORED RUN RDL v3 Johnny5",
+  "code_file": "ARC3_TRUE_SCORED_RUN_RDL_V3_JOHNNY5.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "machine_shape": "NvidiaRtxPro6000",
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "dataset_sources": [
+    "jeroencottaar/taaf-kaggle-source-share",
+    "driessmit1/arc3-vllm-h100-wheelhouse-v3"
+  ],
+  "model_sources": [
+    "foysalemonshanto/qwen3-8-27b-fp8-repacked-v1/pytorch/hf-fp8/1"
+  ]
+}

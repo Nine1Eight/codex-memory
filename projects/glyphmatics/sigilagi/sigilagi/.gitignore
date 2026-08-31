@@ -1,0 +1,27 @@
+# model artifacts
+*.gguf
+
+# archives
+*.zip
+*.tar
+*.tar.gz
+
+# datasets (HF only)
+vil_extended_dataset/
+alphabet_glyph_pairs_extended/
+
+# binaries
+*.apk
+*.wav
+*.pdf
+
+# images (bulk datasets only)
+vil_extended_dataset/**/*.png
+alphabet_glyph_pairs_extended/**/*.png
+
+# python
+__pycache__/
+*.pyc
+
+# misc
+.exmu-cfg1.data

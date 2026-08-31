@@ -1,0 +1,45 @@
+{
+  "app": "LORAForge",
+  "created_at": "2026-06-11T15:00:02",
+  "paths": {
+    "adapters": "/data/data/com.termux/files/home/loraforge/adapters",
+    "base_models": "/data/data/com.termux/files/home/loraforge/models/base",
+    "cache": "/data/data/com.termux/files/home/loraforge/cache",
+    "checkpoints": "/data/data/com.termux/files/home/loraforge/checkpoints",
+    "datasets": "/data/data/com.termux/files/home/loraforge/datasets",
+    "gguf_models": "/data/data/com.termux/files/home/loraforge/models/gguf",
+    "outputs": "/data/data/com.termux/files/home/loraforge/outputs"
+  },
+  "platform": {
+    "machine": "aarch64",
+    "python": "3.13.13",
+    "system": "Android",
+    "termux": true
+  },
+  "security": {
+    "allow_network_downloads": false,
+    "redact_env_keys": [
+      "OPENAI_API_KEY",
+      "HF_TOKEN",
+      "HUGGINGFACE_TOKEN"
+    ],
+    "refuse_overwrite_without_force": true,
+    "require_explicit_model_path": true,
+    "write_secrets_to_disk": false
+  },
+  "training_defaults": {
+    "adapter_type": "lora",
+    "alpha": 64,
+    "checkpoint_strategy": "steps",
+    "dropout": 0.05,
+    "gradient_checkpointing": true,
+    "mixed_precision": "auto",
+    "rank": 32,
+    "resume_from_checkpoint": true,
+    "save_safetensors": true,
+    "trust_remote_code": false,
+    "weight_decay": 0.02
+  },
+  "version": "2.2",
+  "workspace": "/data/data/com.termux/files/home/loraforge"
+}

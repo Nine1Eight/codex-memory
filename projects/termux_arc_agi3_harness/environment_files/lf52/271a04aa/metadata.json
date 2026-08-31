@@ -1,0 +1,23 @@
+{
+  "game_id": "lf52-271a04aa",
+  "title": "LF52",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/leap_frog",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    24,
+    81,
+    74,
+    86,
+    118,
+    148,
+    189,
+    116,
+    150,
+    225
+  ],
+  "local_dir": "environment_files/lf52/271a04aa",
+  "date_downloaded": "2026-03-23T01:12:51.524049+00:00"
+}

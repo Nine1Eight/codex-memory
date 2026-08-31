@@ -1,0 +1,8 @@
+README.md
+install_arcagi3_nine18.sh
+configure_arc_key.sh
+run_local_ls20.sh
+run_online_one.sh
+run_competition_all.sh
+agents_nine18_world_model_agent.py
+tools/summarize_nine18_memory.py

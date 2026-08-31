@@ -1,0 +1,21 @@
+{
+  "game_id": "lp85-305b61c3",
+  "title": "LP85",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/looping_chains",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    33,
+    22,
+    31,
+    23,
+    33,
+    34,
+    73,
+    173
+  ],
+  "local_dir": "environment_files/lp85/305b61c3",
+  "date_downloaded": "2026-03-23T01:12:51.033779+00:00"
+}

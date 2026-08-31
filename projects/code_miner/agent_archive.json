@@ -1,0 +1,582 @@
+[
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": true,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "4f01e509fadd6aa66d1c3645c266d971ee1dc175887325b72b6fe8aa60887d0f",
+    "novelty": 0
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": true,
+      "json": true,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.37
+    },
+    "vector": [
+      8,
+      2,
+      2.37
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nimport requests\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "b8bcfc6d2095cf1b7682452a11462b9156392fa362e757f4b8c7d7c10ee757a4",
+    "novelty": 0.020000000000000018
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": true,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.37
+    },
+    "vector": [
+      8,
+      2,
+      2.37
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nimport threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "b015c60a5fe41b68840654eae89fde90596c0602c55166f7896e5972b18402f2",
+    "novelty": 0.020000000000000018
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.37
+    },
+    "vector": [
+      8,
+      2,
+      2.37
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "def noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "76b10280e19acb0d072f015c3936ccd0c348a8266835e5525816826aba3912b7",
+    "novelty": 0.020000000000000018
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": true,
+      "json": true,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.37
+    },
+    "vector": [
+      8,
+      2,
+      2.37
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nimport requests\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "b8bcfc6d2095cf1b7682452a11462b9156392fa362e757f4b8c7d7c10ee757a4",
+    "novelty": 0.020000000000000018
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": true,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.37
+    },
+    "vector": [
+      8,
+      2,
+      2.37
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nimport threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "b015c60a5fe41b68840654eae89fde90596c0602c55166f7896e5972b18402f2",
+    "novelty": 0.020000000000000018
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": true,
+      "json": false,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import requests\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "81b3871718a06cc02759b8ec182996058e93e853ea433dc14cd77be587297c3b",
+    "novelty": 0.01666666666666668
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "0d4cf12b15570629b0a85270cab50b5e43af8d77d12dd31b3b2bd89144b1bc6c",
+    "novelty": 0.01666666666666668
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": true,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "4f01e509fadd6aa66d1c3645c266d971ee1dc175887325b72b6fe8aa60887d0f",
+    "novelty": 0.01666666666666668
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "0d4cf12b15570629b0a85270cab50b5e43af8d77d12dd31b3b2bd89144b1bc6c",
+    "novelty": 0.01666666666666668
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": true,
+      "json": false,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import requests\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "81b3871718a06cc02759b8ec182996058e93e853ea433dc14cd77be587297c3b",
+    "novelty": 0.01666666666666668
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "0d4cf12b15570629b0a85270cab50b5e43af8d77d12dd31b3b2bd89144b1bc6c",
+    "novelty": 0.0090909090909091
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.41
+    },
+    "vector": [
+      8,
+      2,
+      2.41
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "from flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "de14e01dedfc6f6a772d7ffae7377431021682495e583e11c8409be07fb5b18b",
+    "novelty": 0.02833333333333336
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.41
+    },
+    "vector": [
+      8,
+      2,
+      2.41
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "from flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "de14e01dedfc6f6a772d7ffae7377431021682495e583e11c8409be07fb5b18b",
+    "novelty": 0.02833333333333336
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "0d4cf12b15570629b0a85270cab50b5e43af8d77d12dd31b3b2bd89144b1bc6c",
+    "novelty": 0.010000000000000009
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "0d4cf12b15570629b0a85270cab50b5e43af8d77d12dd31b3b2bd89144b1bc6c",
+    "novelty": 0.010000000000000009
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": true,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "4f01e509fadd6aa66d1c3645c266d971ee1dc175887325b72b6fe8aa60887d0f",
+    "novelty": 0.010000000000000009
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": false,
+      "threading": true
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import threading\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "0d4cf12b15570629b0a85270cab50b5e43af8d77d12dd31b3b2bd89144b1bc6c",
+    "novelty": 0.010000000000000009
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": false,
+      "json": true,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import json\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "4f01e509fadd6aa66d1c3645c266d971ee1dc175887325b72b6fe8aa60887d0f",
+    "novelty": 0.010000000000000009
+  },
+  {
+    "genome": {
+      "flask": false,
+      "fastapi": false,
+      "requests": true,
+      "json": false,
+      "threading": false
+    },
+    "scores": {
+      "stability": 8,
+      "functionality": 2,
+      "efficiency": 2.39
+    },
+    "vector": [
+      8,
+      2,
+      2.39
+    ],
+    "capabilities": {
+      "flask_endpoint": false,
+      "fastapi_endpoint": false,
+      "json_roundtrip": true,
+      "thread_spawn": true,
+      "cross_lib_execution": false
+    },
+    "source": "import requests\nfrom flask import Flask\napp = Flask(__name__)\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1\nfrom flask import Flask\napp = Flask(__name__)\nfrom fastapi import FastAPI\napp2 = FastAPI()\nimport requests\nimport json\nprint('json active')\nimport threading\n\ndef noop():\n    return 1",
+    "hash": "81b3871718a06cc02759b8ec182996058e93e853ea433dc14cd77be587297c3b",
+    "novelty": 0.010000000000000009
+  }
+]

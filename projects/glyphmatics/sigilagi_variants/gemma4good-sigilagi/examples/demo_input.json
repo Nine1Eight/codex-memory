@@ -1,0 +1,12 @@
+{
+  "project": "SigilAGI",
+  "mode": "object_to_glyph_detection",
+  "scene_note": "A person appears near a phone, door, wallet, and paper document.",
+  "detected_objects": [
+    "person",
+    "phone",
+    "door",
+    "wallet",
+    "paper"
+  ]
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Φ-111 Cube Visualizer</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0e14;
+    color: #e6e6eb;
+    font-family: monospace;
+    height: 100%;
+    overflow: hidden;
+  }
+  #ui {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(20,24,36,0.9);
+    border: 1px solid #333;
+    padding: 10px;
+    z-index: 10;
+  }
+  canvas {
+    display: block;
+  }
+  input {
+    color: #e6e6eb;
+    background: #111;
+  }
+</style>
+</head>
+<body>
+
+<div id="ui">
+  <div><strong>Φ-111 Cube Visualizer</strong></div>
+  <input type="file" id="file" accept=".cube"><br><br>
+  <div>Drag: rotate</div>
+  <div>Wheel: zoom</div>
+</div>
+
+<canvas id="c"></canvas>
+
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+
+let W, H;
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+let points = [];
+let rotX = -0.5, rotY = 0.6;
+let zoom = 4.5;
+let dragging = false;
+let lx = 0, ly = 0;
+
+canvas.addEventListener("mousedown", e => {
+  dragging = true;
+  lx = e.clientX;
+  ly = e.clientY;
+});
+window.addEventListener("mouseup", () => dragging = false);
+window.addEventListener("mousemove", e => {
+  if (!dragging) return;
+  rotY += (e.clientX - lx) * 0.005;
+  rotX += (e.clientY - ly) * 0.005;
+  lx = e.clientX;
+  ly = e.clientY;
+});
+canvas.addEventListener("wheel", e => {
+  zoom *= e.deltaY > 0 ? 0.9 : 1.1;
+});
+
+document.getElementById("file").addEventListener("change", e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => parseCube(r.result);
+  r.readAsText(f);
+});
+
+function parseCube(txt) {
+  points = [];
+  const lines = txt.trim().split(/\r?\n/);
+  for (const l of lines) {
+    const [x,y,z] = l.split(/\s+/).map(Number);
+    if (x>=0 && y>=0 && z>=0)
+      points.push({x,y,z});
+  }
+}
+
+function project(p) {
+  let x = (p.x - 55) / 55;
+  let y = (p.y - 55) / 55;
+  let z = (p.z - 55) / 55;
+
+  let cy = Math.cos(rotY), sy = Math.sin(rotY);
+  let cx = Math.cos(rotX), sx = Math.sin(rotX);
+
+  let dx = cy*x + sy*z;
+  let dz = -sy*x + cy*z;
+  let dy = cx*y - sx*dz;
+  dz = sx*y + cx*dz;
+
+  const s = zoom / (dz + 3.5);
+  return {
+    x: dx * s * 300 + W/2,
+    y: dy * s * 300 + H/2,
+    z: dz
+  };
+}
+
+function draw() {
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle = "#0b0e14";
+  ctx.fillRect(0,0,W,H);
+
+  const projected = points.map(p => ({p, q: project(p)}))
+                           .sort((a,b)=>a.q.z-b.q.z);
+
+  for (const o of projected) {
+    const {x,y,z} = o.q;
+    const c = o.p;
+    const r = 2;
+    const hue = (c.x*3 + c.y*5 + c.z*7) % 360;
+    ctx.fillStyle = `hsl(${hue},70%,60%)`;
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fill();
+  }
+
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>

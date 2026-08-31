@@ -1,0 +1,144 @@
+{
+  "doc_count": 3,
+  "docs": {
+    "glyph-core": {
+      "metadata": {
+        "layer": "core"
+      },
+      "text": "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms."
+    },
+    "registry": {
+      "metadata": {
+        "layer": "registry"
+      },
+      "text": "Registry manifests define module inventory version identity and state snapshots for deterministic boot validation."
+    },
+    "sigil-rag": {
+      "metadata": {
+        "layer": "retrieval"
+      },
+      "text": "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion."
+    }
+  },
+  "inverted_index": {
+    "anchor": [
+      "sigil-rag"
+    ],
+    "anchored": [
+      "glyph-core"
+    ],
+    "and": [
+      "glyph-core",
+      "registry",
+      "sigil-rag"
+    ],
+    "boot": [
+      "registry"
+    ],
+    "core": [
+      "glyph-core"
+    ],
+    "define": [
+      "registry"
+    ],
+    "deterministic": [
+      "glyph-core",
+      "registry"
+    ],
+    "documents": [
+      "sigil-rag"
+    ],
+    "execution": [
+      "glyph-core"
+    ],
+    "expansion": [
+      "sigil-rag"
+    ],
+    "focuses": [
+      "glyph-core"
+    ],
+    "for": [
+      "registry",
+      "sigil-rag"
+    ],
+    "glyphmatics": [
+      "glyph-core"
+    ],
+    "identity": [
+      "registry"
+    ],
+    "indexed": [
+      "sigil-rag"
+    ],
+    "inventory": [
+      "registry"
+    ],
+    "manifests": [
+      "registry"
+    ],
+    "module": [
+      "registry"
+    ],
+    "on": [
+      "glyph-core"
+    ],
+    "over": [
+      "sigil-rag"
+    ],
+    "pointer": [
+      "sigil-rag"
+    ],
+    "precise": [
+      "sigil-rag"
+    ],
+    "proxy": [
+      "sigil-rag"
+    ],
+    "rag": [
+      "sigil-rag"
+    ],
+    "ranges": [
+      "sigil-rag"
+    ],
+    "registries": [
+      "glyph-core"
+    ],
+    "registry": [
+      "registry"
+    ],
+    "reproducible": [
+      "glyph-core"
+    ],
+    "retrieval": [
+      "sigil-rag"
+    ],
+    "returns": [
+      "sigil-rag"
+    ],
+    "snapshots": [
+      "registry"
+    ],
+    "stable": [
+      "sigil-rag"
+    ],
+    "state": [
+      "registry"
+    ],
+    "symbolic": [
+      "glyph-core"
+    ],
+    "transforms": [
+      "glyph-core"
+    ],
+    "uses": [
+      "sigil-rag"
+    ],
+    "validation": [
+      "registry"
+    ],
+    "version": [
+      "registry"
+    ]
+  },
+  "term_count": 38
+}

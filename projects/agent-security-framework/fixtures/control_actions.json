@@ -1,0 +1,3 @@
+[
+  {"tool": "files", "parameters": {"operation": "read", "path": "/reports/demo.txt", "content": ""}, "provenance": []}
+]

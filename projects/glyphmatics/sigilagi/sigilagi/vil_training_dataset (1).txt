@@ -1,0 +1,131 @@
+
+# Visual Instruction Learning (VIL) – Training Corpus
+
+This file collects the primary textual materials necessary to train a language model to understand and use the Visual Instruction Learning (VIL) system.  It combines the full system definition, design rationale, feature‑engineering pipeline, training workflow, and a description of the reference implementation.  Citations point to authoritative sources on Unicode blocks, diffusion models and instruction tuning.
+
+---
+
+## System Definition
+
+Visual Instruction Learning (VIL) is a vision‑native generative framework that transforms **visual sequences of glyphs** into executable instructions for large generative models.  Unlike multimodal instruction tuning, which pairs text prompts with images or videos, VIL constructs its instructions entirely from glyphs.  Each visual instruction encodes identity, motion, style and temporal information through **repetition**, **variation**, **symmetry** and **absence**, and these patterns are decomposed into a latent control space that guides a generative engine (e.g., diffusion or transformer‑based models) to produce deterministic outputsfile:///home/oai/share/summary_sources.txt#:~:text=Visual%20Instruction%20Learning%20,absence%E2%80%94enabling%20deterministic%2C%20language%E2%80%91free%20generative%20behaviour.  By unifying all human alphabets and symbol systems into a single ordered glyph canon, VIL eliminates reliance on natural language and mitigates the overfitting and hallucination problems observed in text‑driven visual instruction tuninghttps://arxiv.org/html/2503.22215v2#:~:text=Typically%2C%20visual%20instruction%20tuning%20consists,initializations%20for%20visual%20and%20language.
+
+### Motivations and Problems
+
+Researchers have found that vision–language models trained via two‑stage instruction tuning often **overfit to textual templates** and **hallucinate** content that is not present in the visual inputhttps://arxiv.org/html/2503.22215v2#:~:text=Typically%2C%20visual%20instruction%20tuning%20consists,initializations%20for%20visual%20and%20language.  Follow‑on work (e.g., learning to instruct images) partially alleviates this by requiring models to generate their own instructionshttps://arxiv.org/html/2503.22215v2#:~:text=By%20learning%20to%20generate%20appropriate,relying%20solely%20on%20languages%20to, but these methods still depend on language priors.  VIL’s objectives are to:
+
+1. **Establish a universal glyph canon**: unify disparate scripts into a single ordered index to ensure cross‑lingual neutrality and consistent referencingfile:///home/oai/share/summary_sources.txt#:~:text=The%20file%20,of%20a%20universal%20glyph%20space.
+2. **Create executable visual instructions**: encode complex behaviours (identity locks, motion grammar, style priors, temporal loops, negative constraints) through spatial arrangements of glyphsfile:///home/oai/share/summary_sources.txt#:~:text=Visual%20Instruction%20Learning%20,absence%E2%80%94enabling%20deterministic%2C%20language%E2%80%91free%20generative%20behaviour.
+3. **Construct a latent control space**: decompose visual patterns into vectors that can be passed directly to generative models, bypassing text encoders.
+4. **Reduce hallucinations**: avoid text priors and emphasise visual cues, thereby improving determinism and reproducibility.
+
+### The Glyph Canon
+
+VIL’s glyph canon comprises **333 characters** arranged in three groups of 111 each.  The groups draw from specific Unicode blocks and private allocations:
+
+* **Private Use Area (PUA)**: The BMP PUA spans U+E000–U+F8FF; these code points are intentionally left undefinedhttps://en.wikipedia.org/wiki/Private_Use_Areas#:~:text=In%20Unicode%20%2C%20a%20Private,2.  VIL reserves the first 111 PUA characters for bespoke shapes that anchor identity and style.  Because PUA characters lack official semantics, their appearance must be defined via custom fontshttps://en.wikipedia.org/wiki/Private_Use_Areas#:~:text=In%20Unicode%20%2C%20a%20Private,2.
+* **Braille patterns**: The block U+2800–U+283E contains 256 Braille patternshttps://en.wikipedia.org/wiki/Braille_Patterns#:~:text=The%20Unicode%20block%20%20Braille,R.  These characters are defined as “symbols” rather than letters and have no inherent meaninghttps://en.wikipedia.org/wiki/Braille_Patterns#:~:text=The%20Unicode%20block%20%20Braille,R.  VIL uses 111 patterns from the first half of the block to encode structural markers.
+* **Miscellaneous symbols and Dingbats**: Blocks U+2600–U+26FF and U+2700–U+27BF include weather symbols, astrological signs, chess pieces, recycling symbols and decorative ornamentshttps://en.wikipedia.org/wiki/Miscellaneous_Symbols#:~:text=rendering%20support%20%2C%20you%20may,instead%20of%20the%20intended%20charactershttps://en.wikipedia.org/wiki/Dingbats_(Unicode_block)#:~:text=Range%20U%2B2700,2.  VIL selects 111 distinctive symbols spanning these blocks to enrich the expressiveness of instructions.
+
+These groups were chosen for their **expressiveness**, **uniqueness**, **neutrality** and **deterministic indexing**.  By avoiding conventional letters, VIL ensures that instructions are not biased towards any language.
+
+### Encoding Visual Instructions
+
+A visual instruction arranges canonical glyphs on a grid.  The arrangement follows a grammar:
+
+1. **Repetition** locks identity by repeating the same glyph, ensuring consistent subjects and styles.
+2. **Variation** introduces motion grammar via gradual changes in size, rotation or position.
+3. **Consistency** applies uniform spacing or colouring to establish style priors.
+4. **Symmetry** creates temporal loops or recurring motifs through mirroring.
+5. **Absence** imposes negative constraints by leaving intentional gapsfile:///home/oai/share/summary_sources.txt#:~:text=Visual%20Instruction%20Learning%20,absence%E2%80%94enabling%20deterministic%2C%20language%E2%80%91free%20generative%20behaviour.
+
+These patterns are fed into a constraint decomposition module that extracts latent vectors for identity, motion, style, temporal structure and negative constraints.  The result is a latent control vector that can condition a generative model.
+
+### Architecture and Workflow
+
+1. **Data preparation**: render each canonical glyph at high resolution; curate a paired dataset of composite glyph images and target outputs (images, videos, 3‑D motions); pre‑train a cross‑modal connector to align visual instruction embeddings with the latent space of the generative modelhttps://arxiv.org/html/2503.22215v2#:~:text=Typically%2C%20visual%20instruction%20tuning%20consists,initializations%20for%20visual%20and%20language.
+2. **Constraint decomposition**: derive separate vectors for identity anchors, motion grammar, style priors, temporal loops and negative constraints.
+3. **Generative engine**: use a diffusion model or transformer model to synthesize outputs.  Diffusion models iteratively remove noise, beginning with random noise and gradually revealing the target imagefile:///home/oai/redirect.html#:~:text=,and%20their%20work%20is%20implementedfile:///home/oai/redirect.html#:~:text=What%20does%20this%20have%20to,Surprisingly%2C%20the%20answer%20is%20yes.
+4. **Determinism and reproducibility**: because instructions are index‑based and noise seeds can be fixed, the same instruction yields the same output, enabling reproducible generation.
+
+### Advanced Feature Engineering
+
+To integrate VIL with large‑language models or other downstream systems, an embedding feature‑engineering pipeline extracts enriched features from embedding vectors.  The pipeline includes similarity computation to anchor vectors, clustering to capture structure, pairwise interactions, dimensionality reduction via PCA or t‑SNE, normalization, aggregation and synthetic feature generationfile:///home/oai/share/summary_sources.txt#:~:text=Another%20figure%20outlines%20an%20,normalized%20values%20and%20synthesized%20interactions.  These features can be concatenated with VIL’s latent control vectors to improve retrieval and reasoning tasks.
+
+### Training and Execution
+
+VIL adopts a two‑stage training process.  During **pre‑training**, it renders glyphs, defines base‑111 encoding schemes for serialisation, trains a cross‑modal connector and constructs anchor dictionaries.  In the **fine‑tuning phase**, it jointly trains the connector and generative model, employing techniques like LoRA for efficient adaptationhttps://www.amazon.science/publications/vit-pro-visual-instruction-tuning-for-product-images#:~:text=General%20vision,commerce%20domain and learning‑to‑instruct to reduce shortcut learninghttps://arxiv.org/html/2503.22215v2#:~:text=By%20learning%20to%20generate%20appropriate,relying%20solely%20on%20languages%20to.  During inference, the system parses visual instructions, decomposes constraints, generates outputs with the generative engine and validates results via cryptographic checks.
+
+### Limitations and Future Work
+
+VIL’s reliance on PUA glyphs and rare symbols means that rendering consistency depends on specialized fontshttps://en.wikipedia.org/wiki/Private_Use_Areas#:~:text=In%20Unicode%20%2C%20a%20Private,2https://en.wikipedia.org/wiki/Braille_Patterns#:~:text=The%20Unicode%20block%20%20Braille,R.  Preparing large paired datasets is labour‑intensive and may introduce bias.  Diffusion models are computationally expensive and sensitive to noise schedulesfile:///home/oai/redirect.html#:~:text=,and%20their%20work%20is%20implemented.  Future work includes expanding the glyph canon, learning inverse mappings from outputs back to instructions, integrating natural language cues, accelerating hardware support and standardising PUA glyph definitions.
+
+---
+
+## Reference Implementation Overview
+
+An open‑source reference implementation of the VIL system is provided as a Python package.  It offers the following components:
+
+* **Dataset loader** (`dataset.py`): reads the canonical glyph file (`data/glyph_canon_3x111.txt`) and returns a structured table containing group number, index, glyph character, code point and Unicode name.  The first 111 glyphs are private use area characters, the next 111 are Braille patterns and the final 111 are miscellaneous symbols/dingbatshttps://en.wikipedia.org/wiki/Private_Use_Areas#:~:text=In%20Unicode%20%2C%20a%20Private,2https://en.wikipedia.org/wiki/Braille_Patterns#:~:text=The%20Unicode%20block%20%20Braille,R.
+* **Visual instruction builder** (`visual_instruction.py`): constructs collage images from sequences of glyph indices.  Users can specify grid size, cell size, font size and rotation range.  The implementation draws each glyph onto a canvas, optionally rotating it to encode variation.
+* **Latent control encoder** (`latent_control.py`): converts collage images into a fixed‑length vector by down‑sampling to an 8×8 grid and computing global statistics.  This placeholder can be replaced with a learned encoder (e.g., a convolutional autoencoder).
+* **Diffusion model interface** (`diffusion_model.py`): defines a base class for generative models.  The provided stub produces either blank canvases or noise modulated by the latent control vector.  To integrate a real model (e.g., stable diffusion), subclass `DiffusionModel` and override the `generate` method.
+* **Embedding feature engineering** (`embedding_pipeline.py`): implements the seven‑stage feature pipeline summarised above.  It computes cosine similarity to anchors, assigns cluster IDs via k‑means, generates pairwise interaction features, applies PCA for dimensionality reduction, normalises embeddings, adds global aggregation statistics and leaves a placeholder for synthetic features.
+* **Training hooks** (`training.py`): demonstrates a simple training loop that samples glyph sequences, builds collages, encodes latent controls, calls the diffusion model and computes a dummy loss.  These functions are meant to be replaced with real optimisation routines.
+* **Utilities** (`utils.py`): provides helpers for configuring logging.
+
+Installation requires Python 3.9+, NumPy, pandas, scikit‑learn and Pillow.  Real generative models may require additional libraries such as PyTorch and the HuggingFace diffusers package.
+
+---
+
+## Usage Examples
+
+1. **Loading the dataset**:
+
+```python
+from vil_system.dataset import GlyphDataset
+
+ds = GlyphDataset()
+print(ds.to_dataframe().head())
+```
+
+2. **Creating and encoding a visual instruction**:
+
+```python
+from vil_system.visual_instruction import VisualInstruction
+from vil_system.latent_control import LatentControlEncoder
+
+instr = VisualInstruction(glyph_indices=[0, 1, 2], grid_size=(1, 3), rotation_range=(-5.0, 5.0))
+collage = instr.build_collage()
+encoder = LatentControlEncoder()
+control_vec = encoder.encode(collage)
+print(control_vec)
+```
+
+3. **Running the embedding feature‑engineering pipeline**:
+
+```python
+import numpy as np
+from vil_system.embedding_pipeline import EmbeddingFeatureEngineer
+
+embeddings = [np.random.rand(768) for _ in range(10)]
+anchors = [np.random.rand(768) for _ in range(3)]
+
+engineer = EmbeddingFeatureEngineer(n_clusters=2, n_components=3)
+features = engineer.transform(embeddings, anchor_vectors=anchors)
+for rec in features:
+    print(rec["similarities"], rec["cluster_id"], rec["pca"])
+```
+
+---
+
+## Selected Bibliographic References
+
+* **Unicode Private Use Area** – The BMP Private Use Area U+E000–U+F8FF contains 6 400 code points reserved for private agreements.  These characters have no assigned meaning and their appearance depends on the fonthttps://en.wikipedia.org/wiki/Private_Use_Areas#:~:text=In%20Unicode%20%2C%20a%20Private,2.
+* **Braille Patterns** – The Braille Patterns block U+2800–U+28FF defines 256 dot patterns and classifies them as “Symbols, other”, not letters.  They represent tactile patterns and have no inherent visual semanticshttps://en.wikipedia.org/wiki/Braille_Patterns#:~:text=The%20Unicode%20block%20%20Braille,R.
+* **Miscellaneous Symbols and Dingbats** – The Miscellaneous Symbols block (U+2600–U+26FF) and Dingbats block (U+2700–U+27BF) include weather symbols, astrological signs, chess pieces, recycling symbols and typographical ornamentshttps://en.wikipedia.org/wiki/Miscellaneous_Symbols#:~:text=rendering%20support%20%2C%20you%20may,instead%20of%20the%20intended%20charactershttps://en.wikipedia.org/wiki/Dingbats_(Unicode_block)#:~:text=Range%20U%2B2700,2.
+* **Instruction Tuning Limitations** – Two‑stage vision–language instruction tuning often leads to knowledge degradation and hallucinationhttps://arxiv.org/html/2503.22215v2#:~:text=Typically%2C%20visual%20instruction%20tuning%20consists,initializations%20for%20visual%20and%20language.  Learning to instruct images expands training content and helps models pay attention to visual inputshttps://arxiv.org/html/2503.22215v2#:~:text=By%20learning%20to%20generate%20appropriate,relying%20solely%20on%20languages%20to.
+* **Diffusion Models** – Denoising diffusion models generate images by iteratively removing noise and gradually revealing the target image.  They use noise schedules and second‑order solvers to improve efficiencyfile:///home/oai/redirect.html#:~:text=,and%20their%20work%20is%20implementedfile:///home/oai/redirect.html#:~:text=What%20does%20this%20have%20to,Surprisingly%2C%20the%20answer%20is%20yes.
+
+---
+
+*Prepared February 8, 2026.*

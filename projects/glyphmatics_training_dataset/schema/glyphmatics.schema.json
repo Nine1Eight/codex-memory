@@ -1,0 +1,12 @@
+{
+  "title": "GlyphMatics Training Record",
+  "type": "object",
+  "required": [
+    "id",
+    "task_type",
+    "instruction",
+    "input",
+    "output",
+    "record_hash"
+  ]
+}

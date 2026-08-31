@@ -1,0 +1,21 @@
+{
+  "game_id": "sb26-7fbdac44",
+  "title": "SB26",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/subroutine",
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    18,
+    16,
+    15,
+    15,
+    31,
+    24,
+    17,
+    17
+  ],
+  "local_dir": "environment_files/sb26/7fbdac44",
+  "date_downloaded": "2026-03-23T01:12:51.244841+00:00"
+}

@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    volumes:
+      - ./:/workspace:ro
+    environment:
+      POSTGRES_DB: agentview
+      POSTGRES_USER: agentview
+      POSTGRES_PASSWORD: agentview
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agentview -d agentview"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    tmpfs:
+      - /var/lib/postgresql/data

@@ -1,0 +1,366 @@
+import json
+import logging
+import os
+import time
+from pathlib import Path
+from abc import ABC, abstractmethod
+from typing import Optional, Any
+
+from arcengine import FrameData, GameAction, GameState
+
+try:
+    from pydantic import ValidationError
+except Exception:
+    class ValidationError(Exception):
+        pass
+
+from .recorder import Recorder
+from .tracing import trace_agent_session
+
+logger = logging.getLogger(__name__)
+
+class Agent(ABC):
+    MAX_ACTIONS = 80
+
+    def __init__(self, card_id, game_id, agent_name, ROOT_URL, record, arc_env, tags=None):
+        self.ROOT_URL = ROOT_URL
+        self.card_id = card_id
+        self.game_id = game_id
+        self.guid = ""
+        self.agent_name = agent_name
+        self.tags = tags or []
+        self.frames = [FrameData(levels_completed=0)]
+        self.action_counter = 0
+        self.timer = 0
+        self.arc_env = arc_env
+        self._cleanup = True
+        self.headers = {
+            "X-API-Key": os.getenv("ARC_API_KEY", ""),
+            "Accept": "application/json",
+        }
+        if record:
+            self.start_recording()
+
+    @property
+    def is_playback(self):
+        return type(self) is Playback
+
+    @property
+    def name(self):
+        return f"{self.game_id}.{self.__class__.__name__.lower()}"
+
+    @property
+    def state(self):
+        return self.frames[-1].state
+
+    @property
+    def levels_completed(self):
+        return self.frames[-1].levels_completed
+
+    @property
+    def seconds(self):
+        return round(time.time() - self.timer, 2)
+
+    @property
+    def fps(self):
+        if self.action_counter <= 0:
+            return 0.0
+        return round(self.action_counter / max(self.seconds, 0.1), 2)
+
+    def start_recording(self):
+        self.recorder = Recorder(prefix=self.name)
+
+    def append_frame(self, frame):
+        self.frames.append(frame)
+        if len(self.frames) > getattr(self, "_MAX_FRAMES", 10):
+            self.frames = self.frames[-getattr(self, "_MAX_FRAMES", 10):]
+        if getattr(frame, "guid", None):
+            self.guid = frame.guid
+        if hasattr(self, "recorder") and not self.is_playback:
+            try:
+                self.recorder.record(json.loads(frame.model_dump_json()))
+            except Exception:
+                pass
+
+    def _convert_raw_frame_data(self, raw):
+        if raw is None:
+            raise ValueError("Received None frame data from environment")
+
+        if isinstance(raw, FrameData):
+            return raw
+
+        frame = getattr(raw, "frame", [])
+        try:
+            frame = [arr.tolist() if hasattr(arr, "tolist") else arr for arr in frame]
+        except Exception:
+            pass
+
+        return FrameData(
+            game_id=getattr(raw, "game_id", self.game_id),
+            frame=frame,
+            state=getattr(raw, "state", GameState.NOT_PLAYED),
+            levels_completed=getattr(raw, "levels_completed", 0),
+            win_levels=getattr(raw, "win_levels", 0),
+            guid=getattr(raw, "guid", ""),
+            full_reset=getattr(raw, "full_reset", False),
+            available_actions=getattr(raw, "available_actions", []),
+        )
+
+    def _normalize_action(self, action):
+        """
+        ARC API remote_wrapper requires arcengine.GameAction enum objects.
+        Some FORGE fallback paths return raw ints like 1, 2, 3, 4.
+        Normalize all legal forms here before env.step().
+        """
+        if isinstance(action, GameAction):
+            return action
+
+        # int -> GameAction
+        if isinstance(action, int):
+            try:
+                return GameAction(action)
+            except Exception:
+                name = f"ACTION{action}"
+                if hasattr(GameAction, name):
+                    return getattr(GameAction, name)
+                raise ValueError(f"Cannot normalize int action={action!r} into GameAction")
+
+        # string -> GameAction
+        if isinstance(action, str):
+            a = action.strip().upper()
+            if a.isdigit():
+                return self._normalize_action(int(a))
+            if not a.startswith("ACTION") and a != "RESET":
+                a = "ACTION" + a
+            if hasattr(GameAction, a):
+                return getattr(GameAction, a)
+            raise ValueError(f"Cannot normalize string action={action!r} into GameAction")
+
+        # object with .value but not actual GameAction
+        if hasattr(action, "value"):
+            try:
+                return GameAction(action.value)
+            except Exception:
+                name = f"ACTION{action.value}"
+                if hasattr(GameAction, name):
+                    return getattr(GameAction, name)
+
+        return action
+
+    def do_action_request(self, action):
+        action = self._normalize_action(action)
+
+        data = {}
+        try:
+            data = action.action_data.model_dump()
+        except Exception:
+            data = {}
+
+        # FORGE ACTION6 coordinate fallback may stash click data here.
+        if not data and hasattr(self, "_last_action_data"):
+            try:
+                data = dict(getattr(self, "_last_action_data") or {})
+            except Exception:
+                data = {}
+
+        reasoning = {}
+        if isinstance(data, dict):
+            reasoning = data.get("reasoning", {}) or {}
+
+        raw = self.arc_env.step(action, data=data, reasoning=reasoning)
+        return self._convert_raw_frame_data(raw)
+
+    def take_action(self, action):
+        frame_data = self.do_action_request(action)
+        try:
+            return FrameData.model_validate(frame_data)
+        except Exception:
+            return frame_data
+
+    def _ls20_frame_flat_signature(self, frame_data):
+        try:
+            frame = getattr(frame_data, "frame", None) or []
+            flat = []
+            for row in frame:
+                if hasattr(row, "tolist"):
+                    row = row.tolist()
+                if isinstance(row, list):
+                    flat.extend(row)
+            return flat, hash(tuple(flat)) if flat else 0
+        except Exception:
+            return [], 0
+
+    def _ls20_forced_sequence(self):
+        if not str(self.game_id).startswith("ls20"):
+            return []
+        raw = os.getenv(
+            "LS20_FORCED_SEQUENCE",
+            "RIGHT RIGHT RIGHT UP UP UP UP UP UP LEFT LEFT LEFT LEFT UP UP UP UP UP",
+        )
+        return [x.strip().upper() for x in raw.replace(",", " ").split() if x.strip()]
+
+    def _ls20_parse_forced_action(self, token):
+        token = str(token).strip().upper()
+        direction_map = {
+            "RIGHT": os.getenv("LS20_RIGHT_ACTION", "ACTION1"),
+            "UP": os.getenv("LS20_UP_ACTION", "ACTION2"),
+            "LEFT": os.getenv("LS20_LEFT_ACTION", "ACTION3"),
+            "DOWN": os.getenv("LS20_DOWN_ACTION", "ACTION4"),
+        }
+        token = direction_map.get(token, token)
+
+        if token == "RESET":
+            return GameAction.RESET
+
+        if token.startswith("ACTION"):
+            n = token.replace("ACTION", "")
+            if n.isdigit():
+                return self._normalize_action(int(n))
+
+        if token.isdigit():
+            return self._normalize_action(int(token))
+
+        raise ValueError(f"Unknown LS20 forced action token: {token!r}")
+
+    def _ls20_write_transition_learning(self, before, after, intended, action, step_index):
+        try:
+            root = Path(os.getenv("FORGE_LEARNING_DIR", "run_logs"))
+            root.mkdir(parents=True, exist_ok=True)
+            out = root / f"ls20_transition_learning_{self.card_id or 'local'}.jsonl"
+
+            before_flat, before_sig = self._ls20_frame_flat_signature(before)
+            after_flat, after_sig = self._ls20_frame_flat_signature(after)
+
+            delta = None
+            if before_flat and after_flat:
+                n = min(len(before_flat), len(after_flat))
+                delta = sum(1 for a, b in zip(before_flat[:n], after_flat[:n]) if a != b)
+
+            before_levels = int(getattr(before, "levels_completed", 0) or 0)
+            after_levels = int(getattr(after, "levels_completed", 0) or 0)
+
+            rec = {
+                "game_id": str(self.game_id),
+                "step": int(step_index),
+                "intended": str(intended),
+                "action": getattr(action, "name", str(action)),
+                "action_value": getattr(action, "value", None),
+                "before_state": str(getattr(before, "state", None)),
+                "after_state": str(getattr(after, "state", None)),
+                "before_levels_completed": before_levels,
+                "after_levels_completed": after_levels,
+                "before_sig": before_sig,
+                "after_sig": after_sig,
+                "pixel_delta": delta,
+                "reward_proxy": after_levels - before_levels,
+            }
+
+            with open(out, "a", encoding="utf-8") as f:
+                f.write(json.dumps(rec, default=str) + "\n")
+
+            logger.info(
+                f"[LS20_LEARN] step={step_index} intended={intended} "
+                f"action={getattr(action, 'name', action)} delta={delta} "
+                f"levels={before_levels}->{after_levels}"
+            )
+        except Exception as e:
+            logger.warning(f"[LS20_LEARN][WARN] failed: {e}")
+
+    @trace_agent_session
+    def main(self):
+        self.timer = time.time()
+
+        forced_seq = self._ls20_forced_sequence()
+        force_ls20 = bool(forced_seq) and os.getenv("LS20_FORCE_ROUTE", "1") != "0"
+
+        min_actions = int(os.getenv("FORGE_MIN_ACTIONS", "20"))
+        max_actions = int(os.getenv("FORGE_MAX_ACTIONS", str(self.MAX_ACTIONS)))
+
+        if force_ls20:
+            max_actions = min(max_actions, len(forced_seq))
+            min_actions = min(min_actions, len(forced_seq))
+            logger.info(f"[LS20_ROUTE] forced sequence active len={len(forced_seq)} seq={forced_seq}")
+            logger.info(
+                "[LS20_ROUTE] mapping "
+                f"RIGHT={os.getenv('LS20_RIGHT_ACTION', 'ACTION1')} "
+                f"UP={os.getenv('LS20_UP_ACTION', 'ACTION2')} "
+                f"LEFT={os.getenv('LS20_LEFT_ACTION', 'ACTION3')} "
+                f"DOWN={os.getenv('LS20_DOWN_ACTION', 'ACTION4')}"
+            )
+
+        while (
+            (
+                self.action_counter < min_actions
+                or not self.is_done(self.frames, self.frames[-1])
+            )
+            and self.action_counter < max_actions
+        ):
+            latest = self._convert_raw_frame_data(
+                self.arc_env.observation_space if self.arc_env else None
+            )
+
+            forced_token = None
+            if force_ls20 and self.action_counter < len(forced_seq):
+                forced_token = forced_seq[self.action_counter]
+                action = self._ls20_parse_forced_action(forced_token)
+                logger.info(
+                    f"[LS20_ROUTE] step={self.action_counter + 1}/{len(forced_seq)} "
+                    f"{forced_token}->{getattr(action, 'name', action)}"
+                )
+            else:
+                action = self.choose_action(self.frames, latest)
+
+            before_frame = latest
+            frame = self.take_action(action)
+
+            if force_ls20 and frame is not None:
+                self._ls20_write_transition_learning(
+                    before_frame,
+                    frame,
+                    forced_token if forced_token is not None else "policy",
+                    action,
+                    self.action_counter + 1,
+                )
+
+            if frame:
+                self.append_frame(frame)
+                logger.info(
+                    f"{self.game_id} - {getattr(action, 'name', action)}: "
+                    f"count {self.action_counter}, "
+                    f"levels_completed {getattr(frame, 'levels_completed', -1)}, "
+                    f"fps {self.fps}"
+                )
+
+            self.action_counter += 1
+
+        self.cleanup()
+
+
+    def cleanup(self, scorecard=None):
+        if not self._cleanup:
+            return
+        self._cleanup = False
+        logger.info(
+            f"Finishing: actions={self.action_counter}, seconds={self.seconds}, fps={self.fps}"
+        )
+
+    @abstractmethod
+    def is_done(self, frames, latest_frame):
+        raise NotImplementedError
+
+    @abstractmethod
+    def choose_action(self, frames, latest_frame):
+        raise NotImplementedError
+
+class Playback(Agent):
+    MAX_ACTIONS = 1000000
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.recorded_actions = []
+
+    def is_done(self, frames, latest_frame):
+        return self.action_counter >= len(self.recorded_actions)
+
+    def choose_action(self, frames, latest_frame):
+        return GameAction.RESET

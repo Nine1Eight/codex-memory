@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GGUF Home Launcher</title>
+
+<meta http-equiv="Content-Security-Policy"
+content="default-src 'self';
+         connect-src http://127.0.0.1:8080 ws://127.0.0.1:8080;
+         script-src 'self';
+         style-src 'self';
+         img-src 'self';
+         object-src 'none';
+         frame-ancestors 'none';">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div>GGUF AI Launcher</div>
+  <div id="status">Booting...</div>
+</header>
+
+<main>
+  <section id="dock"></section>
+  <section id="grid"></section>
+  <section id="stream"></section>
+</main>
+
+<footer>
+  <input id="prompt" placeholder="Command..." autocomplete="off"/>
+  <button id="runBtn">Run</button>
+  <button id="voiceBtn">🎤</button>
+</footer>
+
+<script src="app.js"></script>
+<script>
+(async function init(){
+    if ('serviceWorker' in navigator) {
+        await navigator.serviceWorker.register('sw.js');
+    }
+
+    try {
+        const res = await fetch("http://127.0.0.1:8080/health");
+        document.getElementById("status").innerText =
+            res.ok ? "LLM Online" : "LLM Offline";
+    } catch {
+        document.getElementById("status").innerText = "LLM Offline";
+    }
+})();
+</script>
+
+</body>
+</html>

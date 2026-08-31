@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Borg AI Swarm Agency — Agent Seed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07090f;
+      --panel: #101522;
+      --text: #e7eefc;
+      --muted: #9fb0d0;
+      --accent: #70e1ff;
+      --line: #243049;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #13203a, var(--bg));
+      color: var(--text);
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+    .hero {
+      border: 1px solid var(--line);
+      background: rgba(16, 21, 34, 0.82);
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.36);
+    }
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      line-height: 0.96;
+      margin: 0 0 18px;
+      letter-spacing: -0.06em;
+    }
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      background: #151c2e;
+      font-weight: 700;
+    }
+    a.primary {
+      background: linear-gradient(135deg, #4cd4ff, #8ef7d3);
+      color: #051018;
+      border: 0;
+    }
+    code, pre {
+      background: #080c14;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    pre {
+      padding: 18px;
+      overflow-x: auto;
+    }
+    section {
+      margin-top: 36px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      background: rgba(16, 21, 34, 0.56);
+    }
+    li {
+      color: var(--muted);
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <h1>Borg AI Swarm Agency</h1>
+    <p>
+      Portable seed capsule for a distributable, offline-first agent network.
+      Signed sync. Trusted lineage. No silent replication. No auto-executed remote code.
+    </p>
+    <div class="buttons">
+      <a class="button primary" href="./borg-agent-seed.borg">Download Seed .borg</a>
+      <a class="button" href="./SHA256SUMS">Verify SHA256</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Inspect</h2>
+    <pre><code>python -m pip install borg-seed
+borg-seed inspect borg-agent-seed.borg</code></pre>
+  </section>
+
+  <section>
+    <h2>Safety Contract</h2>
+    <ul>
+      <li>Authorized forking only.</li>
+      <li>Signed CRDT deltas only.</li>
+      <li>Working memory is private by default.</li>
+      <li>Capabilities sync as proposals, not executable payloads.</li>
+      <li>Unknown peers are rejected unless explicitly trusted.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,7 @@
+window_id,name,start_date,end_date,type,intensity_score,source
+lhc_first_beam_2008,First LHC beam,2008-09-10,2008-09-10,beam,1.0,CERN timeline
+lhc_fault_2008,LHC electrical fault/malfunction,2008-09-19,2008-09-19,incident,0.8,CERN timeline
+lhc_beams_back_2009,Beams back in LHC,2009-11-20,2009-11-20,beam,1.0,CERN timeline
+lhc_first_collisions_2009,First LHC collisions,2009-11-23,2009-11-23,collision,1.0,CERN timeline
+lhc_standby_2009,End of first full operation period,2009-12-16,2009-12-16,shutdown,0.4,CERN timeline
+lhc_7tev_2010,First 7 TeV collisions,2010-03-30,2010-03-30,high_energy_collision,1.0,CERN timeline

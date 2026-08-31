@@ -1,0 +1,26 @@
+name: Build Seed Artifact
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build seed
+        run: |
+          python -m pip install -e .
+          mkdir -p dist
+          python scripts/create_seed.py --out dist/borg-agent-seed.borg
+          sha256sum dist/borg-agent-seed.borg > dist/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: borg-agent-seed
+          path: dist/

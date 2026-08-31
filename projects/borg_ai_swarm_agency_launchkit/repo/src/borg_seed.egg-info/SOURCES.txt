@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/borg_seed/__init__.py
+src/borg_seed/capsule.py
+src/borg_seed/cli.py
+src/borg_seed.egg-info/PKG-INFO
+src/borg_seed.egg-info/SOURCES.txt
+src/borg_seed.egg-info/dependency_links.txt
+src/borg_seed.egg-info/entry_points.txt
+src/borg_seed.egg-info/top_level.txt
+tests/test_seed.py

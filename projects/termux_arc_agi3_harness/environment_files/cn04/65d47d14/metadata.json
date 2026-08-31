@@ -1,0 +1,19 @@
+{
+  "game_id": "cn04-65d47d14",
+  "title": "CN04",
+  "default_fps": 5,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/connector",
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    16,
+    54,
+    69,
+    318,
+    208,
+    114
+  ],
+  "local_dir": "environment_files/cn04/65d47d14",
+  "date_downloaded": "2026-03-23T01:12:51.754591+00:00"
+}

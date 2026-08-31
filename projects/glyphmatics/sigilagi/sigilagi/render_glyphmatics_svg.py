@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+svg = """<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+<rect x="50" y="80" width="50" height="50" fill="white"/>
+<polygon points="150,80 120,130 180,130" fill="green"/>
+<circle cx="250" cy="105" r="25" fill="orange"/>
+<polygon points="350,80 320,105 350,130 380,105" fill="yellow"/>
+<polygon points="450,90 480,90 500,105 480,120 450,120 430,105" fill="red"/>
+</svg>
+"""
+
+with open("glyphmatics_v7.svg","w") as f:
+    f.write(svg)
+
+print("WROTE glyphmatics_v7.svg")

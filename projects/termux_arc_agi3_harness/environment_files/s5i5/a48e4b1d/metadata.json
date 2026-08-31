@@ -1,0 +1,21 @@
+{
+  "game_id": "s5i5-a48e4b1d",
+  "title": "S5I5",
+  "default_fps": 15,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/sliders",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    19,
+    57,
+    85,
+    203,
+    82,
+    30,
+    76,
+    56
+  ],
+  "local_dir": "environment_files/s5i5/a48e4b1d",
+  "date_downloaded": "2026-03-23T01:12:51.268319+00:00"
+}

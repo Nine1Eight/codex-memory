@@ -1,0 +1,14 @@
+[package]
+name = "glyphmatics"
+version = "2.1.0"
+edition = "2021"
+
+[[bin]]
+name = "glyphmatics"
+path = "src/main.rs"
+
+[dependencies]
+flate2 = "1.0"
+tar = "0.4"
+sha2 = "0.10"
+hex = "0.4"

@@ -1,0 +1,20 @@
+{
+  "game_id": "ls20-9607627b",
+  "title": "LS20",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/locksmith",
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    21,
+    123,
+    39,
+    92,
+    54,
+    108,
+    109
+  ],
+  "local_dir": "environment_files/ls20/9607627b",
+  "date_downloaded": "2026-03-23T01:12:50.993027+00:00"
+}

@@ -1,0 +1,15 @@
+[project]
+name = "glyphmatics-agent"
+version = "0.1.0"
+description = "Agents SDK project for the Glyphmatics sigil corpus"
+requires-python = ">=3.11"
+dependencies = [
+  "openai-agents",
+  "pillow",
+]
+
+[project.scripts]
+glyphmatics = "main:cli"
+
+[tool.uv]
+dev-dependencies = []

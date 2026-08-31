@@ -1,0 +1,84 @@
+{
+  "project": "SigilAGI",
+  "mode": "object_to_glyph_detection",
+  "created_utc": "2026-04-30T05:20:11.005606+00:00",
+  "scene_note": "A person appears near a phone, door, wallet, and paper document.",
+  "detected_objects": [
+    "person",
+    "phone",
+    "door",
+    "wallet",
+    "paper"
+  ],
+  "glyph_objects": [
+    {
+      "index": 1,
+      "label": "person",
+      "glyph": "☉",
+      "meaning": "actor / observer / intent",
+      "role": "human subject",
+      "risk": "human-review",
+      "detection_source": "user_label_or_detector_output"
+    },
+    {
+      "index": 2,
+      "label": "phone",
+      "glyph": "☏",
+      "meaning": "communication / signal / record",
+      "role": "information device",
+      "risk": "low",
+      "detection_source": "user_label_or_detector_output"
+    },
+    {
+      "index": 3,
+      "label": "door",
+      "glyph": "⛩",
+      "meaning": "boundary / transition / access",
+      "role": "entry or exit point",
+      "risk": "low",
+      "detection_source": "user_label_or_detector_output"
+    },
+    {
+      "index": 4,
+      "label": "wallet",
+      "glyph": "▨",
+      "meaning": "identity / value / personal property",
+      "role": "personal property",
+      "risk": "privacy-review",
+      "detection_source": "user_label_or_detector_output"
+    },
+    {
+      "index": 5,
+      "label": "paper",
+      "glyph": "▧",
+      "meaning": "document / record / instruction",
+      "role": "written evidence",
+      "risk": "low",
+      "detection_source": "user_label_or_detector_output"
+    }
+  ],
+  "glyph_summary": "☉ → ☏ → ⛩ → ▨ → ▧",
+  "relationships": [
+    {
+      "symbolic": "☉ near ☏",
+      "plain": "A human subject and a communication or recording device appear in the same scene."
+    },
+    {
+      "symbolic": "☉ near ⛩",
+      "plain": "A human subject and an access boundary appear in the same scene."
+    }
+  ],
+  "plain_english_summary": "The scene contains: person, phone, door, wallet, paper. A human subject and a communication or recording device appear in the same scene. A human subject and an access boundary appear in the same scene.",
+  "risk_flags": [
+    "Privacy-sensitive object detected: wallet mapped to ▨."
+  ],
+  "unknowns": [
+    "The system cannot verify identity, intent, guilt, legality, medical status, or exact danger level from object labels alone.",
+    "Object labels may be incomplete or incorrect if provided manually or by a detector.",
+    "Spatial relationships are approximate unless bounding boxes or coordinates are supplied."
+  ],
+  "human_review_needed": [
+    "Review any privacy-sensitive or high-risk glyphs before using the report.",
+    "Do not treat symbolic output as proof. Treat it as an organized reasoning trace."
+  ]
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools==75.8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthetic-agent-security"
+version = "0.1.0"
+description = "Deterministic offline evaluator for synthetic multi-step tool attacks"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+agentsec = "src.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

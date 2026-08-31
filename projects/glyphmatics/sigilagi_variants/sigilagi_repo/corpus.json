@@ -1,0 +1,17 @@
+[
+  {
+    "doc_id": "glyph-core",
+    "text": "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms.",
+    "metadata": {"layer": "core"}
+  },
+  {
+    "doc_id": "registry",
+    "text": "Registry manifests define module inventory version identity and state snapshots for deterministic boot validation.",
+    "metadata": {"layer": "registry"}
+  },
+  {
+    "doc_id": "sigil-rag",
+    "text": "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion.",
+    "metadata": {"layer": "retrieval"}
+  }
+]

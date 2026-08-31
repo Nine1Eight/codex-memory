@@ -1,0 +1,19 @@
+{
+  "default": {
+    "description": "GlyphMatics complete synthetic canonical training dataset.",
+    "splits": {
+      "train": {
+        "name": "train",
+        "num_examples": 752
+      },
+      "validation": {
+        "name": "validation",
+        "num_examples": 83
+      },
+      "test": {
+        "name": "test",
+        "num_examples": 83
+      }
+    }
+  }
+}

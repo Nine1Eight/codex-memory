@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AgentView</title>
+    <meta
+      name="description"
+      content="AgentView is a proof-of-understanding frontend for authorized multimodal analysis, signed receipts, and bootstrap progress."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="eyebrow">AgentView</div>
+        <h1>Authorized semantic viewing with signed evidence.</h1>
+        <p class="lede">
+          The frontend stays minimal: upload authorized media, track bootstrap progress,
+          and inspect receipts without inventing extra logic.
+        </p>
+        <div class="status-strip">
+          <span class="pill">Bootstrap: <strong id="state-pill">locked</strong></span>
+          <span class="pill">API: <strong id="api-label">auto</strong></span>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="#status">View bootstrap status</a>
+          <a class="button" href="#receipt">Inspect receipt layout</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card" id="status">
+          <h2>Bootstrap</h2>
+          <p class="metric"><span id="count">0</span> / <span id="threshold">?</span></p>
+          <p class="muted" id="lock-state">Locked until qualified multimodal views reach the threshold.</p>
+        </article>
+
+        <article class="card">
+          <h2>What counts</h2>
+          <ul>
+            <li>Distinct authorized videos</li>
+            <li>Qualified multimodal views</li>
+            <li>Verified evidence and signed receipts</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>What does not count</h2>
+          <ul>
+            <li>Retries and duplicates</li>
+            <li>Transcript-only analysis</li>
+            <li>Metadata-only or failed runs</li>
+          </ul>
+        </article>
+
+        <article class="card" id="receipt">
+          <h2>Receipt fields</h2>
+          <pre>{
+  "tenantId": "…",
+  "sourceRevisionId": "…",
+  "objectiveType": "…",
+  "claimsMerkleRootSha256": "…",
+  "qualified": true
+}</pre>
+        </article>
+
+        <article class="card" id="cohost">
+          <h2>Co-host</h2>
+          <p class="muted">Looki data can appear here through the API proxy.</p>
+          <div class="cohost-row">
+            <button class="button primary" id="load-looki">Load Looki me</button>
+            <button class="button" id="load-moments">Load Moments</button>
+          </div>
+          <pre id="looki-output">No Looki data loaded yet.</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

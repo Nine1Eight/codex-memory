@@ -1,0 +1,15 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+data
+logs
+tmp
+node_modules
+.venv
+venv

@@ -1,0 +1,12 @@
+{
+  "name": "agentview-api-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --port 8787"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

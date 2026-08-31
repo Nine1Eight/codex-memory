@@ -1,0 +1,24 @@
+# secrets
+.env
+*.key
+*.pem
+*.token
+
+# large artifacts
+models/
+datasets/
+checkpoints/
+adapters/
+outputs/
+cache/
+tmp/
+
+# logs
+logs/*.log
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/

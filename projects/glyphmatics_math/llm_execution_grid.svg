@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="912" viewBox="0 0 864 912">
+<metadata id="glyphmatics" version="1" base="333" sha256="6b094aedb53e5e96b713d87b772ccf28ff4b4d01de9504f37167c4031541e374">150,151,152,153,200,154,155,156,201,157,202,158,203,159,204,160,220,186,161,162,163,164,165,205,187,166,167,206,168,207,169,208,170,171,172,209,173,174,188,175,210,176,211,177,178,179,180,181,182,183,189,184,185,0</metadata>
+<rect width="100%" height="100%" fill="#0b1020"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#58d6ff"/></marker></defs>
+<line x1="312.0" y1="408.0" x2="360.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="360.0" y1="408.0" x2="408.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="408.0" y1="408.0" x2="456.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="456.0" y1="408.0" x2="120.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="120.0" y1="552.0" x2="504.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="504.0" y1="408.0" x2="552.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="552.0" y1="408.0" x2="600.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="600.0" y1="408.0" x2="168.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="168.0" y1="552.0" x2="648.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="648.0" y1="408.0" x2="216.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="216.0" y1="552.0" x2="696.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="696.0" y1="408.0" x2="264.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="264.0" y1="552.0" x2="744.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="744.0" y1="408.0" x2="312.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="312.0" y1="552.0" x2="792.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="792.0" y1="408.0" x2="216.0" y2="600.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="216.0" y1="600.0" x2="312.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="312.0" y1="504.0" x2="840.0" y2="408.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="840.0" y1="408.0" x2="24.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="24.0" y1="456.0" x2="72.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="72.0" y1="456.0" x2="120.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="120.0" y1="456.0" x2="168.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="168.0" y1="456.0" x2="360.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="360.0" y1="552.0" x2="360.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="360.0" y1="504.0" x2="216.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="216.0" y1="456.0" x2="264.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="264.0" y1="456.0" x2="408.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="408.0" y1="552.0" x2="312.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="312.0" y1="456.0" x2="456.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="456.0" y1="552.0" x2="360.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="360.0" y1="456.0" x2="504.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="504.0" y1="552.0" x2="408.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="408.0" y1="456.0" x2="456.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="456.0" y1="456.0" x2="504.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="504.0" y1="456.0" x2="552.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="552.0" y1="552.0" x2="552.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="552.0" y1="456.0" x2="600.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="600.0" y1="456.0" x2="408.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="408.0" y1="504.0" x2="648.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="648.0" y1="456.0" x2="600.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="600.0" y1="552.0" x2="696.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="696.0" y1="456.0" x2="648.0" y2="552.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="648.0" y1="552.0" x2="744.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="744.0" y1="456.0" x2="792.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="792.0" y1="456.0" x2="840.0" y2="456.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="840.0" y1="456.0" x2="24.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="24.0" y1="504.0" x2="72.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="72.0" y1="504.0" x2="120.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="120.0" y1="504.0" x2="168.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="168.0" y1="504.0" x2="456.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="456.0" y1="504.0" x2="216.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="216.0" y1="504.0" x2="264.0" y2="504.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="264.0" y1="504.0" x2="24.0" y2="24.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="3.84" y="3.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="24.0" y="28.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#a6ffcb">000</text>
+<title>END</title>
+<rect x="291.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="312.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">150</text>
+<title>LOAD_TOKENIZER</title>
+<rect x="339.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="360.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">151</text>
+<title>TOKENIZE</title>
+<rect x="387.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="408.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">152</text>
+<title>TOKEN_IDS</title>
+<rect x="435.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="456.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">153</text>
+<title>TOKEN_EMBEDDING</title>
+<rect x="483.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="504.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">154</text>
+<title>POSITION_INDEX</title>
+<rect x="531.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="552.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">155</text>
+<title>LAYER_BEGIN</title>
+<rect x="579.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="600.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">156</text>
+<title>RMS_NORM_ATTENTION</title>
+<rect x="627.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="648.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">157</text>
+<title>PROJECT_QUERY</title>
+<rect x="675.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="696.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">158</text>
+<title>PROJECT_KEY</title>
+<rect x="723.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="744.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">159</text>
+<title>PROJECT_VALUE</title>
+<rect x="771.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="792.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">160</text>
+<title>APPLY_ROPE</title>
+<rect x="819.84" y="387.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="840.0" y="412.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">161</text>
+<title>ATTENTION_SCORES</title>
+<rect x="3.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="24.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">162</text>
+<title>CAUSAL_MASK</title>
+<rect x="51.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="72.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">163</text>
+<title>ATTENTION_SOFTMAX</title>
+<rect x="99.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="120.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">164</text>
+<title>ATTENTION_VALUES</title>
+<rect x="147.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="168.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">165</text>
+<title>PROJECT_ATTENTION_OUTPUT</title>
+<rect x="195.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="216.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">166</text>
+<title>RESIDUAL_ATTENTION</title>
+<rect x="243.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="264.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">167</text>
+<title>RMS_NORM_MLP</title>
+<rect x="291.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="312.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">168</text>
+<title>MLP_GATE</title>
+<rect x="339.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="360.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">169</text>
+<title>MLP_UP</title>
+<rect x="387.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="408.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">170</text>
+<title>SILU_GATE</title>
+<rect x="435.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="456.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">171</text>
+<title>MLP_MULTIPLY</title>
+<rect x="483.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="504.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">172</text>
+<title>MLP_DOWN</title>
+<rect x="531.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="552.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">173</text>
+<title>RESIDUAL_MLP</title>
+<rect x="579.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="600.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">174</text>
+<title>LAYER_END</title>
+<rect x="627.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="648.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">175</text>
+<title>FINAL_RMS_NORM</title>
+<rect x="675.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="696.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">176</text>
+<title>LM_HEAD</title>
+<rect x="723.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="744.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">177</text>
+<title>LOGITS</title>
+<rect x="771.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="792.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">178</text>
+<title>TEMPERATURE</title>
+<rect x="819.84" y="435.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="840.0" y="460.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">179</text>
+<title>TOP_K</title>
+<rect x="3.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="24.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">180</text>
+<title>TOP_P</title>
+<rect x="51.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="72.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">181</text>
+<title>SAMPLE_TOKEN</title>
+<rect x="99.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="120.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">182</text>
+<title>APPEND_TOKEN</title>
+<rect x="147.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="168.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">183</text>
+<title>STOP_CHECK</title>
+<rect x="195.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="216.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">184</text>
+<title>DETOKENIZE</title>
+<rect x="243.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="264.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">185</text>
+<title>OUTPUT_TEXT</title>
+<rect x="291.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="312.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">186</text>
+<title>KV_CACHE_READ</title>
+<rect x="339.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="360.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">187</text>
+<title>KV_CACHE_WRITE</title>
+<rect x="387.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="408.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">188</text>
+<title>NEXT_LAYER</title>
+<rect x="435.84" y="483.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#55e6a5" stroke-width="2"/>
+<text x="456.0" y="508.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#55e6a5">189</text>
+<title>NEXT_TOKEN</title>
+<rect x="99.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#4da3ff" stroke-width="2"/>
+<text x="120.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#4da3ff">200</text>
+<title>WEIGHT_TOKEN_EMBEDDING</title>
+<rect x="147.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ffd166" stroke-width="2"/>
+<text x="168.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffd166">201</text>
+<title>WEIGHT_ATTN_NORM</title>
+<rect x="195.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#b388ff" stroke-width="2"/>
+<text x="216.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#b388ff">202</text>
+<title>WEIGHT_QUERY</title>
+<rect x="243.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#b388ff" stroke-width="2"/>
+<text x="264.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#b388ff">203</text>
+<title>WEIGHT_KEY</title>
+<rect x="291.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#b388ff" stroke-width="2"/>
+<text x="312.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#b388ff">204</text>
+<title>WEIGHT_VALUE</title>
+<rect x="339.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#b388ff" stroke-width="2"/>
+<text x="360.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#b388ff">205</text>
+<title>WEIGHT_ATTN_OUTPUT</title>
+<rect x="387.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ffd166" stroke-width="2"/>
+<text x="408.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffd166">206</text>
+<title>WEIGHT_MLP_NORM</title>
+<rect x="435.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ff9f43" stroke-width="2"/>
+<text x="456.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff9f43">207</text>
+<title>WEIGHT_MLP_GATE</title>
+<rect x="483.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ff9f43" stroke-width="2"/>
+<text x="504.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff9f43">208</text>
+<title>WEIGHT_MLP_UP</title>
+<rect x="531.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ff9f43" stroke-width="2"/>
+<text x="552.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff9f43">209</text>
+<title>WEIGHT_MLP_DOWN</title>
+<rect x="579.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ffd166" stroke-width="2"/>
+<text x="600.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffd166">210</text>
+<title>WEIGHT_FINAL_NORM</title>
+<rect x="627.84" y="531.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#ff6384" stroke-width="2"/>
+<text x="648.0" y="556.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff6384">211</text>
+<title>WEIGHT_LM_HEAD</title>
+<rect x="195.84" y="579.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#b388ff" stroke-width="2"/>
+<text x="216.0" y="604.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#b388ff">220</text>
+<title>WEIGHT_ROPE_FREQUENCIES</title>
+</svg>

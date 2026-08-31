@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SigilAGI GlyphMatics Academic Framework</title>
+  <meta name="description" content="Academic research framing for SigilAGI GlyphMatics, an experimental symbolic AI and semantic compression framework.">
+  <style>
+    :root {
+      --bg: #070812;
+      --panel: #101426;
+      --panel2: #151a31;
+      --text: #eef2ff;
+      --muted: #aab3d6;
+      --line: rgba(255,255,255,.13);
+      --accent: #8b5cf6;
+      --accent2: #22d3ee;
+      --code: #050711;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(139,92,246,.32), transparent 35%),
+        radial-gradient(circle at top right, rgba(34,211,238,.2), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+    main {
+      width: min(1040px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 42px 0 80px;
+    }
+    .hero {
+      padding: 34px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(16,20,38,.94), rgba(21,26,49,.88));
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.38);
+    }
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.05);
+      font-size: 14px;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 6vw, 4.6rem);
+      line-height: .98;
+      letter-spacing: -0.055em;
+      margin: 22px 0 14px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      max-width: 830px;
+    }
+    section {
+      margin-top: 22px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: rgba(16,20,38,.78);
+      border-radius: 24px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    h3 {
+      color: #dfe5ff;
+      margin-top: 22px;
+    }
+    p, li { color: var(--muted); }
+    strong { color: var(--text); }
+    ul { padding-left: 22px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      margin-top: 12px;
+      border: 1px solid var(--line);
+    }
+    th, td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--text);
+      background: rgba(255,255,255,.07);
+    }
+    td { color: var(--muted); }
+    pre {
+      overflow-x: auto;
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      color: #d9e3ff;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.045);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .card b { display: block; margin-bottom: 6px; }
+    footer {
+      color: var(--muted);
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+    a { color: var(--accent2); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="badge">🧬 918 Technologies · Academic Framework</div>
+      <h1>SigilAGI GlyphMatics Academic Framework</h1>
+      <p class="subtitle">
+        Experimental symbolic AI research system for semantic compression, glyph-based memory,
+        deterministic reconstruction, and interpretable agent reasoning.
+      </p>
+    </div>
+
+    <section>
+      <h2>Abstract</h2>
+      <p>
+        <strong>SigilAGI GlyphMatics</strong> is an experimental symbolic artificial intelligence framework
+        for compressing, encoding, retrieving, and reasoning over information using structured glyph-based
+        representations.
+      </p>
+      <p>
+        The project investigates whether meaning can be represented through compact symbolic units rather
+        than only through large token streams or opaque vector embeddings. By combining symbolic compression,
+        layered semantic encoding, deterministic reconstruction, and agent-oriented reasoning, this framework
+        explores a hybrid architecture for memory-efficient artificial intelligence systems.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Hypothesis</h2>
+      <p>
+        Meaning can be compressed into deterministic symbolic structures that preserve enough semantic
+        information for useful reconstruction, reasoning, retrieval, and agent control.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Motivation</h2>
+      <p>
+        Modern large language models rely heavily on high-volume token streams, vector embeddings, and
+        large-scale compute infrastructure. These systems are powerful, but they require significant memory,
+        bandwidth, storage, and energy resources.
+      </p>
+      <div class="grid">
+        <div class="card"><b>Mobile AI</b><span>Low-resource deployment and offline reasoning.</span></div>
+        <div class="card"><b>Agent Memory</b><span>Compact symbolic memory traces for autonomous systems.</span></div>
+        <div class="card"><b>Interpretability</b><span>Human-readable symbolic states and audit trails.</span></div>
+        <div class="card"><b>Semantic Compression</b><span>Meaning-preserving reduction of data structures.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Layered Architecture</h2>
+      <h3>Alpha Layer — Symbolic Identity</h3>
+      <p>The alpha layer stores the visible symbolic identity of a concept: glyph IDs, labels, semantic anchors, or symbolic class markers.</p>
+
+      <h3>Beta Layer — Encoded Payload</h3>
+      <p>The beta layer stores compressed semantic payloads representing meaning, relational data, command structures, or memory fragments.</p>
+
+      <h3>Gamma Layer — Contextual Validation</h3>
+      <p>The gamma layer stores temporal, contextual, relational, or reconstruction validation markers.</p>
+    </section>
+
+    <section>
+      <h2>Intended Research Areas</h2>
+      <ul>
+        <li>Symbolic AI</li>
+        <li>Neuro-symbolic systems</li>
+        <li>Semantic compression</li>
+        <li>Representation learning</li>
+        <li>Cognitive architectures</li>
+        <li>Agentic AI</li>
+        <li>Interpretable machine learning</li>
+        <li>Edge AI</li>
+        <li>Human-computer interaction</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Evaluation Criteria</h2>
+      <table>
+        <thead>
+          <tr><th>Metric</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Compression Ratio</td><td>Measures reduction in storage size compared to the original input.</td></tr>
+          <tr><td>Reconstruction Accuracy</td><td>Measures how faithfully glyphs expand back into the original meaning.</td></tr>
+          <tr><td>Semantic Preservation</td><td>Measures whether the core meaning survives compression.</td></tr>
+          <tr><td>Determinism</td><td>Measures whether repeated inputs produce stable glyph outputs.</td></tr>
+          <tr><td>Interpretability</td><td>Measures whether symbolic structures can be inspected by humans.</td></tr>
+          <tr><td>Runtime Efficiency</td><td>Measures speed on mobile or low-resource hardware.</td></tr>
+          <tr><td>Error Recovery</td><td>Measures handling of corrupted or incomplete glyphs.</td></tr>
+          <tr><td>Agent Utility</td><td>Measures improvement to routing, planning, or memory recall.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Citation</h2>
+      <pre><code>@misc{ward2026sigilagi_glyphmatics,
+  title        = {SigilAGI GlyphMatics Academic Framework},
+  author       = {Ward, Matthew Blake},
+  year         = {2026},
+  publisher    = {Hugging Face},
+  note         = {Experimental symbolic AI and semantic compression framework}
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Author</h2>
+      <p>
+        <strong>Matthew Blake Ward</strong><br>
+        Founder, 918 Technologies<br>
+        Creator of GlyphMatics and SigilAGI
+      </p>
+    </section>
+
+    <section>
+      <h2>Disclaimer</h2>
+      <p>
+        This repository contains experimental research software and academic framing material.
+        Results may vary depending on input quality, glyph mapping rules, reconstruction methods,
+        and evaluation procedures. Users should independently validate outputs before relying on them
+        in production, academic, or operational settings.
+      </p>
+    </section>
+
+    <footer>
+      SigilAGI GlyphMatics · 918 Technologies · Research and experimental development
+    </footer>
+  </main>
+</body>
+</html>

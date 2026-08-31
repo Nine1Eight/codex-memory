@@ -1,0 +1,49 @@
+{
+  "0": {
+    "name": "empty",
+    "letter": " ",
+    "braille": ".",
+    "traversable": true
+  },
+  "1": {
+    "name": "wall",
+    "letter": "W",
+    "braille": "⠺",
+    "blocking": true,
+    "traversable": false
+  },
+  "2": {
+    "name": "player",
+    "letter": "P",
+    "braille": "⠏",
+    "controllable": true
+  },
+  "3": {
+    "name": "goal",
+    "letter": "G",
+    "braille": "⠛",
+    "objective": true
+  },
+  "4": {
+    "name": "door",
+    "letter": "D",
+    "braille": "⠙",
+    "blocking": true,
+    "traversable": false
+  },
+  "5": {
+    "name": "key",
+    "letter": "K",
+    "braille": "⠅"
+  },
+  "6": {
+    "name": "enemy",
+    "letter": "E",
+    "braille": "⠑"
+  },
+  "7": {
+    "name": "button",
+    "letter": "B",
+    "braille": "⠃"
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="912" viewBox="0 0 864 912">
+<metadata id="glyphmatics" version="1" base="333" sha256="c510839f461196b92ec9af1a90a8c17d98d36bfcd1a4a53074612b4e6690d197">30,2,37,2,32,72,2,2,0</metadata>
+<rect width="100%" height="100%" fill="#0b1020"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#58d6ff"/></marker></defs>
+<line x1="600.0" y1="72.0" x2="120.0" y2="24.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="120.0" y1="24.0" x2="72.0" y2="120.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="72.0" y1="120.0" x2="120.0" y2="24.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="120.0" y1="24.0" x2="696.0" y2="72.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="696.0" y1="72.0" x2="24.0" y2="216.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="24.0" y1="216.0" x2="120.0" y2="24.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="120.0" cy="24.0" r="13.440000000000001" fill="none" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="120.0" y1="24.0" x2="24.0" y2="24.0" stroke="#58d6ff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="3.84" y="3.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="24.0" y="28.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffffff">000</text>
+<title>END</title>
+<rect x="99.84" y="3.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="120.0" y="28.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffffff">002</text>
+<title>IDENTIFIER</title>
+<rect x="579.84" y="51.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="600.0" y="76.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffffff">030</text>
+<title>FUNCTION</title>
+<rect x="675.84" y="51.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="696.0" y="76.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffffff">032</text>
+<title>RETURN</title>
+<rect x="51.84" y="99.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="72.0" y="124.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffffff">037</text>
+<title>ARGUMENTS</title>
+<rect x="3.84" y="195.84" width="40.32" height="40.32" rx="6" fill="#18213b" stroke="#a6ffcb" stroke-width="2"/>
+<text x="24.0" y="220.0" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffffff">072</text>
+<title>MULTIPLY</title>
+</svg>

@@ -1,0 +1,2 @@
+[console_scripts]
+borg-seed = borg_seed.cli:main

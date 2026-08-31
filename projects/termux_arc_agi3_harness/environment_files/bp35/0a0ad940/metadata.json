@@ -1,0 +1,22 @@
+{
+  "game_id": "bp35-0a0ad940",
+  "title": "BP35",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/bottomless_pit",
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    15,
+    72,
+    36,
+    31,
+    31,
+    48,
+    86,
+    155,
+    163
+  ],
+  "local_dir": "environment_files/bp35/0a0ad940",
+  "date_downloaded": "2026-03-23T01:12:51.487006+00:00"
+}

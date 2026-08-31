@@ -1,0 +1,250 @@
+{
+  "format": "GlyphMatics Compression Benchmark Suite",
+  "records": 27,
+  "rows": [
+    {
+      "text": "safe offline edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 94,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1787,
+      "ratio_plain_to_braille": 0.1787,
+      "round_trip": true
+    },
+    {
+      "text": "realtime offline edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 98,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1863,
+      "ratio_plain_to_braille": 0.1863,
+      "round_trip": true
+    },
+    {
+      "text": "auditable offline edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 99,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1882,
+      "ratio_plain_to_braille": 0.1882,
+      "round_trip": true
+    },
+    {
+      "text": "safe hybrid edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 93,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1768,
+      "ratio_plain_to_braille": 0.1768,
+      "round_trip": true
+    },
+    {
+      "text": "realtime hybrid edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 97,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1844,
+      "ratio_plain_to_braille": 0.1844,
+      "round_trip": true
+    },
+    {
+      "text": "auditable hybrid edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 98,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1863,
+      "ratio_plain_to_braille": 0.1863,
+      "round_trip": true
+    },
+    {
+      "text": "safe networked edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 96,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1825,
+      "ratio_plain_to_braille": 0.1825,
+      "round_trip": true
+    },
+    {
+      "text": "realtime networked edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 100,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1901,
+      "ratio_plain_to_braille": 0.1901,
+      "round_trip": true
+    },
+    {
+      "text": "auditable networked edge analytics with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 101,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.192,
+      "ratio_plain_to_braille": 0.192,
+      "round_trip": true
+    },
+    {
+      "text": "safe offline local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 95,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1806,
+      "ratio_plain_to_braille": 0.1806,
+      "round_trip": true
+    },
+    {
+      "text": "realtime offline local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 99,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1882,
+      "ratio_plain_to_braille": 0.1882,
+      "round_trip": true
+    },
+    {
+      "text": "auditable offline local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 100,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1901,
+      "ratio_plain_to_braille": 0.1901,
+      "round_trip": true
+    },
+    {
+      "text": "safe hybrid local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 94,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1787,
+      "ratio_plain_to_braille": 0.1787,
+      "round_trip": true
+    },
+    {
+      "text": "realtime hybrid local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 98,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1863,
+      "ratio_plain_to_braille": 0.1863,
+      "round_trip": true
+    },
+    {
+      "text": "auditable hybrid local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 99,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1882,
+      "ratio_plain_to_braille": 0.1882,
+      "round_trip": true
+    },
+    {
+      "text": "safe networked local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 97,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1844,
+      "ratio_plain_to_braille": 0.1844,
+      "round_trip": true
+    },
+    {
+      "text": "realtime networked local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 101,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.192,
+      "ratio_plain_to_braille": 0.192,
+      "round_trip": true
+    },
+    {
+      "text": "auditable networked local assistant with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 102,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1939,
+      "ratio_plain_to_braille": 0.1939,
+      "round_trip": true
+    },
+    {
+      "text": "safe offline resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 97,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1844,
+      "ratio_plain_to_braille": 0.1844,
+      "round_trip": true
+    },
+    {
+      "text": "realtime offline resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 101,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.192,
+      "ratio_plain_to_braille": 0.192,
+      "round_trip": true
+    },
+    {
+      "text": "auditable offline resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 102,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1939,
+      "ratio_plain_to_braille": 0.1939,
+      "round_trip": true
+    },
+    {
+      "text": "safe hybrid resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 96,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1825,
+      "ratio_plain_to_braille": 0.1825,
+      "round_trip": true
+    },
+    {
+      "text": "realtime hybrid resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 100,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1901,
+      "ratio_plain_to_braille": 0.1901,
+      "round_trip": true
+    },
+    {
+      "text": "auditable hybrid resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 101,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.192,
+      "ratio_plain_to_braille": 0.192,
+      "round_trip": true
+    },
+    {
+      "text": "safe networked resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 99,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1882,
+      "ratio_plain_to_braille": 0.1882,
+      "round_trip": true
+    },
+    {
+      "text": "realtime networked resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 103,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1958,
+      "ratio_plain_to_braille": 0.1958,
+      "round_trip": true
+    },
+    {
+      "text": "auditable networked resilient service with controller, network, storage, security, power, and telemetry.",
+      "plain_bytes": 104,
+      "prior_bytes": 526,
+      "braille_cells": 526,
+      "ratio_plain_to_prior": 0.1977,
+      "ratio_plain_to_braille": 0.1977,
+      "round_trip": true
+    }
+  ],
+  "all_round_trip": true
+}

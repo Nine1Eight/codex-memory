@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Private, local-first recording copilot for creators">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Looki Studio</title>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <button class="brand" id="homeBtn" aria-label="Looki home"><span class="logo">L</span><span><strong>Looki</strong><small>Creator copilot</small></span></button>
+    <div class="status"><span id="saveState">Saved locally</span><span class="privacy">● Private</span></div>
+  </header>
+
+  <main id="main">
+    <section id="projectsView" class="view active">
+      <div class="hero">
+        <p class="eyebrow">Local-first production studio</p>
+        <h1>Plan it. Shoot it.<br><span>Ship it.</span></h1>
+        <p>Create a production-ready outline, record with live captions, mark chapters, and export your work without uploading footage.</p>
+        <form id="ideaForm" class="idea-form">
+          <label class="sr-only" for="idea">Video idea</label>
+          <input id="idea" required maxlength="240" placeholder="What are you creating?" autocomplete="off">
+          <button class="primary" type="submit">Create project</button>
+        </form>
+        <div id="ideaChips" class="chips" aria-label="Example ideas"></div>
+      </div>
+      <div class="section-head"><div><p class="eyebrow">Workspace</p><h2>Your projects</h2></div><button id="importBtn" class="secondary">Import project</button></div>
+      <div id="projectGrid" class="project-grid"></div>
+      <input id="importInput" type="file" accept="application/json" hidden>
+    </section>
+
+    <section id="studioView" class="view">
+      <nav class="tabs" aria-label="Project sections">
+        <button data-tab="plan" class="active">Plan</button><button data-tab="record">Record</button><button data-tab="review">Review & export</button>
+      </nav>
+      <div class="project-head">
+        <div><p id="projectKind" class="eyebrow">Project</p><input id="projectTitle" aria-label="Project title"></div>
+        <div class="head-actions"><button id="exportProjectBtn" class="secondary">Back up</button><button id="deleteProjectBtn" class="danger">Delete</button></div>
+      </div>
+
+      <div id="planTab" class="tab active">
+        <div class="two-col">
+          <article class="panel"><div class="panel-head"><div><p class="eyebrow">Production plan</p><h2>Shot list</h2></div><button id="addShotBtn" class="secondary">+ Add shot</button></div><div id="shotList" class="shot-list"></div></article>
+          <article class="panel"><div class="panel-head"><div><p class="eyebrow">Talking points</p><h2>Script</h2></div><span id="runtimeEstimate" class="badge"></span></div><label class="sr-only" for="scriptEditor">Script</label><textarea id="scriptEditor" class="script-editor" placeholder="Write your script or talking points..."></textarea><div class="field"><label for="projectTags">Tags</label><input id="projectTags" placeholder="Comma-separated tags"></div><button class="primary wide" data-go="record">Open recording studio</button></article>
+        </div>
+      </div>
+
+      <div id="recordTab" class="tab">
+        <div class="record-grid">
+          <article class="camera-panel">
+            <video id="preview" playsinline muted></video>
+            <div id="cameraEmpty" class="camera-empty"><span>◉</span><strong>Camera is off</strong><small>Preview stays on this device</small></div>
+            <div class="camera-hud"><span id="recordBadge">READY</span><time id="timer">00:00</time></div>
+            <div id="captionOverlay" class="caption-overlay" aria-live="polite"></div>
+          </article>
+          <aside class="record-side">
+            <article class="panel compact"><h3>Devices</h3><div class="field"><label for="cameraSelect">Camera</label><select id="cameraSelect"></select></div><div class="field"><label for="micSelect">Microphone</label><select id="micSelect"></select></div><div class="button-row"><button id="enableMediaBtn" class="secondary">Enable camera</button><button id="startRecordBtn" class="primary" disabled>Record</button><button id="stopRecordBtn" class="danger" disabled>Stop</button></div><p id="mediaHelp" class="help">Camera recording requires HTTPS or localhost.</p></article>
+            <article class="panel compact"><div class="panel-head"><h3>Live markers</h3><button id="addMarkerBtn" class="secondary" disabled>+ Marker</button></div><div id="markerList" class="marker-list"></div></article>
+            <article class="panel compact"><h3>Live notes</h3><textarea id="sessionNotes" rows="5" placeholder="Notes saved as you type..."></textarea></article>
+          </aside>
+        </div>
+      </div>
+
+      <div id="reviewTab" class="tab">
+        <div class="two-col">
+          <article class="panel"><div class="panel-head"><div><p class="eyebrow">Recordings</p><h2>Session media</h2></div></div><div id="recordingList" class="recording-list"></div></article>
+          <article class="panel"><p class="eyebrow">Publish package</p><h2>Real export files</h2><p class="muted">Generate files from your saved project and session data. Nothing is uploaded.</p><div class="export-actions"><button data-export="json" class="secondary">Project JSON</button><button data-export="txt" class="secondary">Transcript TXT</button><button data-export="srt" class="secondary">Captions SRT</button><button data-export="chapters" class="secondary">Chapters TXT</button></div><div id="exportSummary" class="summary"></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="confirmDialog"><form method="dialog"><h2>Delete project?</h2><p>This removes its plan and metadata from this browser. Downloaded recordings are unaffected.</p><div class="button-row"><button value="cancel" class="secondary">Cancel</button><button value="confirm" class="danger">Delete</button></div></form></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

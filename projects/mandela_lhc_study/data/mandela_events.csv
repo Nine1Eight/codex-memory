@@ -1,0 +1,6 @@
+event_id,name,claimed_memory,archive_version,first_public_notice_date,first_notice_source,confidence_0_1,category
+mandela_death,Nelson Mandela death,died in prison 1980s,died Dec 5 2013,2010-09-09,Fiona Broome public post,0.95,origin
+fotl_cornucopia,Fruit of the Loom cornucopia,cornucopia behind fruit,no official cornucopia,,,0.30,logo
+berenstain,Berenstain Bears spelling,Berenstein,Berenstain,,,0.30,book
+monopoly_monocle,Monopoly Man monocle,has monocle,no monocle,,,0.30,character
+pikachu_tail,Pikachu black tail tip,black tail tip,no black tail tip,,,0.30,character

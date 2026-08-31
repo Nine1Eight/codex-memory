@@ -1,0 +1,47 @@
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from .utils import append_jsonl, ensure_dir, write_json
+
+
+class ArtifactWriter:
+    def __init__(self, root: str | Path = "artifacts"):
+        self.root = Path(root)
+        ensure_dir(self.root / "episodes")
+        ensure_dir(self.root / "datasets")
+        ensure_dir(self.root / "reasoning")
+        ensure_dir(self.root / "checkpoints")
+        self.dataset_path = self.root / "datasets" / "arc_agi3_training.jsonl"
+        self.move_reasoning_path = self.root / "reasoning" / "move_reasoning.jsonl"
+
+    def episode_path(self, game_id: str) -> Path:
+        safe = game_id.replace("/", "_")
+        return self.root / "episodes" / f"{safe}.jsonl"
+
+    def record_step(self, game_id: str, row: dict[str, Any]) -> None:
+        append_jsonl(self.episode_path(game_id), row)
+        append_jsonl(self.dataset_path, row)
+        if isinstance(row, dict) and "reasoning" in row:
+            append_jsonl(self.move_reasoning_path, {
+                "game_id": game_id,
+                "step": row.get("step"),
+                "level_before": row.get("level_before"),
+                "level_after": row.get("level_after"),
+                "action": row.get("action"),
+                "source": row.get("source"),
+                "reasoning": row.get("reasoning"),
+            })
+
+    def status(self, data: dict[str, Any]) -> None:
+        write_json(self.root / "autonomous_status.json", data)
+
+    def summary(self, data: dict[str, Any]) -> None:
+        write_json(self.root / "summary.json", data)
+
+    def checkpoint(self, name: str, data: dict[str, Any]) -> None:
+        write_json(self.root / "checkpoints" / f"{name}.json", data)
+
+    def report(self, markdown: str) -> None:
+        (self.root / "reasoning" / "arc_agi3_reasoning_report.md").write_text(markdown, encoding="utf-8")

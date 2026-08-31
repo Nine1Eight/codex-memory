@@ -1,0 +1,20 @@
+{
+  "game_id": "vc33-9851e02b",
+  "title": "VC33",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/valvecheck",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    6,
+    13,
+    31,
+    59,
+    92,
+    24,
+    82
+  ],
+  "local_dir": "environment_files/vc33/9851e02b",
+  "date_downloaded": "2026-03-23T01:12:51.389207+00:00"
+}

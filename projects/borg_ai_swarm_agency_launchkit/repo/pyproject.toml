@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "borg-seed"
+version = "0.1.0"
+description = "Borg AI Swarm Agency seed capsule runtime"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+borg-seed = "borg_seed.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

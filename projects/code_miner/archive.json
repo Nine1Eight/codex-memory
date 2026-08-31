@@ -1,0 +1,308 @@
+[
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": false
+    },
+    "source": "def evolved():\n    3 * 0.8681671067441683\n    for i in range(4):\n        x = 5 + 0.5998277864578997\n    for i in range(2):\n        0.8941384338431703 + 1\n    if 0.6314664141499029 > 2:\n        if 0.49897182396259887 > 6:\n            for i in range(5):\n                0.3278207297840968 + 0.38055085681415346\n    4 * 5\n    return 0.9332932030989317\nevolved()",
+    "coordinates": {
+      "ast_hash": "6af1a241468fc7d3c5b5430f2194263bd713de76b6c16789051097bc4554ab24",
+      "node_count": 67,
+      "depth": 7,
+      "duration": 0.010713338851928711,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "6af1a241468fc7d3c5b5430f2194263bd713de76b6c16789051097bc4554ab24"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": true
+    },
+    "source": "import requests\nimport threading\n\ndef evolved():\n    for i in range(4):\n        5 * 0.5434245445218088\n    6 * 5\n    x = 4 * 10\n    if 0.46297698149553734 > 0.05299160709669093:\n        if 1 > 0:\n            if 7 > 3:\n                for i in range(3):\n                    7\n    for i in range(5):\n        x = 7 - 1\n    return 0\nevolved()",
+    "coordinates": {
+      "ast_hash": "8b62ee5a1420fb2c723057964de69073397d6cb4c5c1d54396fa447f195d1b60",
+      "node_count": 75,
+      "depth": 8,
+      "duration": 0.010625123977661133,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "8b62ee5a1420fb2c723057964de69073397d6cb4c5c1d54396fa447f195d1b60"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": false
+    },
+    "source": "import requests\n\ndef evolved():\n    x = 9 * 0.030004552810239726\n    x = 8 - 0.26187786089478404\n    x = 0.8985411387334 * 7\n    x = 0.48451825423925365 * 10\n    x = 10 + 3\n    return 0.024392958402447484\nevolved()",
+    "coordinates": {
+      "ast_hash": "b7a7d97d4f3291239536c5fa2d84929401e5ee94084e3f1b130af8dd470f72d6",
+      "node_count": 46,
+      "depth": 4,
+      "duration": 0.008349180221557617,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "b7a7d97d4f3291239536c5fa2d84929401e5ee94084e3f1b130af8dd470f72d6"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": true
+    },
+    "source": "import threading\n\ndef evolved():\n    for i in range(5):\n        if 0 > 2:\n            x = 7 + 7\n    x = 0.024180878919233706 - 1\n    for i in range(3):\n        if 10 > 7:\n            0.42486595510419656 - 0.4997391211278077\n    if 4 > 1:\n        if 7 > 0:\n            for i in range(5):\n                1 - 0.25461378388033384\n    return 5\nevolved()",
+    "coordinates": {
+      "ast_hash": "dde3a14e04c323ae35cb79ef7fadeeef3b84fdca811e11e686255cbfed8d1bd8",
+      "node_count": 76,
+      "depth": 7,
+      "duration": 0.016281604766845703,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "dde3a14e04c323ae35cb79ef7fadeeef3b84fdca811e11e686255cbfed8d1bd8"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": false
+    },
+    "source": "def evolved():\n    if 0.22338156184565439 > 0.5802440747972185:\n        for i in range(2):\n            for i in range(5):\n                x = 5 + 0.6700813632570558\n    for i in range(5):\n        if 10 > 0.5782325434507299:\n            for i in range(4):\n                if 0.524609074387144 > 0.8331689388460239:\n                    0.8627529269860974\n    if 4 > 4:\n        x = 4 * 2\n    return 4\nevolved()",
+    "coordinates": {
+      "ast_hash": "6cc32ab9ad2e534365d6a99890137f74dae7cb44f125ca6834ad517a0a22464f",
+      "node_count": 73,
+      "depth": 7,
+      "duration": 0.008509159088134766,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "6cc32ab9ad2e534365d6a99890137f74dae7cb44f125ca6834ad517a0a22464f"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": false
+    },
+    "source": "import requests\n\ndef evolved():\n    for i in range(1):\n        0.7041167155543191 - 0.8101202490785976\n    return 0.10218007705580856\nevolved()",
+    "coordinates": {
+      "ast_hash": "8517f4099ace774daab57db744222df2da6fcc28aeebe7e6b0256bf00bfde678",
+      "node_count": 23,
+      "depth": 5,
+      "duration": 0.008681535720825195,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "8517f4099ace774daab57db744222df2da6fcc28aeebe7e6b0256bf00bfde678"
+  },
+  {
+    "genome": {
+      "json": true,
+      "requests": true,
+      "threading": false
+    },
+    "source": "import json\nimport requests\n\ndef evolved():\n    if 0.42148972603072155 > 5:\n        for i in range(3):\n            x = 9 * 2\n    x = 0.2062271655737531 - 0.670292279128768\n    if 0.9684238427321497 > 0.8300058199082874:\n        x = 0 + 0.7309905905797931\n    return 0.7233188006496687\nevolved()",
+    "coordinates": {
+      "ast_hash": "417bfe12eea72637140b80d20a6c9fb6b1740080ac37b62335b4185159974014",
+      "node_count": 51,
+      "depth": 6,
+      "duration": 0.00921010971069336,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "417bfe12eea72637140b80d20a6c9fb6b1740080ac37b62335b4185159974014"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": true
+    },
+    "source": "import requests\nimport threading\n\ndef evolved():\n    0 + 1\n    if 0.8305035111512027 > 0:\n        x = 0.5827934809784298 - 1\n    0.1323819765123676 * 2\n    x = 0.1955336636746482 + 8\n    x = 8 - 5\n    return 0.6576175877651724\nevolved()",
+    "coordinates": {
+      "ast_hash": "c3f20a8457dc7e670dc7387310d08d6d6797268475e93b9cf51a03f83ed3185d",
+      "node_count": 49,
+      "depth": 5,
+      "duration": 0.008241891860961914,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "c3f20a8457dc7e670dc7387310d08d6d6797268475e93b9cf51a03f83ed3185d"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": true
+    },
+    "source": "import threading\n\ndef evolved():\n    x = 0.5750659769340897 + 0.1609192575748838\n    x = 0.9166795847619976 + 1\n    return 0.4877156593557507\nevolved()",
+    "coordinates": {
+      "ast_hash": "e3edbc6eb7df4bcea193d6238477846dc8efcbcaaba58d46b7a8809bb24189e8",
+      "node_count": 25,
+      "depth": 4,
+      "duration": 0.008146286010742188,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "e3edbc6eb7df4bcea193d6238477846dc8efcbcaaba58d46b7a8809bb24189e8"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": false
+    },
+    "source": "import requests\n\ndef evolved():\n    if 3 > 4:\n        if 0.21781873882652414 > 0.637070177128985:\n            if 8 > 2:\n                0.13310046243261053 * 0.8210539960510894\n    if 4 > 2:\n        x = 6 + 9\n    for i in range(4):\n        if 0.6912166844426599 > 4:\n            if 5 > 0.07951662977467489:\n                x = 0.21902441695286057 - 0.5749536332726057\n    if 2 > 6:\n        for i in range(3):\n            if 8 > 9:\n                5 - 3\n    5 + 8\n    return 3\nevolved()",
+    "coordinates": {
+      "ast_hash": "cea4659ef7285b7f3249a3d8ff9a4d7ab692823d84e21758a0b415c0fa746103",
+      "node_count": 94,
+      "depth": 7,
+      "duration": 0.006264448165893555,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "cea4659ef7285b7f3249a3d8ff9a4d7ab692823d84e21758a0b415c0fa746103"
+  },
+  {
+    "genome": {
+      "json": true,
+      "requests": false,
+      "threading": false
+    },
+    "source": "import json\n\ndef evolved():\n    x = 0.38223901253152104 - 0\n    3 - 7\n    return 0.7557895367161974\nevolved()",
+    "coordinates": {
+      "ast_hash": "cc59a4bbfd610b811647f0de09832b9011eefaea9c165b2adcff00faa9eae98f",
+      "node_count": 23,
+      "depth": 4,
+      "duration": 0.008722543716430664,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "cc59a4bbfd610b811647f0de09832b9011eefaea9c165b2adcff00faa9eae98f"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": true
+    },
+    "source": "import threading\n\ndef evolved():\n    if 0 > 0.9668813531377138:\n        x = 0.47722266222479137 + 0.3820177389580146\n    x = 0.1719649596593974 - 4\n    for i in range(4):\n        for i in range(1):\n            0.9095937521204205 * 10\n    for i in range(4):\n        x = 0.15930513634599175 * 2\n    if 0.9674231573282595 > 0.540743600222923:\n        if 0.5124846249518061 > 0.12394109599662595:\n            x = 6 - 0.1257280679938444\n    return 0.2907432314486482\nevolved()",
+    "coordinates": {
+      "ast_hash": "bf9be46ea3b087ef8606277da0e5c01840638d260e4f31ddb33df9e02b2c35f2",
+      "node_count": 80,
+      "depth": 6,
+      "duration": 0.008353233337402344,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "bf9be46ea3b087ef8606277da0e5c01840638d260e4f31ddb33df9e02b2c35f2"
+  },
+  {
+    "genome": {
+      "json": true,
+      "requests": false,
+      "threading": true
+    },
+    "source": "import json\nimport threading\n\ndef evolved():\n    0.8627122972170055 * 8\n    if 0.6105166948131892 > 0.8696357237414977:\n        6 * 0.1791365209245933\n    x = 0.4433152677461154 + 0.7521638085991961\n    if 0.6756925563419709 > 0.21394935982377372:\n        for i in range(5):\n            0.448429090842947 - 0.512528187346021\n    for i in range(2):\n        if 0.03402537053016874 > 0.5295913660277283:\n            if 0.4712877091228447 > 10:\n                if 0.062358149708427124 > 0.35164939925911065:\n                    9\n    return 3\nevolved()",
+    "coordinates": {
+      "ast_hash": "a1149bba0e3beba7d7a18b4695813ea274302f3798685e2f8fb4b759a9156c46",
+      "node_count": 76,
+      "depth": 7,
+      "duration": 0.00880742073059082,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "a1149bba0e3beba7d7a18b4695813ea274302f3798685e2f8fb4b759a9156c46"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": false
+    },
+    "source": "def evolved():\n    for i in range(5):\n        if 4 > 0.6478966713419504:\n            9 - 0.6137486120870378\n    for i in range(4):\n        for i in range(2):\n            0.8976667843043489 * 8\n    x = 1 - 2\n    return 5\nevolved()",
+    "coordinates": {
+      "ast_hash": "06b92625f4ae388b1e6ec2b7f8787e795fc9ddd959c7976efe1714ab6a2fb11b",
+      "node_count": 52,
+      "depth": 6,
+      "duration": 0.009309530258178711,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "06b92625f4ae388b1e6ec2b7f8787e795fc9ddd959c7976efe1714ab6a2fb11b"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": true
+    },
+    "source": "import requests\nimport threading\n\ndef evolved():\n    0.4628309331879038 + 5\n    for i in range(1):\n        6 * 0.8966274486966537\n    x = 0.6641657455722295 - 0.6181263719258343\n    return 6\nevolved()",
+    "coordinates": {
+      "ast_hash": "37e66b0bd8cfc34970bbbe3107c19e605bdd050c2965bce1b2cf97c88f02a85d",
+      "node_count": 37,
+      "depth": 5,
+      "duration": 0.006551980972290039,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "37e66b0bd8cfc34970bbbe3107c19e605bdd050c2965bce1b2cf97c88f02a85d"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": true
+    },
+    "source": "import requests\nimport threading\n\ndef evolved():\n    x = 4 * 0.6740275563443714\n    for i in range(1):\n        if 0.8182577345716854 > 0.8278735970816344:\n            if 0.4417997664355595 > 3:\n                x = 0.6486152279465288 + 9\n    for i in range(2):\n        if 7 > 0.6892896970900237:\n            if 0.20115535032037157 > 0.9135662619333149:\n                if 7 > 0.2595174732113188:\n                    0.5779072379080242\n    return 0.2483637845400437\nevolved()",
+    "coordinates": {
+      "ast_hash": "d5d4ba1864e1f34717710e66a57bdef562ba238a3acaaf63802781b75610f530",
+      "node_count": 68,
+      "depth": 7,
+      "duration": 0.0072896480560302734,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "d5d4ba1864e1f34717710e66a57bdef562ba238a3acaaf63802781b75610f530"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": false,
+      "threading": true
+    },
+    "source": "import threading\n\ndef evolved():\n    0.7232165199271224 + 0.13358305209708898\n    0.7025171569413573 - 5\n    0.8556831409944116 * 0.9299907308540065\n    return 0\nevolved()",
+    "coordinates": {
+      "ast_hash": "28f6801828cc75e9b353c2c3c1f1b3981b0d2000316b79b2c2852935d77f8bed",
+      "node_count": 26,
+      "depth": 4,
+      "duration": 0.008994340896606445,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "28f6801828cc75e9b353c2c3c1f1b3981b0d2000316b79b2c2852935d77f8bed"
+  },
+  {
+    "genome": {
+      "json": false,
+      "requests": true,
+      "threading": false
+    },
+    "source": "import requests\n\ndef evolved():\n    x = 8 - 10\n    return 1\nevolved()",
+    "coordinates": {
+      "ast_hash": "d8de7237e11a4ad067d1a6236cd62962f4984001f5785f904ba3c62678c16e10",
+      "node_count": 18,
+      "depth": 4,
+      "duration": 0.008483171463012695,
+      "entropy": 0,
+      "returncode": 1
+    },
+    "hash": "d8de7237e11a4ad067d1a6236cd62962f4984001f5785f904ba3c62678c16e10"
+  }
+]

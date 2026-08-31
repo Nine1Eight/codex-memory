@@ -1,0 +1,16 @@
+{
+  "id": "wethepeople918/glyphmatics-agent-security-scoring",
+  "title": "GlyphMatics Agent Security Scoring",
+  "code_file": "glyphmatics_agent_security_scoring.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "false",
+  "enable_tpu": "false",
+  "enable_internet": "false",
+  "machine_shape": "",
+  "dataset_sources": [],
+  "competition_sources": ["ai-agent-security-multi-step-tool-attacks"],
+  "kernel_sources": [],
+  "model_sources": []
+}

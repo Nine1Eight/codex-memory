@@ -1,0 +1,16 @@
+{
+  "release": "v4-core-control-retrieval-pricing-discovery",
+  "tag": "v4-capsule-pipeline",
+  "summary": "Deterministic source -> build -> verify -> rehydrate -> boot -> assert -> hash-compare milestone",
+  "components": [
+    "proxy_pointer_rag.py",
+    "system_refiner.py",
+    "discount_combiner.py",
+    "enhancement_discovery.py",
+    "sigil_stack.py",
+    "build_capsule.py",
+    "run_pipeline.sh",
+    "test_expected_output.py",
+    "compare_rehydrated_hashes.py"
+  ]
+}

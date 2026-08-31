@@ -1,0 +1,369 @@
+openapi: 3.1.0
+info:
+  title: Genos API
+  version: 1.0.0
+  description: API for Genos platform – session management and model inference.
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+
+paths:
+  /session/start:
+    post:
+      summary: Start a new session
+      operationId: startSession
+      requestBody:
+        description: Optional initial session parameters
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SessionStartRequest'
+            example:
+              user_id: "user-123"
+              metadata: { "source": "web" }
+      responses:
+        '201':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionStartResponse'
+              example:
+                session_id: "sess_abc123def"
+                created_at: "2025-03-22T10:30:00Z"
+        '400':
+          description: Invalid request
+
+  /session/state:
+    get:
+      summary: Get current session state
+      operationId: getSessionState
+      parameters:
+        - name: session_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Active session identifier
+      responses:
+        '200':
+          description: Current session state
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionState'
+              example:
+                session_id: "sess_abc123def"
+                state: { "mode": "idle", "tokens_used": 42 }
+        '404':
+          description: Session not found
+
+    post:
+      summary: Update session state
+      operationId: updateSessionState
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SessionStateUpdate'
+            example:
+              session_id: "sess_abc123def"
+              state: { "mode": "busy" }
+      responses:
+        '200':
+          description: State updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionState'
+              example:
+                session_id: "sess_abc123def"
+                state: { "mode": "busy", "tokens_used": 42 }
+        '400':
+          description: Invalid update
+        '404':
+          description: Session not found
+
+  /model/llm/predict:
+    post:
+      summary: Generate text using LLM
+      operationId: llmPredict
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LLMPredictRequest'
+      responses:
+        '200':
+          description: Successful generation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LLMPredictResponse'
+        '400':
+          description: Invalid request
+        '429':
+          description: Rate limit exceeded
+
+  /model/math/compute:
+    post:
+      summary: Evaluate a mathematical expression
+      operationId: mathCompute
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MathComputeRequest'
+      responses:
+        '200':
+          description: Computation result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MathComputeResponse'
+        '400':
+          description: Invalid expression
+
+  /model/image/render:
+    post:
+      summary: Generate an image from a description
+      operationId: imageRender
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImageRenderRequest'
+      responses:
+        '200':
+          description: Image generated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImageRenderResponse'
+        '202':
+          description: Request accepted, processing asynchronously
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AsyncJobResponse'
+        '400':
+          description: Invalid parameters
+
+  /model/video/transition:
+    post:
+      summary: Create a video transition effect
+      operationId: videoTransition
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VideoTransitionRequest'
+      responses:
+        '200':
+          description: Transition applied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoTransitionResponse'
+        '202':
+          description: Request accepted, processing asynchronously
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AsyncJobResponse'
+        '400':
+          description: Invalid request
+
+components:
+  schemas:
+    SessionStartRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+        metadata:
+          type: object
+      additionalProperties: false
+
+    SessionStartResponse:
+      type: object
+      required:
+        - session_id
+        - created_at
+      properties:
+        session_id:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+      additionalProperties: false
+
+    SessionState:
+      type: object
+      required:
+        - session_id
+        - state
+      properties:
+        session_id:
+          type: string
+        state:
+          type: object
+      additionalProperties: false
+
+    SessionStateUpdate:
+      type: object
+      required:
+        - session_id
+        - state
+      properties:
+        session_id:
+          type: string
+        state:
+          type: object
+      additionalProperties: false
+
+    LLMPredictRequest:
+      type: object
+      required:
+        - session_id
+        - prompt
+      properties:
+        session_id:
+          type: string
+        prompt:
+          type: string
+        max_tokens:
+          type: integer
+        temperature:
+          type: number
+      additionalProperties: false
+
+    LLMPredictResponse:
+      type: object
+      required:
+        - session_id
+        - response
+      properties:
+        session_id:
+          type: string
+        response:
+          type: string
+        tokens_used:
+          type: integer
+      additionalProperties: false
+
+    MathComputeRequest:
+      type: object
+      required:
+        - session_id
+        - expression
+      properties:
+        session_id:
+          type: string
+        expression:
+          type: string
+        precision:
+          type: integer
+      additionalProperties: false
+
+    MathComputeResponse:
+      type: object
+      required:
+        - session_id
+        - result
+      properties:
+        session_id:
+          type: string
+        result:
+          type: number
+        unit:
+          type: string
+      additionalProperties: false
+
+    ImageRenderRequest:
+      type: object
+      required:
+        - session_id
+        - prompt
+      properties:
+        session_id:
+          type: string
+        prompt:
+          type: string
+        width:
+          type: integer
+        height:
+          type: integer
+        style:
+          type: string
+      additionalProperties: false
+
+    ImageRenderResponse:
+      type: object
+      required:
+        - session_id
+        - image_url
+      properties:
+        session_id:
+          type: string
+        image_url:
+          type: string
+          format: uri
+        format:
+          type: string
+      additionalProperties: false
+
+    VideoTransitionRequest:
+      type: object
+      required:
+        - session_id
+        - source_clip
+        - target_clip
+        - effect
+      properties:
+        session_id:
+          type: string
+        source_clip:
+          type: string
+          format: uri
+        target_clip:
+          type: string
+          format: uri
+        effect:
+          type: string
+        duration:
+          type: number
+      additionalProperties: false
+
+    VideoTransitionResponse:
+      type: object
+      required:
+        - session_id
+        - output_url
+      properties:
+        session_id:
+          type: string
+        output_url:
+          type: string
+          format: uri
+      additionalProperties: false
+
+    AsyncJobResponse:
+      type: object
+      required:
+        - session_id
+        - job_id
+        - status
+      properties:
+        session_id:
+          type: string
+        job_id:
+          type: string
+        status:
+          type: string
+      additionalProperties: false

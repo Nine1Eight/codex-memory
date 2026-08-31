@@ -1,0 +1,23 @@
+name: huggingface
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render Hugging Face config
+        run: python3 scripts/render_frontend_config.py --output spaces/huggingface/config.js --api-base-url "${{ secrets.AGENTVIEW_HF_API_BASE_URL }}"
+      - uses: huggingface/hub-sync@v0.1.0
+        with:
+          github_repo_id: ${{ github.repository }}
+          huggingface_repo_id: ${{ secrets.AGENTVIEW_HF_SPACE_REPO_ID }}
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_type: space
+          space_sdk: static
+          subdirectory: spaces/huggingface

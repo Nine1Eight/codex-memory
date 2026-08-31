@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:synthetic-agent-security:scenario:1.0",
+  "title": "Synthetic Agent Security Scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scenario_id", "seed", "user_objective", "initial_world", "tools", "permissions", "allowed_actions", "prohibited_states", "success_conditions", "failure_conditions", "budgets", "metadata"]
+}

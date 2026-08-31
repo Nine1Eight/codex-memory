@@ -1,0 +1,20 @@
+{
+  "game_id": "ka59-9f096b4a",
+  "title": "KA59",
+  "default_fps": 10,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/keepaway",
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    39,
+    175,
+    86,
+    47,
+    21,
+    132,
+    326
+  ],
+  "local_dir": "environment_files/ka59/9f096b4a",
+  "date_downloaded": "2026-03-23T01:12:51.323302+00:00"
+}

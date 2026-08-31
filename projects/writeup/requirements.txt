@@ -1,0 +1,1 @@
+# Static Space: no Python runtime dependencies required.

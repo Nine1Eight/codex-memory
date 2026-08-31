@@ -1,0 +1,22 @@
+{
+  "game_id": "su15-4c352900",
+  "title": "SU15",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/suika_vacuum",
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    18,
+    28,
+    50,
+    151,
+    18,
+    31,
+    50,
+    179,
+    41
+  ],
+  "local_dir": "environment_files/su15/4c352900",
+  "date_downloaded": "2026-03-23T01:12:51.099500+00:00"
+}

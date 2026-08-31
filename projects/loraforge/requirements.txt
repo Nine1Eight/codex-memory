@@ -1,0 +1,13 @@
+packaging
+pyyaml
+tqdm
+numpy
+requests
+huggingface_hub
+safetensors
+datasets
+accelerate
+peft
+transformers
+sentencepiece
+protobuf

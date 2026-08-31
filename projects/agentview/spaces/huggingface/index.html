@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AgentView Space</title>
+    <meta
+      name="description"
+      content="AgentView Space: static preview for the bootstrap-gated semantic viewing frontend."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="eyebrow">Hugging Face Space</div>
+        <h1>AgentView frontend preview.</h1>
+        <p class="lede">
+          A static mirror of the GitHub Pages experience for quick demos, bootstrap
+          monitoring, and receipt inspection.
+        </p>
+        <div class="status-strip">
+          <span class="pill">Bootstrap: <strong id="state-pill">locked</strong></span>
+          <span class="pill">API: <strong id="api-label">auto</strong></span>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="#status">View status</a>
+          <a class="button" href="#receipt">Receipt fields</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card" id="status">
+          <h2>Bootstrap</h2>
+          <p class="metric"><span id="count">0</span> / <span id="threshold">?</span></p>
+          <p class="muted" id="lock-state">Locked until qualified multimodal views reach the threshold.</p>
+        </article>
+
+        <article class="card">
+          <h2>Core rules</h2>
+          <ul>
+            <li>Only distinct authorized videos count</li>
+            <li>Qualified multimodal views are required</li>
+            <li>Recommendations unlock at threshold</li>
+          </ul>
+        </article>
+
+        <article class="card" id="receipt">
+          <h2>Receipt fields</h2>
+          <pre>{
+  "tenantId": "…",
+  "sourceRevisionId": "…",
+  "objectiveType": "…",
+  "claimsMerkleRootSha256": "…",
+  "qualified": true
+}</pre>
+        </article>
+
+        <article class="card">
+          <h2>Deployment</h2>
+          <ul>
+            <li>GitHub Pages for the public static site</li>
+            <li>Hugging Face Spaces for a mirrored preview</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

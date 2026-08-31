@@ -1,0 +1,5 @@
+name = "agentview-api"
+main = "src/worker.js"
+compatibility_date = "2026-08-14"
+account_id = ""
+

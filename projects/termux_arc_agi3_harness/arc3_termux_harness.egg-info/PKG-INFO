@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: arc3-termux-harness
+Version: 0.1.0
+Summary: Termux offline ARC-AGI-3 public 25-game training harness
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.24
+Requires-Dist: pydantic<3,>=2
+Requires-Dist: typing-extensions>=4.8

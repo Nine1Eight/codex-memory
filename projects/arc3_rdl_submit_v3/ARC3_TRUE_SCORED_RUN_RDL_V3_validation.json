@@ -1,0 +1,28 @@
+{
+  "cells": 36,
+  "checks": {
+    "boundary_premove_ensure": true,
+    "gateway_competition_path": true,
+    "gateway_submission_preserved": true,
+    "postrun_nonfatal_gateway": true,
+    "qwen38_exact": true,
+    "rdl_observational": true,
+    "required_agent_output": true,
+    "required_submission_output": true,
+    "solver_profile_decoupled": true,
+    "solver_target_not_bound_to_true_submission": true
+  },
+  "code_cells": 19,
+  "compile": "PASS",
+  "fixes": [
+    "real Kaggle competition gateway remains enabled on rerun",
+    "Johnny5/Duck multi-action solver profile decoupled from gateway flag",
+    "TAAF_RUN_AS_SUBMISSION/TAAF_MINIMAL_DIAGNOSTICS held at proven control profile by default",
+    "deployment target solver flags held at control profile while GameAPI remains competition mode",
+    "GhostBridge pre-move record guaranteed at every real action boundary",
+    "post-run instrumentation warnings cannot suppress valid gateway output on true rerun",
+    "gateway submission.parquet remains canonical and byte-preserved"
+  ],
+  "notebook": "ARC3_TRUE_SCORED_RUN_RDL_V3_JOHNNY5.ipynb",
+  "sha256": "5c449e9625c6ac556bceda9c21c6af6b656aa388084b53da65fd7e99515fe8b5"
+}

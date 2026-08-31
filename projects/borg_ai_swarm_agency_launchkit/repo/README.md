@@ -1,0 +1,59 @@
+# Borg AI Swarm Agency — Seed Runtime
+
+Portable, signed, offline-first agent seed capsule for Borg AI Swarm Agency.
+
+## What this repository provides
+
+- `.borg` seed capsule generation
+- deterministic manifest hashing
+- GitHub Pages download site
+- Hugging Face model repository upload scaffold
+- Hugging Face Space download UI
+- safe-by-default capability propagation rules
+
+## Safety Contract
+
+This project implements **authorized forking and signed sync**, not uncontrolled replication.
+
+The seed package does not:
+- silently install itself
+- persist without explicit user action
+- execute remote capabilities automatically
+- exfiltrate secrets
+- auto-join unknown swarms
+
+## Quick Start
+
+```bash
+python -m pip install -e .
+python scripts/create_seed.py --out dist/borg-agent-seed.borg
+python -m borg_seed.cli inspect dist/borg-agent-seed.borg
+```
+
+## Deploy
+
+Use environment variables to control names:
+
+```bash
+export GITHUB_OWNER="BlockChain-BailBonds"
+export REPO_NAME="borg-ai-swarm-agency"
+export HF_OWNER="Nine1Eight"
+export HF_MODEL_REPO="borg-agent-seed"
+export HF_SPACE_REPO="borg-agent-seed-download"
+export HF_TOKEN="hf_..."
+```
+
+Then run:
+
+```bash
+bash deploy_all.sh
+```
+
+## Repository Layout
+
+```text
+src/borg_seed/         Python package for seed capsule generation/inspection
+scripts/               build, verify, and deploy helpers
+site/                  GitHub Pages static site
+.github/workflows/     Pages + seed artifact workflows
+```

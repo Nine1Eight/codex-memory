@@ -1,0 +1,19 @@
+{
+  "game_id": "sp80-0ee2d095",
+  "title": "SP80",
+  "default_fps": 10,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/spill",
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    11,
+    18,
+    17,
+    172,
+    102,
+    152
+  ],
+  "local_dir": "environment_files/sp80/0ee2d095",
+  "date_downloaded": "2026-03-23T01:12:51.596309+00:00"
+}

@@ -1,0 +1,19 @@
+MANDELA × LHC TIMING STUDY — V1
+================================
+
+Events loaded: 5
+LHC windows loaded: 6
+
+Monte Carlo result:
+  observed_score: 0.40431720202903876
+  random_median: 0.31840075797358297
+  random_95th: 0.9459594689067654
+  p_value: 0.42551489702059586
+  trials: 5000
+
+Interpretation:
+  p_value below 0.05 = timing cluster stronger than random baseline.
+  High p_value = no useful evidence of LHC timing relationship.
+
+Generated files:
+  /data/data/com.termux/files/home/mandela_lhc_study/out/mandela_lhc_lag_report.csv

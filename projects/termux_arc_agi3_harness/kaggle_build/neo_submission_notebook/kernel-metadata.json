@@ -1,0 +1,14 @@
+{
+  "id": "wethepeople918/arc-agi-3-neoagent-no-priors",
+  "title": "ARC AGI 3 NeoAgent No Priors",
+  "code_file": "submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ]
+}

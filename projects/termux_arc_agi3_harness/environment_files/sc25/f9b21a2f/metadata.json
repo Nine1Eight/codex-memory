@@ -1,0 +1,19 @@
+{
+  "game_id": "sc25-f9b21a2f",
+  "title": "SC25",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/spellcaster",
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    39,
+    5,
+    32,
+    33,
+    66,
+    41
+  ],
+  "local_dir": "environment_files/sc25/f9b21a2f",
+  "date_downloaded": "2026-03-23T01:12:51.139734+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "game_id": "ft09-0d8bbf25",
+  "title": "FT09",
+  "default_fps": 8,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/flip_tiles",
+  "baseline_actions": [
+    17,
+    19,
+    15,
+    21,
+    65,
+    26
+  ],
+  "tags": [],
+  "local_dir": "environment_files/ft09/0d8bbf25",
+  "date_downloaded": "2026-03-23T01:12:51.120575+00:00"
+}

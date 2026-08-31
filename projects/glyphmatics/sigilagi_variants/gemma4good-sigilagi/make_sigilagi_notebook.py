@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+
+nb = {
+    "cells": [
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "# SigilAGI — Gemma 4 Good Hackathon\n",
+                "\n",
+                "Object-to-glyph detection for symbolic AI reasoning.\n",
+                "\n",
+                "Core transformation:\n",
+                "\n",
+                "`object → glyph → meaning → relationship → reasoning trace`\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## Project Links\n",
+                "\n",
+                "- GitHub: https://github.com/Nine1Eight/gemma4good-sigilagi\n",
+                "- Live Demo: https://huggingface.co/spaces/Nine1Eight/gemma4good-sigilagi\n",
+                "- Video Demo: https://www.youtube.com/watch?v=-zY6nOSD8Sg\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "from datetime import datetime, timezone\n",
+                "import json, re\n",
+                "\n",
+                "GLYPH_MAP = {\n",
+                "    'person': {'glyph': '☉', 'meaning': 'actor / observer / intent', 'role': 'human subject', 'risk': 'human-review'},\n",
+                "    'phone': {'glyph': '☏', 'meaning': 'communication / signal / record', 'role': 'information device', 'risk': 'low'},\n",
+                "    'door': {'glyph': '⛩', 'meaning': 'boundary / transition / access', 'role': 'entry or exit point', 'risk': 'low'},\n",
+                "    'wallet': {'glyph': '▨', 'meaning': 'identity / value / personal property', 'role': 'personal property', 'risk': 'privacy-review'},\n",
+                "    'paper': {'glyph': '▧', 'meaning': 'document / record / instruction', 'role': 'written evidence', 'risk': 'low'},\n",
+                "    'vehicle': {'glyph': '⟡', 'meaning': 'movement / transport / force', 'role': 'vehicle', 'risk': 'medium'},\n",
+                "    'key': {'glyph': '⌘', 'meaning': 'access / permission / control', 'role': 'access object', 'risk': 'medium'},\n",
+                "    'camera': {'glyph': '◈', 'meaning': 'recording / observation / evidence', 'role': 'capture device', 'risk': 'privacy-review'},\n",
+                "    'face': {'glyph': '◉', 'meaning': 'identity-sensitive visual feature', 'role': 'privacy-sensitive feature', 'risk': 'privacy-review'},\n",
+                "    'knife': {'glyph': '⚠', 'meaning': 'possible danger / sharp object / review required', 'role': 'hazard object', 'risk': 'high-review'},\n",
+                "}\n",
+                "\n",
+                "DEFAULT = {'glyph': '◇', 'meaning': 'unknown object / unmapped symbol', 'role': 'unclassified object', 'risk': 'unknown'}\n",
+                "\n",
+                "def normalize(x):\n",
+                "    x = x.strip().lower()\n",
+                "    x = re.sub(r'[^a-z0-9 _-]', '', x)\n",
+                "    x = re.sub(r'\\s+', ' ', x.replace('_', ' ').replace('-', ' '))\n",
+                "    return x\n",
+                "\n",
+                "def generate_report(labels, note=''):\n",
+                "    labels = [normalize(x) for x in re.split(r'[,;\\n]+', labels) if normalize(x)]\n",
+                "    glyph_objects = []\n",
+                "    for i, label in enumerate(labels, 1):\n",
+                "        m = GLYPH_MAP.get(label, DEFAULT)\n",
+                "        glyph_objects.append({'index': i, 'label': label, **m})\n",
+                "    glyph_summary = ' → '.join(x['glyph'] for x in glyph_objects)\n",
+                "    risk_flags = [f\"{x['risk']} object: {x['label']} mapped to {x['glyph']}\" for x in glyph_objects if x['risk'] not in ('low', 'medium')]\n",
+                "    return {\n",
+                "        'project': 'SigilAGI',\n",
+                "        'created_utc': datetime.now(timezone.utc).isoformat(),\n",
+                "        'scene_note': note,\n",
+                "        'detected_objects': labels,\n",
+                "        'glyph_objects': glyph_objects,\n",
+                "        'glyph_summary': glyph_summary,\n",
+                "        'plain_english_summary': 'The scene contains: ' + ', '.join(labels) + '.',\n",
+                "        'risk_flags': risk_flags,\n",
+                "        'unknowns': [\n",
+                "            'The system cannot verify identity, intent, guilt, legality, medical status, or exact danger level from object labels alone.',\n",
+                "            'Object labels may be incomplete or incorrect if provided manually or by a detector.'\n",
+                "        ],\n",
+                "        'human_review_needed': ['Treat this as an organized symbolic reasoning trace, not proof.']\n",
+                "    }\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "report = generate_report(\n",
+                "    'person, phone, door, wallet, paper',\n",
+                "    'SigilAGI Gemma 4 Good demonstration.'\n",
+                ")\n",
+                "\n",
+                "print(report['glyph_summary'])\n",
+                "print(json.dumps(report, ensure_ascii=False, indent=2))\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## Safety Boundary\n",
+                "\n",
+                "SigilAGI does not prove identity, intent, guilt, legal status, medical status, or confirmed danger.\n",
+                "\n",
+                "It creates a structured symbolic reasoning trace for human review.\n"
+            ]
+        }
+    ],
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3"
+        },
+        "language_info": {
+            "name": "python",
+            "version": "3.11"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 5
+}
+
+out = Path("sigilagi_gemma4_good_kaggle.ipynb")
+out.write_text(json.dumps(nb, ensure_ascii=False, indent=2), encoding="utf-8")
+print("[OK] wrote", out)
