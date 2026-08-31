@@ -31,3 +31,11 @@ The original local projects were not modified by this snapshot operation.
 reports, bundles, and project directories discovered in Android shared storage.
 Paths are preserved relative to shared storage. Embedded credentials are redacted
 from the backup copy, and files at or above GitHub's per-file limit are omitted.
+
+## Complete notebook export
+
+`notebooks/termux-home/` and `notebooks/android-shared/` contain all active,
+valid Jupyter notebooks discovered in Termux home and Android shared storage.
+Paths are preserved relative to each source root. Credential-shaped literals are
+redacted only in these exported copies. Trash, caches, environments, Android
+app-private data, and malformed dependency test fixtures are excluded.
