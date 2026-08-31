@@ -1,0 +1,17 @@
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+auth.json
+credentials*
+
+# Machine-local Codex state
+memories/
+sessions/
+logs/
+
+# Editor and OS files
+.DS_Store
+*.swp
+*~
